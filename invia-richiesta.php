@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefono = htmlspecialchars(trim($_POST['telefono']), ENT_QUOTES, 'UTF-8');
     $note     = htmlspecialchars(trim($_POST['richieste_speciali']), ENT_QUOTES, 'UTF-8');
     $raw_lang = isset($_POST['lang']) ? strtolower(trim($_POST['lang'])) : 'it';
-    $lang     = in_array($raw_lang, ['it', 'en', 'de']) ? $raw_lang : 'it';
+    $lang     = in_array($raw_lang, ['it', 'en', 'de', 'fr']) ? $raw_lang : 'it';
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         die("Indirizzo email non valido. <a href='javascript:history.back()'>Torna indietro</a>");
@@ -288,6 +288,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $clientHelpTitle  = "DIREKTER KONTAKT REZEPTION";
             $clientFooterSign = "Exklusive Gastfreundschaft im Herzen von San Marino";
             $redirectPage     = "de/grazie";
+            break;
+
+        case 'fr':
+            $clientSubjectRaw = "Demande reçue – Hôtel La Rocca, Saint-Marin";
+            $clientBadge      = "✓ DEMANDE REÇUE AVEC SUCCÈS";
+            $clientGreeting   = "Bonjour " . $nome . ",";
+            $clientIntro      = "Merci d'avoir contacté l'Hôtel La Rocca. Nous avons bien reçu votre demande de devis pour la chambre <strong>" . $camera . "</strong>.";
+            $clientReplyTime  = "Notre équipe de réception vérifie actuellement la disponibilité et vous fera parvenir notre meilleure offre personnalisée par e-mail d'ici quelques heures.";
+            $clientWarning    = "<strong>Remarque importante :</strong> Ce message atteste de la bonne réception de votre demande et ne constitue pas une réservation confirmée définitive. La confirmation officielle sera effectuée directement par notre équipe.";
+            $clientSummary    = "RÉCAPITULATIF DE VOTRE DEMANDE";
+            $clientLblRoom    = "CHAMBRE";
+            $clientLblGuests  = "VOYAGEURS";
+            $clientGuestsVal  = $adulti . " adulte" . ((int)$adulti > 1 ? "s" : "") . ((int)$bambini > 0 ? ", " . $bambini . " enfant" . ((int)$bambini > 1 ? "s" : "") : "");
+            $clientLblNotes   = "DEMANDES PARTICULIÈRES";
+            $clientHelpTitle  = "RÉCEPTION DIRECTE DE L'HÔTEL";
+            $clientFooterSign = "Demeure d'exception et d'élégance à Saint-Marin";
+            $redirectPage     = "fr/grazie";
             break;
 
         case 'it':

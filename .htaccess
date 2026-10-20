@@ -29,7 +29,11 @@ Options -Indexes +FollowSymLinks
     RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+de/index\.html[\s?] [NC]
     RewriteRule ^de/index\.html$ https://%{HTTP_HOST}/de/ [R=301,L]
 
-    # 4) Redirect 301 di qualsiasi altra richiesta *.html all'URL senza estensione
+    # 4) Redirect /fr/index.html -> /fr/
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+fr/index\.html[\s?] [NC]
+    RewriteRule ^fr/index\.html$ https://%{HTTP_HOST}/fr/ [R=301,L]
+
+    # 5) Redirect 301 di qualsiasi altra richiesta *.html all'URL senza estensione
     RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+(.+?)\.html[\s?] [NC]
     RewriteRule ^(.+?)\.html$ https://%{HTTP_HOST}/$1 [R=301,L]
 

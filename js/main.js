@@ -525,10 +525,17 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const card = btn.closest('.service-card') || btn.parentElement;
-      const body = card ? card.querySelector('.practical-info-body') : null;
-      if (!body) return;
+      if (!card) return;
 
-      const isExpanded = body.classList.toggle('expanded');
+      const extra = card.querySelector('.practical-info-extra');
+      const body = card.querySelector('.practical-info-body');
+
+      let isExpanded = false;
+      if (extra) {
+        isExpanded = extra.classList.toggle('is-visible');
+      } else if (body) {
+        isExpanded = body.classList.toggle('expanded');
+      }
       btn.classList.toggle('is-expanded', isExpanded);
 
       const moreText = btn.getAttribute('data-more') || 'Leggi di più';

@@ -2143,21 +2143,41 @@ h6 {
   line-height: 1.68;
 }
 
+.dove-info-section .services-grid {
+  align-items: start;
+}
+
+.dove-info-section .service-card {
+  align-self: start;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
 .practical-info-body {
-  flex-grow: 1;
+  width: 100%;
 }
 
-.practical-info-body.clamp-text {
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.practical-info-extra {
+  display: none;
+  margin-top: var(--space-sm);
+  animation: practicalFadeIn 0.25s ease forwards;
 }
 
-.practical-info-body.expanded {
+.practical-info-extra.is-visible {
   display: block;
-  -webkit-line-clamp: unset;
-  overflow: visible;
+}
+
+@keyframes practicalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .btn-toggle-more {
@@ -2173,7 +2193,7 @@ h6 {
   align-items: center;
   gap: 0.4rem;
   align-self: flex-start;
-  margin-top: auto;
+  margin-top: 0.75rem;
   transition: color var(--transition-fast);
 }
 
@@ -2240,6 +2260,8 @@ h6 {
   align-items: center;
   justify-content: center;
   padding: var(--space-md);
+  overflow-x: hidden;
+  box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s ease;
@@ -2257,9 +2279,10 @@ h6 {
   border: 1px solid rgba(197, 160, 89, 0.35);
   border-radius: 16px;
   width: 100%;
-  max-width: 620px;
+  max-width: min(620px, calc(100vw - 1.5rem));
   max-height: 90vh;
   overflow-y: auto;
+  overflow-x: hidden;
   padding: 2.5rem 2.5rem 2.25rem;
   transform: translateY(25px) scale(0.97);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -2345,6 +2368,8 @@ h6 {
 /* ---------- FORM STYLES (LUXURY UNIFIED) ---------- */
 .form-group {
   margin-bottom: 1.25rem;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .form-group label {
@@ -2383,12 +2408,24 @@ h6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+#form-preventivo {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   padding: 0.85rem 1.1rem;
   background: rgba(29, 34, 27, 0.9);
   border: 1px solid rgba(197, 160, 89, 0.3);
@@ -2529,16 +2566,37 @@ h6 {
 }
 
 @media (max-width: 600px) {
+  .modal-overlay {
+    padding: 1rem 0.5rem;
+  }
   .modal {
-    padding: 2rem 1.25rem 1.75rem;
+    padding: 2rem 1.15rem 1.75rem;
     border-radius: 12px;
+    max-width: calc(100vw - 1rem);
   }
   .form-row {
     grid-template-columns: 1fr;
     gap: 0;
   }
+  .form-group input[type="date"] {
+    padding: 0.85rem 0.65rem;
+  }
   .modal-header h2 {
     font-size: 1.5rem;
+  }
+  .recaptcha-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 380px) {
+  .modal {
+    padding: 1.75rem 0.85rem 1.5rem;
+  }
+  .recaptcha-wrapper {
+    transform: scale(0.88);
+    transform-origin: center center;
   }
 }
 

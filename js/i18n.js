@@ -1,5 +1,5 @@
 /* ============================================================
-   Hotel La Rocca – Sistema Multilingua (IT, EN, DE)
+   Hotel La Rocca – Sistema Multilingua (IT, EN, DE, FR)
    i18n.js
    ============================================================ */
 
@@ -92,8 +92,8 @@ const translations = {
     services_quote_lead: "Contattaci per scoprire tutti i dettagli sui nostri servizi, come le opzioni di parcheggio o l'organizzazione delle escursioni guidate a San Marino.",
     services_quote_btn: "Richiedi Informazioni",
     form_room_label: "Camera Desiderata",
-    form_checkin: "Data Check-in",
-    form_checkout: "Data Check-out",
+    form_checkin: "Check-in",
+    form_checkout: "Check-out",
     form_adults: "Adulti",
     form_children: "Bambini",
     form_name: "Nome e Cognome",
@@ -241,8 +241,8 @@ const translations = {
     services_quote_lead: "Contact us to discover all details about our services, such as parking options or arranging guided excursions in San Marino.",
     services_quote_btn: "Request Information",
     form_room_label: "Preferred Room",
-    form_checkin: "Check-in Date",
-    form_checkout: "Check-out Date",
+    form_checkin: "Check-in",
+    form_checkout: "Check-out",
     form_adults: "Adults",
     form_children: "Children",
     form_name: "Full Name",
@@ -390,8 +390,8 @@ const translations = {
     services_quote_lead: "Kontaktieren Sie uns, um alle Details zu unseren Services zu erfahren – wie Parkmöglichkeiten oder die Organisation geführter Ausflüge in San Marino.",
     services_quote_btn: "Informationen Anfragen",
     form_room_label: "Gewünschtes Zimmer",
-    form_checkin: "Anreisedatum",
-    form_checkout: "Abreisedatum",
+    form_checkin: "Check-in",
+    form_checkout: "Check-out",
     form_adults: "Erwachsene",
     form_children: "Kinder",
     form_name: "Vor- und Nachname",
@@ -449,7 +449,157 @@ const translations = {
     page404_btn_home: "Zur Startseite",
     page404_btn_rooms: "Zimmer Entdecken",
     page404_btn_contact: "Kontaktieren Sie Uns"
+  },
+
+  fr: {
+    // Navigation
+    nav_home: "Accueil",
+    nav_rooms: "Chambres",
+    nav_services: "Services",
+    nav_bar: "Notre bar",
+    nav_activities: "Activités",
+    nav_location: "Nous trouver",
+    nav_book: "Réserver",
+    nav_book_short: "RÉSERVER",
+    nav_shop: "BOUTIQUE",
+    nav_menu: "MENU",
+    nav_close: "FERMER",
+    nav_contact: "Contact",
+
+    // Hero Index
+    hero_subtitle: "Saint-Marin · Centre Historique",
+    hero_title: "Hôtel La Rocca",
+    hero_tagline: "Une expérience unique au cœur de la plus ancienne République du monde. Élégance, confort et une vue à couper le souffle sur les collines et les vallées de Saint-Marin.",
+    hero_btn_rooms: "Découvrir les Chambres",
+    hero_btn_story: "Notre Histoire",
+    hero_scroll: "Défiler",
+
+    // About
+    about_overline: "Notre Histoire",
+    about_title: "Un Havre d'Élégance au Cœur du Centre Historique",
+    about_lead: "Situé au cœur même de la République de Saint-Marin, l'Hôtel La Rocca est le point de départ idéal pour explorer cette ville inscrite au patrimoine mondial de l'UNESCO.",
+    about_story_h3: "Là où l'Histoire Rencontre le Confort Contemporain",
+    about_p1: "Niché entre les anciens remparts du Mont Titano et les célèbres tours médiévales, l'Hôtel La Rocca offre une hospitalité raffinée dans un cadre véritablement incomparable. Chaque chambre a été soigneusement conçue pour un séjour inoubliable, avec des détails raffinés et des panoramas exceptionnels.",
+    about_p2: "À quelques pas des Trois Tours, des musées et des boutiques historiques, notre hôtel est le choix idéal pour ceux qui souhaitent découvrir l'âme authentique de Saint-Marin.",
+    feat_unesco_title: "Centre Historique UNESCO",
+    feat_unesco_desc: "À quelques pas des Trois Tours",
+    feat_view_title: "Vue Panoramique",
+    feat_view_desc: "Sur la Riviera Adriatique",
+    feat_hospitality_title: "Hospitalité Personnalisée",
+    feat_hospitality_desc: "Un service attentif et sur mesure",
+    feat_parking_title: "Parking Conventionné",
+    feat_parking_desc: "Accès facilité au centre",
+
+    // Rooms Preview Index
+    rooms_overline: "Les Chambres",
+    rooms_title: "Votre Refuge à Saint-Marin",
+    rooms_lead: "Dix chambres boutique au design unique, pensées pour offrir calme et sérénité. Choisissez le refuge idéal pour vos vacances.",
+    room_all_btn: "Toutes les Chambres",
+    room_detail_btn: "Détails de la Chambre",
+    room_request_btn: "Demander un Devis",
+
+    // Services
+    services_overline: "Nos Services",
+    services_title: "Une Expérience de Séjour Impeccable",
+    services_lead: "Chaque prestation est pensée avec soin pour garantir votre confort maximal tout au long de votre séjour.",
+    srv_breakfast_title: "Petit-déjeuner Panoramique",
+    srv_breakfast_desc: "Délices locaux frais, viennoiseries artisanales et vues panoramiques pour bien commencer la journée.",
+    srv_wifi_title: "Wi-Fi Haut Débit Gratuit",
+    srv_wifi_desc: "Connexion internet fiable par fibre optique dans toutes les chambres et les espaces communs.",
+    srv_parking_title: "Accès ZTL & Parking",
+    srv_parking_desc: "Autorisation de circulation dans la zone historique à accès limité et solutions de stationnement.",
+    srv_concierge_title: "Conciergerie & Conseils",
+    srv_concierge_desc: "Recommandations sur mesure pour la gastronomie, les sites culturels et les promenades panoramiques.",
+
+    // Reviews Section
+    reviews_overline: "Expériences de nos Hôtes",
+    reviews_title: "Ce que Disent nos Hôtes",
+    reviews_lead: "La chaleur de notre hospitalité authentique à travers les mots de nos visiteurs.",
+    reviews_badge_sub: "Note exceptionnelle de voyageurs vérifiés",
+    rev1_text: "Emplacement magnifique, à seulement deux minutes de la Première Tour. Voir le lever du soleil sur la mer Adriatique depuis notre chambre était magique. Chambre impeccable et petit-déjeuner délicieux !",
+    rev1_author: "Marco & Giulia",
+    rev1_origin: "Milan, Italie",
+    rev2_text: "Un hôtel merveilleux au centre de Saint-Marin. Vues fantastiques, chambres impeccables et un accueil chaleureux. Nous reviendrons sans aucun doute !",
+    rev2_author: "Thomas & Elena",
+    rev2_origin: "Munich, Allemagne",
+    rev3_text: "Un séjour boutique inoubliable ! Perché au sommet du Mont Titano avec des panoramas à couper le souffle. Personnel aimable, atmosphère paisible et chambres raffinées.",
+    rev3_author: "Sarah & David",
+    rev3_origin: "Londres, Royaume-Uni",
+    rev_cta_title: "Avez-vous séjourné chez nous ?",
+    rev_cta_desc: "Votre avis nous est très précieux. Partagez votre expérience sur TripAdvisor ou Google.",
+    rev_cta_tripadvisor: "Laisser un Avis sur TripAdvisor",
+    rev_cta_google: "Laissez-nous un avis sur Google",
+
+    // Booking & Quote Form
+    quote_overline: "Réservation Directe",
+    quote_title: "Demandez votre Offre Personnalisée",
+    quote_lead: "Remplissez le formulaire ci-dessous pour recevoir le meilleur tarif direct garanti et la disponibilité des chambres.",
+    services_quote_overline: "Informations & Services",
+    services_quote_title: "Besoin de plus d'Informations ?",
+    services_quote_lead: "Contactez-nous pour découvrir tous les détails de nos services, comme les options de stationnement ou l'organisation d'excursions guidées à Saint-Marin.",
+    services_quote_btn: "Demander des Informations",
+    form_room_label: "Chambre Souhaitée",
+    form_checkin: "Check-in",
+    form_checkout: "Check-out",
+    form_adults: "Adultes",
+    form_children: "Enfants",
+    form_name: "Nom et Prénom",
+    form_name_ph: "ex. Jean Dupont",
+    form_email: "Adresse E-mail",
+    form_email_ph: "nom@exemple.fr",
+    form_phone: "Téléphone",
+    form_phone_ph: "+33 6 12 34 56 78",
+    form_notes: "Demandes Particulières / Remarques",
+    form_notes_ph: "ex. arrivée tardive, lit bébé, préférences alimentaires...",
+    form_badge: "Hôtel La Rocca • Saint-Marin",
+    form_subtitle: "Devis gratuit et sans engagement avec la garantie du meilleur tarif.",
+    form_optional: "(facultatif)",
+    form_privacy: "J'ai lu et j'accepte la Politique de Confidentialité",
+    form_submit: "Envoyer la Demande de Devis",
+
+    // Activities
+    att_overline: "Expériences Uniques",
+    att_title: "Activités & Excursions",
+    att_subtitle: "Vivez Saint-Marin à travers des aventures authentiques et inoubliables.",
+    att_notice_title: "Remarque Importante :",
+    att_notice_desc: "Toutes les activités et excursions doivent être réservées au moins 3 jours avant votre date d'arrivée en contactant directement notre réception.",
+    att_section_overline: "Nos Suggestions",
+    att_section_title: "Découvrez les Activités",
+    att_section_desc: "Une sélection d'expériences uniques pour vivre l'histoire, la nature et la beauté panoramique du Mont Titano.",
+    att_card1_title: "Trekking & Balades Panoramiques",
+    att_card1_desc: "Des sentiers verdoyants le long des anciens chemins du Mont Titano. Une aventure unique mêlant nature préservée et histoire médiévale.",
+    att_card2_title: "Dégustations Œnogastronomiques",
+    att_card2_desc: "Un voyage sensoriel à travers les spécialités culinaires traditionnelles, les vins locaux et les fromages artisanaux de Saint-Marin.",
+    att_card3_title: "Visites Guidées du Centre Historique",
+    att_card3_desc: "Explorations culturelles parmi les tours médiévales, les anciennes contrade et les monuments, accompagnées de guides experts agréés.",
+    att_card4_title: "Excursions Guidées en E-Bike",
+    att_card4_desc: "Des balades à deux roues sans effort pour explorer les collines et belvédères spectaculaires de Saint-Marin avec un accompagnement local expert.",
+    att_card5_title: "Vol Panoramique sur Saint-Marin",
+    att_card5_desc: "Une expérience de vol à couper le souffle pour admirer l'ancienne République d'en haut, avec des panoramas à 360° sur les montagnes et la côte.",
+    att_card6_title: "Tir à l'Arc en Plein Air",
+    att_card6_desc: "Concentration, équilibre et loisirs en plein air, au cœur de la nature paisible du Mont Titano.",
+
+    // Footer
+    footer_about: "Une authentique demeure de charme et d'élégance intemporelle nichée parmi les tours médiévales du Mont Titano, patrimoine mondial de l'UNESCO. Panoramas à couper le souffle et accueil chaleureux.",
+    footer_col_explore: "Navigation",
+    footer_col_contacts: "Contacts Directs",
+    footer_col_reviews: "Hôtes & Avis",
+    footer_rating_label: "sur la base d'avis vérifiés",
+    footer_btn_tripadvisor: "Laissez-nous un avis sur TripAdvisor",
+    footer_btn_google: "Laissez-nous un avis sur Google",
+    footer_checkin_info: "Check-in : 14h00 - 19h00",
+    footer_request: "Demander un Devis",
+    footer_privacy: "Politique de Confidentialité",
+    footer_cookie: "Conditions Générales",
+
+    // 404 Page
+    page404_title: "Page Introuvable",
+    page404_desc: "La page que vous recherchez semble s'être égarée dans les ruelles anciennes du Mont Titano, ou a été déplacée.",
+    page404_btn_home: "Retour à l'Accueil",
+    page404_btn_rooms: "Découvrir les Chambres",
+    page404_btn_contact: "Nous Contacter"
   }
+
 };
 
 class I18nManager {
@@ -459,6 +609,8 @@ class I18nManager {
       this.currentLang = 'en';
     } else if (path.includes('/de/') || path.endsWith('/de')) {
       this.currentLang = 'de';
+    } else if (path.includes('/fr/') || path.endsWith('/fr')) {
+      this.currentLang = 'fr';
     } else {
       this.currentLang = 'it';
     }
@@ -478,7 +630,7 @@ class I18nManager {
     document.documentElement.lang = lang;
 
     const dict = translations[lang];
-    const flagMap = { it: '🇮🇹', en: '🇬🇧', de: '🇩🇪' };
+    const flagMap = { it: '🇮🇹', en: '🇬🇧', de: '🇩🇪', fr: '🇫🇷' };
 
     // Aggiorna indicatori del trigger dropdown
     document.querySelectorAll('#activeLangFlag').forEach(el => el.textContent = flagMap[lang] || '🇮🇹');
@@ -556,34 +708,21 @@ class I18nManager {
           let page = '';
           if (segments.length > 0) {
             let last = segments[segments.length - 1];
-            if (last !== 'en' && last !== 'de' && last !== 'index.html' && last !== 'index') {
+            if (last !== 'en' && last !== 'de' && last !== 'fr' && last !== 'index.html' && last !== 'index') {
               page = last.replace(/\.html$/, '');
             }
           }
 
-          const isEn = path.includes('/en/') || path.endsWith('/en');
-          const isDe = path.includes('/de/') || path.endsWith('/de');
-
+          // Lingua corrente dedotta dal percorso (cartelle /en/, /de/, /fr/)
+          const inSubfolder = ['en', 'de', 'fr'].some(l => path.includes('/' + l + '/') || path.endsWith('/' + l));
+          const prefix = inSubfolder ? '../' : '';
           let targetUrl = '';
           if (selectedLang === 'it') {
-            targetUrl = (isEn || isDe) ? (page ? `../${page}` : '../') : (page ? page : './');
-          } else if (selectedLang === 'en') {
-            if (isEn) {
-              targetUrl = page ? page : './';
-            } else if (isDe) {
-              targetUrl = page ? `../en/${page}` : '../en/';
-            } else {
-              targetUrl = page ? `en/${page}` : 'en/';
-            }
-          } else if (selectedLang === 'de') {
-            if (isDe) {
-              targetUrl = page ? page : './';
-            } else if (isEn) {
-              targetUrl = page ? `../de/${page}` : '../de/';
-            } else {
-              targetUrl = page ? `de/${page}` : 'de/';
-            }
+            targetUrl = prefix + (page ? page : (inSubfolder ? '' : './'));
+          } else {
+            targetUrl = prefix + selectedLang + '/' + page;
           }
+          if (!targetUrl) targetUrl = './';
 
           const hash = window.location.hash || '';
           const search = window.location.search || '';
