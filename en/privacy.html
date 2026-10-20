@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy & Cookies | Hotel La Rocca San Marino</title>
+  <meta name="description" content="Personal Data Processing and Cookie Policy in accordance with San Marino Law No. 171/2018 and EU GDPR.">
+  <link rel="icon" href="../content/favicon.png">
+  <link rel="apple-touch-icon" href="../content/favicon.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+  <!-- ==================== NAVBAR / HEADER ==================== -->
+  <header class="navbar header-grand" id="navbar">
+    <div class="header-inner">
+      <div class="nav-block-left">
+        <button type="button" class="nav-menu-btn" id="navMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navOverlay">
+          <span class="hamburger-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="nav-menu-label" data-i18n="nav_menu">MENU</span>
+        </button>
+        <a href="#" class="nav-block-action btn-richiedi" data-camera="Da definire" data-i18n="nav_book_short">BOOK</a>
+      </div>
+
+      <div class="nav-block-right">
+        <div class="nav-socials">
+          <a href="https://www.instagram.com/hotellaroccasm/" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="Instagram Hotel La Rocca">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61563815469908&ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="Facebook Hotel La Rocca">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button type="button" class="lang-dropdown-trigger" id="langDropdownBtn" aria-expanded="false" aria-haspopup="true" aria-label="Seleziona lingua">
+            <span class="lang-flag" id="activeLangFlag">🇬🇧</span>
+            <span class="lang-code" id="activeLangCode">EN</span>
+            <svg class="lang-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="lang-dropdown-menu" id="langDropdownMenu" role="menu">
+            <button type="button" class="lang-option" data-lang="it" role="menuitem">
+              <span class="flag">🇮🇹</span>
+              <span class="name">Italiano</span>
+              <span class="code">IT</span>
+            </button>
+            <button type="button" class="lang-option active" data-lang="en" role="menuitem">
+              <span class="flag">🇬🇧</span>
+              <span class="name">English</span>
+              <span class="code">EN</span>
+            </button>
+            <button type="button" class="lang-option" data-lang="de" role="menuitem">
+              <span class="flag">🇩🇪</span>
+              <span class="name">Deutsch</span>
+              <span class="code">DE</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== OVERLAY MENU DRAWER ==================== -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <div class="nav-overlay-backdrop" id="navOverlayBackdrop"></div>
+    <div class="nav-overlay-panel">
+      <div class="nav-overlay-header">
+        <button type="button" class="nav-overlay-close" id="navOverlayClose" aria-label="Chiudi menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          <span data-i18n="nav_close">CLOSE</span>
+        </button>
+        <div class="nav-overlay-brand">
+          <a href="./" title="Hotel La Rocca San Marino">
+            <img src="../content/logo.png" alt="Hotel La Rocca San Marino">
+          </a>
+        </div>
+      </div>
+      <div class="nav-overlay-content">
+        <div class="nav-overlay-col nav-overlay-nav">
+          <ul class="nav-overlay-links">
+            <li><a href="./" data-i18n="nav_home">HOME</a></li>
+            <li><a href="camere" data-i18n="nav_rooms">CAMERE</a></li>
+            <li><a href="servizi" data-i18n="nav_services">SERVIZI</a></li>
+            <li><a href="bar" data-i18n="nav_bar">IL NOSTRO BAR</a></li>
+            <li><a href="attivita" data-i18n="nav_activities">ATTIVITÀ</a></li>
+            <li><a href="dove-siamo" data-i18n="nav_location">DOVE SIAMO</a></li>
+          </ul>
+          <div class="nav-overlay-actions">
+            <a href="#" class="btn btn-primary btn-richiedi" data-camera="Da definire" data-i18n="nav_book">BOOK</a>
+          </div>
+        </div>
+        <div class="nav-overlay-col nav-overlay-info">
+          <h4 class="nav-overlay-hotel-title">Hotel La Rocca</h4>
+          <p class="nav-overlay-address">
+            Via Salita alla Rocca n° 33/35<br>
+            47890 Città di San Marino (RSM)<br>
+            Repubblica di San Marino
+          </p>
+          <div class="nav-overlay-contacts">
+            <a href="tel:+3780549991166" class="nav-overlay-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+378 0549 991166</span>
+            </a>
+            <a href="mailto:hotellarocca@omniway.sm" class="nav-overlay-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>hotellarocca@omniway.sm</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="../content/foto/INCANTO (3).jpg" alt="Hotel La Rocca San Marino">
+    </div>
+    <div class="page-hero-content">
+      <div class="page-hero-brand-logo">
+        <a href="./" title="Hotel La Rocca San Marino">
+          <img src="../content/logo.png" alt="Hotel La Rocca San Marino">
+        </a>
+      </div>
+      <p class="overline">LEGAL NOTICE &bull; REPUBLIC OF SAN MARINO</p>
+      <h1>Privacy Policy &amp; Cookies</h1>
+      <p>Personal Data Processing Policy in accordance with San Marino Law No. 171/2018 and EU Regulation 2016/679 (GDPR).</p>
+    </div>
+  </section>
+
+  <main class="legal-page-main">
+    <div class="container legal-page-container">
+      <article class="legal-card">
+        <div class="legal-meta-badge">
+          <i data-lucide="shield-check"></i>
+          <span>Compliant with San Marino Law No. 171/2018 &bull; EU GDPR 2016/679</span>
+        </div>
+
+        <h2>1. Data Controller</h2>
+        <p>The Data Controller is <strong>LA ROCCA SRL</strong> (sole shareholder company) – hospitality structure Hotel La Rocca, with registered and operational headquarters at Via Salita alla Rocca n° 33/35 – 47890 City of San Marino (Republic of San Marino), C.O.E. SM 30254. For any privacy requests or to exercise data subject rights, you may contact the Controller at:</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:hotellarocca@omniway.sm">hotellarocca@omniway.sm</a></li>
+          <li><strong>Phone:</strong> <a href="tel:+3780549991166">+378 0549 991166</a></li>
+        </ul>
+
+        <h2>2. Data Collection Methods, Hosting, and Absence of Online Database Storage</h2>
+        <p>This website serves purely informative purposes. Personal data voluntarily submitted by users through quote request or contact forms <strong>are neither saved nor stored on any website database</strong>. Data is directly and solely transmitted in real time via email protocol to the property's official mailbox (managed through email applications such as Microsoft Outlook and Google Gmail and received at <a href="mailto:hotellarocca@omniway.sm">hotellarocca@omniway.sm</a>) for the exclusive purpose of processing and replying to the inquiry or quotation requested.</p>
+        <p>Web hosting, server, and network infrastructure services are provided by <strong>Aruba S.p.A.</strong> (with data centers and servers located within the European Union), appointed as technical supplier and data processor for the technical management of web space, alongside authorized email service providers.</p>
+
+        <h2>3. Categories of Processed Data &amp; Protection of Special Category Data</h2>
+        <ul>
+          <li><strong>Identification and Contact Details:</strong> full name, email address, telephone number.</li>
+          <li><strong>Stay and Booking Inquiry Details:</strong> arrival and departure dates, room type selected, number of guests (adults/children), and general notes. Guests are kindly requested not to provide health-related, sensitive, or special category data (Art. 9 GDPR) regarding medical conditions or allergies unless strictly necessary for managing accommodation logistics.</li>
+          <li><strong>Browsing Data &amp; Cookies:</strong> IP addresses and technical device parameters. The website uses technical cookies only (such as language preference and cookie consent settings) which do not require prior consent. Only upon explicit and optional user consent via the Cookie Banner, the 'Location' page loads the interactive map service <strong>Google Maps</strong> (provided by <strong>Google Ireland Limited</strong>). Enabling Google Maps may involve the installation of third-party cookies and data transfer to third countries (including the United States of America), governed by the European Commission's Standard Contractual Clauses and Google's privacy policy at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</li>
+        </ul>
+
+        <h2>4. Purposes and Legal Basis of Processing</h2>
+        <p>Personal data is processed lawfully pursuant to Art. 5 of San Marino Law No. 171/2018 and Art. 6 of the EU GDPR for:</p>
+        <ul>
+          <li><strong>Performance of Pre-contractual and Contractual Measures:</strong> answering availability and quotation requests, managing room reservations, and arranging requested activities/excursions.</li>
+          <li><strong>Compliance with Legal and Public Security Obligations:</strong> mandatory notification of guest arrivals to the Public Security Authorities of the Republic of San Marino, as well as fulfillment of accounting, tax, and administrative duties.</li>
+        </ul>
+
+        <h2>5. Processing Methods and Retention Periods</h2>
+        <p>Processing is carried out using electronic and paper tools with strict organizational and technical security measures.</p>
+        <ul>
+          <li><strong>Unconfirmed quote requests:</strong> emails are retained solely for the period required to handle the inquiry and periodically deleted within a maximum of 12 months.</li>
+          <li><strong>Confirmed stays:</strong> accounting, billing, and administrative records are retained for the statutory 10-year period prescribed by San Marino law.</li>
+        </ul>
+
+        <h2>6. Disclosure to Third Parties and Recipients</h2>
+        <p>Data will never be disseminated, transferred, or sold to third parties for commercial or marketing purposes. Data may only be disclosed to: authorized internal personnel, San Marino Public Security Authorities, banking institutions, Aruba S.p.A. (for web hosting infrastructure), email providers, company tax/legal consultants, and local tourism operators only upon explicit guest request for outdoor excursion bookings.</p>
+
+        <h2>7. Rights of the Data Subject</h2>
+        <p>Data subjects may at any time exercise their statutory rights under Articles 15-22 of San Marino Law No. 171/2018 and the GDPR (access, rectification, erasure, restriction, portability, objection) by writing to <a href="mailto:hotellarocca@omniway.sm">hotellarocca@omniway.sm</a>, or lodge a formal complaint with the Data Protection Authority of the Republic of San Marino (<a href="https://www.garanteprivacy.sm" target="_blank" rel="noopener noreferrer">www.garanteprivacy.sm</a>).</p>
+
+        <h2>8. Automated Decision-Making and Profiling</h2>
+        <p>The Data Controller does not use automated decision-making processes or profiling activities on user data.</p>
+
+        <div class="legal-highlight-box">
+          <p><strong>Privacy Assistance:</strong> For any inquiries regarding our privacy policy or data processing, the front desk of Hotel La Rocca is at your full disposal via email at <a href="mailto:hotellarocca@omniway.sm">hotellarocca@omniway.sm</a> or by phone at <a href="tel:+3780549991166">+378 0549 991166</a>.</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- ==================== MODAL PREVENTIVO ==================== -->
+  <div class="modal-overlay" id="modal-preventivo">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-pre-title">
+          <img src="../content/logo.png" alt="Hotel La Rocca">
+          <span>HOTEL LA ROCCA &bull; SAN MARINO</span>
+        </div>
+        <h2>Request a <span class="text-gold">Quote</span></h2>
+        <p class="modal-subtitle">Free, non-binding quote with best rate guarantee.</p>
+        <button class="modal-close" aria-label="Chiudi">&times;</button>
+      </div>
+
+      <form id="form-preventivo" action="../invia-richiesta.php" method="POST">
+        <input type="hidden" name="lang" value="en">
+
+        <div class="form-group">
+          <label for="camera_selezionata"><span class="lbl-text">Preferred Room</span> <span class="required">*</span></label>
+          <input type="text" id="camera_selezionata" name="camera_selezionata" readonly required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkin"><span class="lbl-text">Check-in</span> <span class="required">*</span></label>
+            <input type="date" id="checkin" name="checkin" required>
+          </div>
+          <div class="form-group">
+            <label for="checkout"><span class="lbl-text">Check-out</span> <span class="required">*</span></label>
+            <input type="date" id="checkout" name="checkout" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ospiti_adulti"><span class="lbl-text">Adults</span> <span class="required">*</span></label>
+            <select id="ospiti_adulti" name="ospiti_adulti" required>
+              <option value="">Seleziona</option>
+              <option value="1">1 Adulto</option>
+              <option value="2" selected>2 Adulti</option>
+              <option value="3">3 Adulti</option>
+              <option value="4">4 Adulti</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ospiti_bambini"><span class="lbl-text">Children</span></label>
+            <select id="ospiti_bambini" name="ospiti_bambini">
+              <option value="0" selected>0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="nome_cognome"><span class="lbl-text">Full Name</span> <span class="required">*</span></label>
+          <input type="text" id="nome_cognome" name="nome_cognome" placeholder="e.g. John Smith" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email"><span class="lbl-text">Email</span> <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono"><span class="lbl-text">Phone</span> <span class="optional-tag">(optional)</span></label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+39 ___________">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="richieste_speciali"><span class="lbl-text">Special Requests / Notes</span> <span class="optional-tag">(optional)</span></label>
+          <textarea id="richieste_speciali" name="richieste_speciali" placeholder="e.g. late arrival, baby cot, twin bed preference..."></textarea>
+          <p class="form-disclaimer-note">Note: please do not enter health, sensitive or medical/allergy-related data unless strictly necessary for managing your stay.</p>
+        </div>
+
+        <div class="ohnohoney">
+          <label for="website">Se sei umano, lascia vuoto questo campo</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="recaptcha-wrapper">
+          <div class="g-recaptcha" data-sitekey="6LeayI8tAAAAABW8OtaExPvf7Fk1sF-on3CQiWGZ"></div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-checkbox">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <span>I declare that I have read the <a href="privacy" target="_blank">Privacy Policy</a> and accept the <a href="termini" target="_blank">Terms and Conditions</a>. <span class="required">*</span></span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-form-submit">
+          <span>Send Quote Request</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+          <a href="./" class="footer-logo">
+            <img src="../content/logo-stracked.png" alt="Hotel La Rocca San Marino">
+          </a>
+          <p class="footer-about">
+            An authentic historical residence of charm nestled within the medieval walls of Mount Titano, a UNESCO World Heritage site.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/hotellaroccasm/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram Hotel La Rocca">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61563815469908&ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook Hotel La Rocca">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="./">Home</a></li>
+            <li><a href="camere">Camere</a></li>
+            <li><a href="servizi">Servizi</a></li>
+            <li><a href="bar">Il nostro bar</a></li>
+            <li><a href="attivita">Attività</a></li>
+            <li><a href="dove-siamo">Dove Siamo</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Direct Contacts</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i data-lucide="map-pin"></i>
+              <span>Via Salita alla Rocca n° 33/35<br>47890 San Marino (R.S.M.)</span>
+            </li>
+            <li>
+              <i data-lucide="phone"></i>
+              <a href="tel:+3780549991166">+378 0549 991166</a>
+            </li>
+            <li>
+              <i data-lucide="mail"></i>
+              <a href="mailto:hotellarocca@omniway.sm">hotellarocca@omniway.sm</a>
+            </li>
+            <li>
+              <i data-lucide="clock"></i>
+              <span>Check-in: From 2:00 PM to 7:00 PM</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-col-reviews">
+          <h4>Guests &amp; Reviews</h4>
+          <div class="footer-rating-badge">
+            <div class="stars" aria-label="4.5 / 5">
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-half" width="18" height="18" viewBox="0 0 24 24">
+                <defs>
+                  <linearGradient id="starHalfGrad">
+                    <stop offset="50%" stop-color="#C5A059"/>
+                    <stop offset="50%" stop-color="rgba(197, 160, 89, 0.2)"/>
+                  </linearGradient>
+                </defs>
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="url(#starHalfGrad)" stroke="#C5A059" stroke-width="1"/>
+              </svg>
+            </div>
+            <p><strong>4.5 / 5</strong> <span>based on certified reviews</span></p>
+          </div>
+          <div class="footer-review-actions">
+            <a href="https://www.tripadvisor.it/UserReviewEdit-g187809-d2019489-Hotel_La_Rocca-City_of_San_Marino.html"
+              target="_blank" rel="noopener noreferrer" class="btn-review-link tripadvisor-btn">
+              <img src="../content/tripadvisor-logo.svg" alt="TripAdvisor" class="review-btn-icon" width="20" height="20">
+              <span>Review us on TripAdvisor</span>
+            </a>
+            <a href="https://www.google.com/search?sca_esv=f04dc0b0de07faa0&q=recensioni+di+hotel+la+rocca+citt%C3%A0+di+san+marino"
+              target="_blank" rel="noopener noreferrer" class="btn-review-link google-btn">
+              <svg class="review-btn-icon" width="20" height="20" viewBox="0 0 48 48">
+                <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+              </svg>
+              <span>Review us on Google</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Hotel La Rocca – LA ROCCA SRL | Via Salita alla Rocca n° 33/35, 47890 San Marino (R.S.M.) | C.O.E. SM 30254 | Tel. +378 0549 991166 | Email: hotellarocca@omniway.sm – All rights reserved.</p>
+        <div class="legal-links">
+          <a href="privacy">Privacy Policy</a>
+          <span>•</span>
+          <a href="termini">Terms and Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

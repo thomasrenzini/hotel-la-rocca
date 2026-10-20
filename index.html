@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel La Rocca | San Marino – Centro Storico</title>
+  <meta name="description"
+    content="Hotel La Rocca, nel cuore del Centro Storico di San Marino. Camere esclusive con vista panoramica sul Monte Titano. Prenota direttamente e risparmia.">
+  <meta name="keywords"
+    content="hotel san marino, hotel la rocca, centro storico san marino, camere san marino, pernottamento san marino">
+  <link rel="canonical" href="https://www.hotellaroccasm.com/">
+  <!-- Favicon -->
+  <link rel="icon" href="content/favicon.png">
+  <link rel="apple-touch-icon" href="content/favicon.png">
+  <!-- Open Graph / Google -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.hotellaroccasm.com/">
+  <meta property="og:title" content="Hotel La Rocca | San Marino – Centro Storico">
+  <meta property="og:description"
+    content="Hotel La Rocca, nel cuore del Centro Storico di San Marino. Camere esclusive con vista panoramica sul Monte Titano. Prenota direttamente e risparmia.">
+  <meta property="og:image" content="https://www.hotellaroccasm.com/content/logo.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:site_name" content="Hotel La Rocca San Marino">
+  <meta property="og:locale" content="it_IT">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hotel La Rocca | San Marino">
+  <meta name="twitter:description" content="Camere esclusive nel cuore del Centro Storico di San Marino.">
+  <meta name="twitter:image" content="https://www.hotellaroccasm.com/content/og-image.png">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- reCAPTCHA v2 -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+  <!-- ==================== NAVBAR / HEADER ==================== -->
+  <header class="navbar header-grand" id="navbar">
+    <div class="header-inner">
+      <!-- A SINISTRA: Blocco Navigazione (#232920) -->
+      <div class="nav-block-left">
+        <button type="button" class="nav-menu-btn" id="navMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navOverlay">
+          <span class="hamburger-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="nav-menu-label" data-i18n="nav_menu">MENU</span>
+        </button>
+        <a href="#" class="nav-block-action btn-richiedi" data-camera="Da definire" data-i18n="nav_book_short">PRENOTA</a>
+      </div>
+
+      <!-- A DESTRA: Social Ufficiali e Lingua -->
+      <div class="nav-block-right">
+        <div class="nav-socials">
+          <a href="https://www.instagram.com/hotellaroccasm/" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="Instagram Hotel La Rocca">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61563815469908&ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="Facebook Hotel La Rocca">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+
+        <!-- Selettore Lingua a Tendina IT | EN | DE -->
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button type="button" class="lang-dropdown-trigger" id="langDropdownBtn" aria-expanded="false" aria-haspopup="true" aria-label="Seleziona lingua">
+            <span class="lang-flag" id="activeLangFlag">🇮🇹</span>
+            <span class="lang-code" id="activeLangCode">IT</span>
+            <svg class="lang-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="lang-dropdown-menu" id="langDropdownMenu" role="menu">
+            <button type="button" class="lang-option active" data-lang="it" role="menuitem">
+              <span class="flag">🇮🇹</span>
+              <span class="name">Italiano</span>
+              <span class="code">IT</span>
+            </button>
+            <button type="button" class="lang-option" data-lang="en" role="menuitem">
+              <span class="flag">🇬🇧</span>
+              <span class="name">English</span>
+              <span class="code">EN</span>
+            </button>
+            <button type="button" class="lang-option" data-lang="de" role="menuitem">
+              <span class="flag">🇩🇪</span>
+              <span class="name">Deutsch</span>
+              <span class="code">DE</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== OVERLAY MENU DRAWER ==================== -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <div class="nav-overlay-backdrop" id="navOverlayBackdrop"></div>
+    <div class="nav-overlay-panel">
+      <div class="nav-overlay-header">
+        <button type="button" class="nav-overlay-close" id="navOverlayClose" aria-label="Chiudi menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+          <span data-i18n="nav_close">CHIUDI</span>
+        </button>
+        <div class="nav-overlay-brand">
+          <a href="./" title="Hotel La Rocca San Marino">
+            <img src="content/logo.png" alt="Hotel La Rocca San Marino">
+          </a>
+        </div>
+      </div>
+      <div class="nav-overlay-content">
+        <div class="nav-overlay-col nav-overlay-nav">
+          <ul class="nav-overlay-links">
+            <li><a href="./" class="active" data-i18n="nav_home">HOME</a></li>
+            <li><a href="camere" data-i18n="nav_rooms">CAMERE</a></li>
+            <li><a href="servizi" data-i18n="nav_services">SERVIZI</a></li>
+            <li><a href="bar" data-i18n="nav_bar">IL NOSTRO BAR</a></li>
+            <li><a href="attivita" data-i18n="nav_activities">ATTIVITÀ</a></li>
+            <li><a href="dove-siamo" data-i18n="nav_location">DOVE SIAMO</a></li>
+          </ul>
+          <div class="nav-overlay-actions">
+            <a href="#" class="btn btn-primary btn-richiedi" data-camera="Da definire" data-i18n="nav_book">PRENOTA ORA</a>
+          </div>
+        </div>
+        <div class="nav-overlay-col nav-overlay-info">
+          <h4 class="nav-overlay-hotel-title">Hotel La Rocca</h4>
+          <p class="nav-overlay-address">
+            Salita alla Rocca, 35<br>
+            47890 Città di San Marino (RSM)<br>
+            Repubblica di San Marino
+          </p>
+          <div class="nav-overlay-contacts">
+            <a href="tel:+3780549991166" class="nav-overlay-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+378 0549 991166</span>
+            </a>
+            <a href="mailto:hotellarocca@omniway.sm" class="nav-overlay-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>hotellarocca@omniway.sm</span>
+            </a>
+          </div>
+          <div class="nav-overlay-socials">
+            <a href="https://www.instagram.com/hotellaroccasm/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Hotel La Rocca">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61563815469908&ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener noreferrer" aria-label="Facebook Hotel La Rocca">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="hero-video-wrapper">
+      <video autoplay muted loop playsinline poster="content/foto/INCANTO.jpg">
+        <source src="content/video/video_mod1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-brand-logo">
+        <a href="./" title="Hotel La Rocca San Marino">
+          <img src="content/logo.png" alt="Hotel La Rocca San Marino">
+        </a>
+      </div>
+<p class="subtitle">San Marino · Centro Storico</p>
+      <h1>Hotel la Rocca</h1>
+      <p class="tagline">Un'esperienza unica nel cuore della Repubblica più antica del mondo. Eleganza, comfort e una
+        vista che toglie il fiato sulla colline e valli di San Marino.</p>
+      <div class="hero-cta">
+        <a href="camere" class="btn btn-primary">Scopri le Camere</a>
+        <a href="#about" class="btn btn-outline">La Nostra Storia</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scorri</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="section-padding" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="overline">La Nostra Storia</p>
+        <h2>Un Rifugio di Eleganza nel Centro Storico</h2>
+        <div class="section-divider"></div>
+        <p>Situato nel cuore della Repubblica di San Marino, l'Hotel la Rocca è il punto di partenza perfetto per
+          esplorare il patrimonio UNESCO della città più antica d'Europa.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="content/foto/RADICI (6).jpg" alt="Vista panoramica Hotel la Rocca San Marino" loading="lazy">
+        </div>
+        <div class="about-text reveal">
+          <h3>Dove la Storia Incontra il <span class="text-gold">Comfort</span></h3>
+          <p>All'Hotel La Rocca, situato nel cuore storico di San Marino, offriamo un'esperienza unica e
+            indimenticabile. La nostra gestione familiare si impegna a garantire un'atmosfera calda e accogliente, con
+            un servizio personalizzato che ti farà sentire come a casa tua. Grazie alla nostra posizione privilegiata
+            sulla cima del Monte Titano, potrai godere di una vista mozzafiato sulla storica città e i paesaggi
+            circostanti.</p>
+          <p>Le nostre camere, dotate di tutti i comfort moderni, sono pensate per assicurare il massimo del relax.
+            Offriamo aria condizionata, bagni privati con phon e box doccia, Wi-Fi gratuito, frigobar All Inclusive e TV
+            al plasma. Siamo attenti all'ambiente ed ecosostenibili: la sanificazione degli ambienti viene effettuata
+            con sistemi all'ozono. Il nostro personale è sempre a disposizione per consigli, concierge e per organizzare
+            le tue attività. Contattaci direttamente via email o telefono per richiedere informazioni e foto delle camere.</p>
+
+          <div class="about-features">
+            <div class="about-feature">
+              <span class="icon"><i data-lucide="castle"></i></span>
+              <div>
+                <h4>Centro Storico UNESCO</h4>
+                <p>A pochi passi dalle Tre Torri</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="icon"><i data-lucide="sunrise"></i></span>
+              <div>
+                <h4>Vista Panoramica</h4>
+                <p>Sulla colline e valli di San Marino</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="icon"><i data-lucide="concierge-bell"></i></span>
+              <div>
+                <h4>Ospitalità Personalizzata</h4>
+                <p>Servizio attento ai dettagli</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <span class="icon"><i data-lucide="parking-circle"></i></span>
+              <div>
+                <h4>Parcheggio Nelle Vicinanze</h4>
+                <p>Parcheggi pubblici a 3 min a piedi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CAMERE PREVIEW ==================== -->
+  <section class="section-padding" style="background: var(--color-bg-alt);">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="overline">Le Nostre Camere</p>
+        <h2>Un'Esperienza Unica per Ogni Ospite</h2>
+        <div class="section-divider"></div>
+        <p>Undici camere uniche, ognuna con il proprio carattere e la propria anima. Scopri quella che fa per te.</p>
+      </div>
+
+      <div class="rooms-grid">
+        <!-- Camera Anima -->
+        <div class="room-card reveal">
+          <div class="room-card-image">
+            <img src="content/foto/ANIMA.png" alt="Camera Anima – Hotel la Rocca San Marino" loading="lazy">
+            <span class="room-badge">Singola</span>
+          </div>
+          <div class="room-card-body">
+            <h3>Anima</h3>
+            <p class="room-desc">Camera singola accogliente con vista sul centro storico, bagno privato, aria
+              condizionata, Wi-Fi, TV al plasma e frigobar All Inclusive.</p>
+          </div>
+          <div class="room-card-footer">
+            <a href="camere#anima" class="btn btn-secondary">Scopri</a>
+            <button class="btn btn-primary btn-richiedi" data-camera="Anima">Richiedi Preventivo</button>
+          </div>
+        </div>
+
+        <!-- Camera Armonia -->
+        <div class="room-card reveal">
+          <div class="room-card-image">
+            <img src="content/foto/ARMONIA.jpg" alt="Camera Armonia – Hotel la Rocca San Marino" loading="lazy">
+            <span class="room-badge">Armonia</span>
+          </div>
+          <div class="room-card-body">
+            <h3>Armonia</h3>
+            <p class="room-desc">Una camera pensata per chi cerca equilibrio e serenità. Arredi caldi e toni naturali
+              per un soggiorno rigenerante nel cuore di San Marino.</p>
+          </div>
+          <div class="room-card-footer">
+            <a href="camere#armonia" class="btn btn-secondary">Scopri</a>
+            <button class="btn btn-primary btn-richiedi" data-camera="Armonia">Richiedi Preventivo</button>
+          </div>
+        </div>
+
+        <!-- Camera Desiderio -->
+        <div class="room-card reveal">
+          <div class="room-card-image">
+            <img src="content/foto/DESIDERIO.jpg" alt="Camera Desiderio – Hotel la Rocca San Marino" loading="lazy">
+            <span class="room-badge">Desiderio</span>
+          </div>
+          <div class="room-card-body">
+            <h3>Desiderio</h3>
+            <p class="room-desc">Uno spazio intimo e raffinato dove ogni dettaglio invita al relax. Il luogo perfetto
+              per coronare un soggiorno speciale.</p>
+          </div>
+          <div class="room-card-footer">
+            <a href="camere#desiderio" class="btn btn-secondary">Scopri</a>
+            <button class="btn btn-primary btn-richiedi" data-camera="Desiderio">Richiedi Preventivo</button>
+          </div>
+        </div>
+
+        <!-- Camera Incanto -->
+        <div class="room-card reveal">
+          <div class="room-card-image">
+            <img src="content/foto/INCANTO.jpg" alt="Camera Incanto – Hotel la Rocca San Marino" loading="lazy">
+            <span class="room-badge">Incanto</span>
+          </div>
+          <div class="room-card-body">
+            <h3>Incanto</h3>
+            <p class="room-desc">Una camera che incanta al primo sguardo. Finiture eleganti e una luce morbida che
+              avvolge ogni momento del soggiorno.</p>
+          </div>
+          <div class="room-card-footer">
+            <a href="camere#incanto" class="btn btn-secondary">Scopri</a>
+            <button class="btn btn-primary btn-richiedi" data-camera="Incanto">Richiedi Preventivo</button>
+          </div>
+        </div>
+
+        <!-- Camera Sogno -->
+        <div class="room-card reveal">
+          <div class="room-card-image">
+            <img src="content/foto/SOGNO.jpg" alt="Camera Sogno – Hotel la Rocca San Marino" loading="lazy">
+            <span class="room-badge">Sogno</span>
+          </div>
+          <div class="room-card-body">
+            <h3>Sogno</h3>
+            <p class="room-desc">Un'oasi onirica dove comfort e design si fondono per regalare notti indimenticabili con
+              vista sulle torri medioevali.</p>
+          </div>
+          <div class="room-card-footer">
+            <a href="camere#sogno" class="btn btn-secondary">Scopri</a>
+            <button class="btn btn-primary btn-richiedi" data-camera="Sogno">Richiedi Preventivo</button>
+          </div>
+        </div>
+
+        <!-- Camera Radici -->
+        <div class="room-card reveal">
+          <div class="room-card-image">
+            <img src="content/foto/RADICI.jpg" alt="Camera Radici – Hotel la Rocca San Marino" loading="lazy">
+            <span class="room-badge">Radici</span>
+          </div>
+          <div class="room-card-body">
+            <h3>Radici</h3>
+            <p class="room-desc">Ispirata alle tradizioni sammarinesi, questa camera celebra l'autenticità con materiali
+              naturali e un'atmosfera avvolgente.</p>
+          </div>
+          <div class="room-card-footer">
+            <a href="camere#radici" class="btn btn-secondary">Scopri</a>
+            <button class="btn btn-primary btn-richiedi" data-camera="Radici">Richiedi Preventivo</button>
+          </div>
+        </div>
+
+        <!-- Camera Quiete (nascosta per preview 6 camere)
+        <div class="room-card reveal">
+          <div class="room-card-image">
+            <img src="content/foto/QUIETE.jpg" alt="Camera Quiete – Hotel la Rocca San Marino" loading="lazy">
+            <span class="room-badge">Quiete</span>
+          </div>
+          <div class="room-card-body">
+            <h3>Quiete</h3>
+            <p class="room-desc">Un rifugio silenzioso pensato per chi desidera staccare dalla routine. Luce soffusa e
+              comfort assoluto per un relax totale.</p>
+          </div>
+          <div class="room-card-footer">
+            <a href="camere#quiete" class="btn btn-secondary">Scopri</a>
+            <button class="btn btn-primary btn-richiedi" data-camera="Quiete">Richiedi Preventivo</button>
+          </div>
+        </div>
+        -->
+      </div>
+
+      <!-- Navigazione / Frecce e indicatore scorrimento camere su mobile -->
+      <div class="rooms-scroll-nav">
+        <button type="button" class="rooms-scroll-arrow prev" id="roomsScrollPrev" aria-label="Camera precedente" disabled>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="rooms-scroll-indicator">
+          <span class="swipe-hint-icon">‹ ›</span>
+          <span class="swipe-hint-text">Scorri le camere</span>
+        </div>
+        <button type="button" class="rooms-scroll-arrow next" id="roomsScrollNext" aria-label="Camera successiva">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+
+      <div class="text-center reveal" style="margin-top: var(--space-2xl);">
+        <a href="camere" class="btn btn-outline">Vedi Tutte le Camere →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVIZI PREVIEW ==================== -->
+  <section class="section-padding" id="servizi-preview">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="overline">I Nostri Servizi</p>
+        <h2>Tutto ciò che Serve per un Soggiorno Perfetto</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <span class="service-icon"><i data-lucide="coffee"></i></span>
+          <h3>Colazione al Bar</h3>
+          <p>La colazione è disponibile a pagamento presso il nostro bar interno. Un servizio opzionale con prodotti
+            locali e internazionali per iniziare al meglio la giornata.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon"><i data-lucide="wifi"></i></span>
+          <h3>Wi-Fi Gratuito</h3>
+          <p>Connessione ad alta velocità disponibile in tutte le aree dell'hotel e nelle camere.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon"><i data-lucide="parking-circle"></i></span>
+          <h3>Parcheggio</h3>
+          <p>Informazioni dettagliate sui parcheggi convenzionati e sulla gestione della ZTL del Centro Storico.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon"><i data-lucide="map"></i></span>
+          <h3>Posizione Strategica</h3>
+          <p>Nel cuore del Centro Storico, a due passi dalle Tre Torri, dai musei e dai migliori ristoranti.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon"><i data-lucide="luggage"></i></span>
+          <h3>Deposito Bagagli</h3>
+          <p>Servizio gratuito di custodia bagagli per godersi San Marino anche dopo il check-out.</p>
+        </div>
+        <div class="service-card reveal">
+          <span class="service-icon"><i data-lucide="mountain"></i></span>
+          <h3>Viste Panoramiche</h3>
+          <p>Molte delle nostre camere offrono viste mozzafiato le colline e valli di San Marino e sulle colline
+            circostanti.</p>
+        </div>
+      </div>
+
+      <div class="text-center reveal" style="margin-top: var(--space-2xl);">
+        <a href="servizi" class="btn btn-outline">Tutti i Servizi →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== REVIEWS SECTION ==================== -->
+  <section class="reviews-section" id="recensioni">
+    <div class="container footer-container">
+      <div class="section-header reveal">
+        <p class="overline" data-i18n="reviews_overline">Esperienze e Recensioni</p>
+        <h2 data-i18n="reviews_title">Cosa Dicono i Nostri Ospiti</h2>
+        <div class="section-divider"></div>
+        <p data-i18n="reviews_lead">L'autenticità della nostra accoglienza raccontata dalle parole di chi ha soggiornato
+          all'Hotel La Rocca.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Recensione 1 -->
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="rev1_text">
+            Posizione eccezionale, a due passi dalla Prima Torre. Dalla nostra camera la vista sulla riviera all'alba è
+            stata semplicemente magica. Pulizia impeccabile e colazione ottima!
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">MG</div>
+            <div class="review-meta">
+              <h5 data-i18n="rev1_author">Marco &amp; Giulia</h5>
+              <span data-i18n="rev1_origin">Milano, Italia</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recensione 2 -->
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="rev2_text">
+            Ein wunderschönes Hotel im Herzen von San Marino. Fantastische Aussicht, sehr saubere Zimmer und ein
+            unvergesslicher Service. Wir werden auf jeden Fall wiederkommen!
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">TE</div>
+            <div class="review-meta">
+              <h5 data-i18n="rev2_author">Thomas &amp; Elena</h5>
+              <span data-i18n="rev2_origin">München, Deutschland</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recensione 3 -->
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-i18n="rev3_text">
+            An unforgettable boutique stay! Perched on top of Mount Titano with breathtaking panoramas. Friendly staff,
+            peaceful atmosphere, and exquisite rooms.
+          </p>
+          <div class="review-author">
+            <div class="review-avatar">SD</div>
+            <div class="review-meta">
+              <h5 data-i18n="rev3_author">Sarah &amp; David</h5>
+              <span data-i18n="rev3_origin">London, UK</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scatola CTA per lasciare una recensione -->
+      <div class="reviews-cta-box reveal">
+        <div class="reviews-cta-text">
+          <h3 data-i18n="rev_cta_title">Hai soggiornato da noi?</h3>
+          <p data-i18n="rev_cta_desc">La tua opinione è preziosa. Condividi la tua esperienza su TripAdvisor o Google.
+          </p>
+        </div>
+        <div class="reviews-cta-buttons">
+          <a href="https://www.tripadvisor.it/UserReviewEdit-g187809-d2019489-Hotel_La_Rocca-City_of_San_Marino.html"
+            target="_blank" rel="noopener noreferrer" class="btn-review-cta tripadvisor">
+            <img src="content/tripadvisor-logo.svg" alt="TripAdvisor" class="review-btn-icon" width="22" height="22"
+              style="object-fit: contain;">
+            <span data-i18n="rev_cta_tripadvisor">Lascia una recensione su TripAdvisor</span>
+          </a>
+          <a href="https://www.google.com/search?sca_esv=f04dc0b0de07faa0&sxsrf=APpeQntQlY_uVYCWjJ60WfoZM-cglINZ3g:1790684323099&q=recensioni+di+hotel+la+rocca+citt%C3%A0+di+san+marino&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r4-cA-MTawr_HrlB-OgOOdH_LDj5byOYIH9-I0oYomaXAq7rRqMOl41kfOJmU2WZCGxANkeSet3gq631bPCpohxmVrZz2aNMTY3eqfRkU8fHQ-6h4MEERZse4UgRI90kF5f3Cg4Dzb7gVP9_C1gUnMFJfoRGtfjQOnQOBfmpjQTP7wgDr&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_wQgZmVwk0Bz_HT9RrlTuyy67WjbNgP8U31hvX_KdvWPwJXTLPghoysRWI5ybCX5PVPyqcKCnkQvE2oejCBaHkTqkBIrwgdTRRsxfkCuraRz5wS_EqXDUNoU9orpc8kbXs5KUes%3D&sa=X&ved=2ahUKEwiKru734pOXAxXj3AIHHVuRAUQQxKsJKAN6BAgmEAE&ictx=1&biw=1710&bih=927&dpr=2#sv=CAESzQEKuQEStgEKd0FKaVQ0dEpMRm52SnEwMWJrblB1N3BnNkJoQkljQkZuZHNsUm45b1I5S1lxMXZnZjdNYnM3b2ZGbHpCYTVDTmxZX2ZwdWFxUDRtOHpKajRiYl9UaVlkMC1IbVhDQ29FZWNySV9FV1ljX2FkbUxXVEJiMnFlcUk4Ehd4S3k3YXF1a0diU25pLWdQaS1LQmdRVRoiQURzcjlmU0NnNEJONFZTb05NdmRqX2piVHNlelExU1NMQRIEODA1MRoBMyoAMAA4AUAAGAAg2ZTMkw9KAhAB"
+            target="_blank" rel="noopener noreferrer" class="btn-review-cta google">
+            <svg class="review-btn-icon" width="20" height="20" viewBox="0 0 48 48">
+              <path fill="#EA4335"
+                d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+              <path fill="#4285F4"
+                d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+              <path fill="#FBBC05"
+                d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+              <path fill="#34A853"
+                d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+            </svg>
+            <span data-i18n="rev_cta_google">Recensiscici su Google</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA SECTION ==================== -->
+  <section class="section-padding" style="background: var(--color-bg-alt);" id="preventivo">
+    <div class="container">
+      <div class="quote-card text-center reveal">
+        <p class="overline" data-i18n="quote_overline">Prenotazione Diretta</p>
+        <h2 data-i18n="quote_title">Richiedi un Preventivo Personalizzato</h2>
+        <p class="quote-card-lead" data-i18n="quote_lead">Compila il modulo per ricevere la migliore tariffa garantita e verificare la
+          disponibilità delle nostre camere.</p>
+        <button class="btn btn-primary btn-richiedi" data-camera="Da definire" data-i18n="form_submit">Richiedi un Preventivo Gratuito</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MODAL PREVENTIVO ==================== -->
+  <div class="modal-overlay" id="modal-preventivo">
+    <div class="modal">
+            <div class="modal-header">
+        <div class="modal-pre-title">
+          <img src="content/logo.png" alt="Hotel La Rocca">
+          <span data-i18n="form_badge">Hotel La Rocca &bull; San Marino</span>
+        </div>
+        <h2>Richiedi <span class="text-gold">Preventivo</span></h2>
+        <p class="modal-subtitle" data-i18n="form_subtitle">Preventivo gratuito e senza impegno con la miglior tariffa garantita.</p>
+        <button class="modal-close" aria-label="Chiudi">&times;</button>
+      </div>
+
+      <form id="form-preventivo" action="invia-richiesta.php" method="POST">
+        <input type="hidden" name="lang" value="it">
+
+        <!-- Camera selezionata (readonly) -->
+        <div class="form-group">
+          <label for="camera_selezionata" data-i18n="form_room_label">Camera Selezionata <span
+              class="required">*</span></label>
+          <input type="text" id="camera_selezionata" name="camera_selezionata" readonly required>
+        </div>
+
+        <!-- Date -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkin" data-i18n="form_checkin">Check-in <span class="required">*</span></label>
+            <input type="date" id="checkin" name="checkin" required>
+          </div>
+          <div class="form-group">
+            <label for="checkout" data-i18n="form_checkout">Check-out <span class="required">*</span></label>
+            <input type="date" id="checkout" name="checkout" required>
+          </div>
+        </div>
+
+        <!-- Ospiti -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ospiti_adulti" data-i18n="form_adults">Adulti <span class="required">*</span></label>
+            <select id="ospiti_adulti" name="ospiti_adulti" required>
+              <option value="">Seleziona</option>
+              <option value="1">1 Adulto</option>
+              <option value="2" selected>2 Adulti</option>
+              <option value="3">3 Adulti</option>
+              <option value="4">4 Adulti</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ospiti_bambini" data-i18n="form_children">Bambini</label>
+            <select id="ospiti_bambini" name="ospiti_bambini">
+              <option value="0" selected>Nessun bambino</option>
+              <option value="1">1 Bambino</option>
+              <option value="2">2 Bambini</option>
+              <option value="3">3 Bambini</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Dati personali -->
+        <div class="form-group">
+          <label for="nome_cognome" data-i18n="form_name">Nome e Cognome <span class="required">*</span></label>
+          <input type="text" id="nome_cognome" name="nome_cognome" placeholder="Es. Mario Rossi"
+            data-i18n-placeholder="form_name_ph" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email" data-i18n="form_email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="email@esempio.com"
+              data-i18n-placeholder="form_email_ph" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono"><span class="lbl-text">Telefono</span> <span class="optional-tag">(opzionale)</span></label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+39 ___________"
+              data-i18n-placeholder="form_phone_ph">
+          </div>
+        </div>
+
+        <!-- Note -->
+        <div class="form-group">
+          <label for="richieste_speciali"><span data-i18n="form_notes">Note / Richieste Speciali</span> <span
+              class="text-gold" style="font-size:0.7rem;">(opzionale)</span></label>
+          <textarea id="richieste_speciali" name="richieste_speciali"
+            placeholder="Es. arrivo previsto tardivo, culla, preferenza letti separati..."
+            data-i18n-placeholder="Es. arrivo previsto tardivo, culla, preferenza letti separati..."></textarea>
+          <p class="form-disclaimer-note">Nota: si prega di non inserire dati sanitari, particolari o relativi ad allergie/esigenze mediche se non strettamente necessari alla gestione del soggiorno.</p>
+        </div>
+
+        <!-- Honeypot Anti-spam -->
+        <div class="ohnohoney">
+          <label for="website">Se sei umano, lascia vuoto questo campo</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <!-- reCAPTCHA v2 -->
+        <div class="recaptcha-wrapper">
+          <div class="g-recaptcha" data-sitekey="6LeayI8tAAAAABW8OtaExPvf7Fk1sF-on3CQiWGZ"></div>
+        </div>
+
+        <!-- Privacy GDPR -->
+        <div class="form-group">
+          <label class="form-checkbox">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <span>Dichiaro di aver preso visione dell'<a href="privacy" target="_blank">Informativa sulla Privacy</a> e accetto i <a href="termini" target="_blank">Termini e Condizioni</a>. <span class="required">*</span></span>
+          </label>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 0.95rem;"
+          data-i18n="form_submit">Invia Richiesta Preventivo</button>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+
+        <!-- Colonna 1: Brand & Social -->
+        <div class="footer-col footer-col-brand">
+          <a href="./" class="footer-logo">
+            <img src="content/logo-stracked.png" alt="Hotel La Rocca San Marino">
+          </a>
+          <p class="footer-about" data-i18n="footer_about">
+            Un'autentica dimora di fascino ed eleganza incastonata tra le mura medievali del Monte Titano, patrimonio
+            mondiale UNESCO. Panorami mozzafiato e calda accoglienza.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/hotellaroccasm/" target="_blank" rel="noopener noreferrer"
+              class="social-icon" aria-label="Instagram Hotel La Rocca">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61563815469908&ref=NONE_xav_ig_profile_page_web#"
+              target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook Hotel La Rocca">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Colonna 2: Navigazione -->
+        <div class="footer-col">
+          <h4 data-i18n="footer_col_explore">Navigazione</h4>
+          <ul>
+            <li><a href="./" data-i18n="nav_home">Home</a></li>
+            <li><a href="camere" data-i18n="nav_rooms">Le Camere</a></li>
+            <li><a href="servizi" data-i18n="nav_services">Servizi</a></li>
+            <li><a href="bar">Il nostro bar</a></li>
+            <li><a href="attivita">Attività</a></li>
+            <li><a href="dove-siamo" data-i18n="nav_location">Dove Siamo &amp; Info ZTL</a></li>
+
+          </ul>
+        </div>
+
+        <!-- Colonna 3: Contatti Diretti -->
+        <div class="footer-col">
+          <h4 data-i18n="footer_col_contacts">Contatti Diretti</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i data-lucide="map-pin"></i>
+              <span>Via Salita alla Rocca n°33/35<br>47890 San Marino (R.S.M.)</span>
+            </li>
+            <li>
+              <i data-lucide="phone"></i>
+              <a href="tel:+3780549991166">+378 0549 991166</a>
+            </li>
+            <li>
+              <i data-lucide="mail"></i>
+              <a href="mailto:hotellarocca@omniway.sm">hotellarocca@omniway.sm</a>
+            </li>
+            <li>
+              <i data-lucide="clock"></i>
+              <span data-i18n="footer_checkin_info">Check-in: Dalle 14:00 alle 19:00</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Colonna 4: Recensioni e Certificazioni -->
+        <div class="footer-col footer-col-reviews">
+          <h4 data-i18n="footer_col_reviews">Ospiti &amp; Recensioni</h4>
+          <div class="footer-rating-badge">
+            <div class="stars" aria-label="4.5 / 5">
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-half" width="18" height="18" viewBox="0 0 24 24">
+                <defs>
+                  <linearGradient id="starHalfGrad">
+                    <stop offset="50%" stop-color="#C5A059"/>
+                    <stop offset="50%" stop-color="rgba(197, 160, 89, 0.2)"/>
+                  </linearGradient>
+                </defs>
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="url(#starHalfGrad)" stroke="#C5A059" stroke-width="1"/>
+              </svg>
+            </div>
+            <p><strong>4.5 / 5</strong> <span data-i18n="footer_rating_label">sulla base di recensioni
+                certificate</span></p>
+          </div>
+          <div class="footer-review-actions">
+            <a href="https://www.tripadvisor.it/UserReviewEdit-g187809-d2019489-Hotel_La_Rocca-City_of_San_Marino.html"
+              target="_blank" rel="noopener noreferrer" class="btn-review-link tripadvisor-btn">
+              <img src="content/tripadvisor-logo.svg" alt="TripAdvisor" class="review-btn-icon" width="18" height="18"
+                style="object-fit: contain;">
+              <span data-i18n="footer_btn_tripadvisor">Recensiscici su TripAdvisor</span>
+            </a>
+            <a href="https://www.google.com/search?sca_esv=f04dc0b0de07faa0&sxsrf=APpeQntQlY_uVYCWjJ60WfoZM-cglINZ3g:1790684323099&q=recensioni+di+hotel+la+rocca+citt%C3%A0+di+san+marino&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r4-cA-MTawr_HrlB-OgOOdH_LDj5byOYIH9-I0oYomaXAq7rRqMOl41kfOJmU2WZCGxANkeSet3gq631bPCpohxmVrZz2aNMTY3eqfRkU8fHQ-6h4MEERZse4UgRI90kF5f3Cg4Dzb7gVP9_C1gUnMFJfoRGtfjQOnQOBfmpjQTP7wgDr&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_wQgZmVwk0Bz_HT9RrlTuyy67WjbNgP8U31hvX_KdvWPwJXTLPghoysRWI5ybCX5PVPyqcKCnkQvE2oejCBaHkTqkBIrwgdTRRsxfkCuraRz5wS_EqXDUNoU9orpc8kbXs5KUes%3D&sa=X&ved=2ahUKEwiKru734pOXAxXj3AIHHVuRAUQQxKsJKAN6BAgmEAE&ictx=1&biw=1710&bih=927&dpr=2#sv=CAESzQEKuQEStgEKd0FKaVQ0dEpMRm52SnEwMWJrblB1N3BnNkJoQkljQkZuZHNsUm45b1I5S1lxMXZnZjdNYnM3b2ZGbHpCYTVDTmxZX2ZwdWFxUDRtOHpKajRiYl9UaVlkMC1IbVhDQ29FZWNySV9FV1ljX2FkbUxXVEJiMnFlcUk4Ehd4S3k3YXF1a0diU25pLWdQaS1LQmdRVRoiQURzcjlmU0NnNEJONFZTb05NdmRqX2piVHNlelExU1NMQRIEODA1MRoBMyoAMAA4AUAAGAAg2ZTMkw9KAhAB"
+              target="_blank" rel="noopener noreferrer" class="btn-review-link google-btn">
+              <svg class="review-btn-icon" width="16" height="16" viewBox="0 0 48 48">
+                <path fill="#EA4335"
+                  d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                <path fill="#4285F4"
+                  d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                <path fill="#FBBC05"
+                  d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                <path fill="#34A853"
+                  d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+              </svg>
+              <span data-i18n="footer_btn_google">Recensiscici su Google</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra Inferiore Footer -->
+      <div class="footer-bottom">
+        <p>© 2026 Hotel La Rocca – LA ROCCA SRL | Via Salita alla Rocca n° 33/35, 47890 San Marino (R.S.M.) | C.O.E. SM 30254 | Tel. +378 0549 991166 | Email: hotellarocca@omniway.sm – Tutti i diritti riservati.</p>
+        <div class="legal-links">
+          <a href="privacy">Privacy Policy</a>
+          <span>•</span>
+          <a href="termini">Termini e Condizioni</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Dynamic guest limit based on room type
+      const cameraInput = document.getElementById('camera_selezionata');
+      const adultiSelect = document.getElementById('ospiti_adulti');
+
+      if (cameraInput && adultiSelect) {
+        // Use MutationObserver to detect value changes on readonly input
+        const observer = new MutationObserver(function () { updateGuestLimit(); });
+        observer.observe(cameraInput, { attributes: true, attributeFilter: ['value'] });
+
+        // Also listen for direct value setting
+        const origSetter = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set;
+        Object.defineProperty(cameraInput, 'value', {
+          set: function (val) {
+            origSetter.call(this, val);
+            updateGuestLimit();
+          },
+          get: function () {
+            return Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').get.call(this);
+          }
+        });
+      }
+
+      function updateGuestLimit() {
+        if (!cameraInput || !adultiSelect) return;
+        const val = cameraInput.value.toLowerCase();
+        let maxGuests = 4;
+
+        if (val.includes('anima') || val.includes('quiete')) {
+          maxGuests = 1;
+        } else if (['desiderio', 'sogno', 'radici', 'rinascita', 'origini'].some(v => val.includes(v))) {
+          maxGuests = 2;
+        } else if (['legame', 'speranza', 'armonia'].some(v => val.includes(v))) {
+          maxGuests = 3;
+        } else if (val.includes('incanto')) {
+          maxGuests = 4;
+        }
+
+        Array.from(adultiSelect.options).forEach(opt => {
+          const v = parseInt(opt.value);
+          if (!isNaN(v) && v > maxGuests) {
+            opt.style.display = 'none';
+            opt.disabled = true;
+          } else {
+            opt.style.display = '';
+            opt.disabled = false;
+          }
+        });
+
+        // Reset selection if current exceeds max
+        if (parseInt(adultiSelect.value) > maxGuests) {
+          adultiSelect.value = '1';
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

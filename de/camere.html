@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zimmer – Hotel La Rocca | Historische Altstadt San Marino</title>
+  <meta name="description" content="Entdecken Sie die 11 einzigartigen Zimmer des Hotel La Rocca in San Marino: Anima, Armonia, Desiderio, Incanto, Legame, Origini, Quiete, Radici, Rinascita, Sogno und Speranza.">
+  <link rel="canonical" href="https://www.hotellaroccasm.com/de/camere">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../content/favicon.png">
+  <link rel="apple-touch-icon" href="../content/favicon.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+  <!-- ==================== NAVBAR / HEADER ==================== -->
+  <header class="navbar header-grand" id="navbar">
+    <div class="header-inner">
+      <!-- A SINISTRA: Blocco Navigazione (#232920) -->
+      <div class="nav-block-left">
+        <button type="button" class="nav-menu-btn" id="navMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navOverlay">
+          <span class="hamburger-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="nav-menu-label" data-i18n="nav_menu">MENÜ</span>
+        </button>
+        <a href="#" class="nav-block-action btn-richiedi" data-camera="Noch festzulegen" data-i18n="nav_book_short">BUCHEN</a>
+      </div>
+
+      <!-- A DESTRA: Social Ufficiali e Lingua -->
+      <div class="nav-block-right">
+        <div class="nav-socials">
+          <a href="https://www.instagram.com/hotellaroccasm/" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="Instagram Hotel La Rocca">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61563815469908&ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="Facebook Hotel La Rocca">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+
+        <!-- Selettore Lingua a Tendina IT | EN | DE -->
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button type="button" class="lang-dropdown-trigger" id="langDropdownBtn" aria-expanded="false" aria-haspopup="true" aria-label="Sprache wählen">
+            <span class="lang-flag" id="activeLangFlag">🇩🇪</span>
+            <span class="lang-code" id="activeLangCode">DE</span>
+            <svg class="lang-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="lang-dropdown-menu" id="langDropdownMenu" role="menu">
+            <button type="button" class="lang-option" data-lang="it" role="menuitem">
+              <span class="flag">🇮🇹</span>
+              <span class="name">Italiano</span>
+              <span class="code">IT</span>
+            </button>
+            <button type="button" class="lang-option" data-lang="en" role="menuitem">
+              <span class="flag">🇬🇧</span>
+              <span class="name">English</span>
+              <span class="code">EN</span>
+            </button>
+            <button type="button" class="lang-option active" data-lang="de" role="menuitem">
+              <span class="flag">🇩🇪</span>
+              <span class="name">Deutsch</span>
+              <span class="code">DE</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== OVERLAY MENU DRAWER ==================== -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <div class="nav-overlay-backdrop" id="navOverlayBackdrop"></div>
+    <div class="nav-overlay-panel">
+      <div class="nav-overlay-header">
+        <button type="button" class="nav-overlay-close" id="navOverlayClose" aria-label="Menü schließen">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+          <span data-i18n="nav_close">SCHLIESSEN</span>
+        </button>
+        <div class="nav-overlay-brand">
+          <a href="./" title="Hotel La Rocca San Marino">
+            <img src="../content/logo.png" alt="Hotel La Rocca San Marino">
+          </a>
+        </div>
+      </div>
+      <div class="nav-overlay-content">
+        <div class="nav-overlay-col nav-overlay-nav">
+          <ul class="nav-overlay-links">
+            <li><a href="./" data-i18n="nav_home">STARTSEITE</a></li>
+            <li><a href="camere" class="active" data-i18n="nav_rooms">ZIMMER</a></li>
+            <li><a href="servizi" data-i18n="nav_services">LEISTUNGEN</a></li>
+            <li><a href="bar" data-i18n="nav_bar">UNSERE BAR</a></li>
+            <li><a href="attivita" data-i18n="nav_activities">AKTIVITÄTEN</a></li>
+            <li><a href="dove-siamo" data-i18n="nav_location">LAGE &amp; ANFAHRT</a></li>
+          </ul>
+          <div class="nav-overlay-actions">
+            <a href="#" class="btn btn-primary btn-richiedi" data-camera="Noch festzulegen" data-i18n="nav_book">JETZT BUCHEN</a>
+          </div>
+        </div>
+        <div class="nav-overlay-col nav-overlay-info">
+          <h4 class="nav-overlay-hotel-title">Hotel La Rocca</h4>
+          <p class="nav-overlay-address">
+            Salita alla Rocca, 35<br>
+            47890 Città di San Marino (RSM)<br>
+            Republik San Marino
+          </p>
+          <div class="nav-overlay-contacts">
+            <a href="tel:+3780549991166" class="nav-overlay-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+378 0549 991166</span>
+            </a>
+            <a href="mailto:hotellarocca@omniway.sm" class="nav-overlay-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>hotellarocca@omniway.sm</span>
+            </a>
+          </div>
+          <div class="nav-overlay-socials">
+            <a href="https://www.instagram.com/hotellaroccasm/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Hotel La Rocca">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61563815469908&ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener noreferrer" aria-label="Facebook Hotel La Rocca">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="../content/foto/INCANTO (3).jpg" alt="Camere Hotel la Rocca">
+    </div>
+    <div class="page-hero-content">
+      <div class="page-hero-brand-logo">
+        <a href="./" title="Hotel La Rocca San Marino">
+          <img src="../content/logo.png" alt="Hotel La Rocca San Marino">
+        </a>
+      </div>
+<p class="overline">Unsere Zimmer</p>
+      <h1>Elf Zimmer, Elf Geschichten</h1>
+      <p>Jedes Zimmer ist ein einzigartiges Erlebnis. Edle Einrichtung, moderner Komfort und der zeitlose Charme von San Marino.
+      </p>
+    </div>
+  </section>
+
+  <!-- ROOM SECTIONS -->
+  <main class="room-detail">
+    <div class="container">
+
+      <!-- ===== ANIMA ===== -->
+      <section class="room-section reveal" id="anima">
+        <div class="room-header">
+          <div>
+            <p class="overline" style="text-align:left;">Einzelzimmer</p>
+            <h2>Anima <span class="room-type-tag">Einzelzimmer</span></h2>
+          </div>
+          <button class="btn btn-primary btn-richiedi" data-camera="Anima">Angebot anfordern</button>
+        </div>
+        <p class="room-desc">Gemütliches Einzelzimmer mit Blick auf die historische Altstadt, eigenem Bad, Klimaanlage/Heizung, WLAN, Plasma-TV und All-Inclusive-Minibar. Ideal für Alleinreisende, die San Marino mit höchstem Komfort entdecken möchten.</p>
+        <div class="room-amenities">
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="castle"></i></span> Blick auf die Altstadt</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="bath"></i></span> Eigenes Bad</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wind"></i></span> Klimaanlage</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wifi"></i></span> WLAN</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="tv"></i></span> Plasma-TV</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wine"></i></span> All-Inclusive-Minibar</span>
+        </div>
+        <div class="room-carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-slides">
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/ANIMA.png" alt="Anima – Panoramica" loading="lazy"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/ANIMA (2).png" alt="Anima – Dettaglio 1" loading="lazy"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/ANIMA (3).png" alt="Anima – Dettaglio 2" loading="lazy"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/ANIMA (5).png" alt="Anima – Dettaglio 3" loading="lazy"></div>
+            </div>
+            <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button type="button" class="carousel-arrow next" aria-label="Nächstes Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">4</span></div>
+          </div>
+          <div class="carousel-thumbs">
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/ANIMA.png" alt="Anima – Panoramica"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/ANIMA (2).png" alt="Anima – Dettaglio 1"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/ANIMA (3).png" alt="Anima – Dettaglio 2"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/ANIMA (5).png" alt="Anima – Dettaglio 3"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ARMONIA ===== -->
+      <section class="room-section reveal" id="armonia">
+        <div class="room-header">
+          <div>
+            <p class="overline" style="text-align:left;">Dreibettzimmer</p>
+            <h2>Armonia <span class="room-type-tag">Dreibettzimmer</span></h2>
+          </div>
+          <button class="btn btn-primary btn-richiedi" data-camera="Armonia">Angebot anfordern</button>
+        </div>
+        <p class="room-desc">1 Doppelbett + 1 Einzelbett. Ideal für Familien oder kleine Gruppen, Talblick, eigenes Bad, Klimaanlage, All-Inclusive-Minibar, 40" Smart-TV und WLAN.</p>
+        <div class="room-amenities">
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="bed-double"></i></span> 1 Doppel- + 1 Einzelbett</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="mountain"></i></span> Talblick</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="users"></i></span> Familien oder kleine Gruppen</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="bath"></i></span> Eigenes Bad</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wind"></i></span> Klimaanlage</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="tv"></i></span> Smart-TV 40"</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wine"></i></span> All-Inclusive-Minibar</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wifi"></i></span> WLAN</span>
+        </div>
+        <div class="room-carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-slides">
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/ARMONIA.jpg"
+                  alt="Armonia – Panoramica" loading="lazy"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/ARMONIA (7).jpg"
+                  alt="Armonia – Dettaglio 1" loading="lazy"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/ARMONIA (8).jpg"
+                  alt="Armonia – Dettaglio 2" loading="lazy"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/ARMONIA (9).jpg"
+                  alt="Armonia – Dettaglio 3" loading="lazy"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/ARMONIA (10).jpg"
+                  alt="Armonia – Dettaglio 4" loading="lazy"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/ARMONIA (11).jpg"
+                  alt="Armonia – Dettaglio 5" loading="lazy"></div>
+            </div>
+            <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="carousel-arrow next" aria-label="Nächstes Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">6</span>
+            </div>
+          </div>
+          <div class="carousel-thumbs">
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img
+                src="../content/foto/ARMONIA.jpg" alt="Armonia – Panoramica"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img
+                src="../content/foto/ARMONIA (7).jpg" alt="Armonia – Dettaglio 1"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img
+                src="../content/foto/ARMONIA (8).jpg" alt="Armonia – Dettaglio 2"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img
+                src="../content/foto/ARMONIA (9).jpg" alt="Armonia – Dettaglio 3"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img
+                src="../content/foto/ARMONIA (10).jpg" alt="Armonia – Dettaglio 4"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img
+                src="../content/foto/ARMONIA (11).jpg" alt="Armonia – Dettaglio 5"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== DESIDERIO ===== -->
+      <section class="room-section reveal" id="desiderio">
+        <div class="room-header">
+          <div>
+            <p class="overline" style="text-align:left;">Superior-Doppelzimmer</p>
+            <h2>Desiderio <span class="room-type-tag">Superior-Doppelzimmer</span></h2>
+          </div>
+          <button class="btn btn-primary btn-richiedi" data-camera="Desiderio">Angebot anfordern</button>
+        </div>
+        <p class="room-desc">Frisch renoviert. Eigenes Bad, Haartrockner, Klimaanlage, All-Inclusive-Minibar, 40" Smart-TV, WLAN. Besonderheit: Sternenhimmel-Decke über dem Bett und privater Balkon mit atemberaubendem Blick auf das Tal.</p>
+        <div class="room-amenities">
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="sparkles"></i></span> Frisch renoviert</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="moon"></i></span> Sternenhimmel über dem Bett</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="mountain"></i></span> Balkon mit Talblick</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="bath"></i></span> Eigenes Bad mit Haartrockner</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wind"></i></span> Klimaanlage</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="tv"></i></span> Smart-TV 40"</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wine"></i></span> All-Inclusive-Minibar</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wifi"></i></span> WLAN</span>
+        </div>
+        <div class="room-carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-slides">
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/DESIDERIO.jpg"
+                  alt="Desiderio – Panoramica" loading="lazy"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/DESIDERIO (2).jpg"
+                  alt="Desiderio – Dettaglio 1" loading="lazy"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/DESIDERIO (3).jpg"
+                  alt="Desiderio – Dettaglio 2" loading="lazy"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/DESIDERIO (4).jpg"
+                  alt="Desiderio – Dettaglio 3" loading="lazy"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/DESIDERIO (5).jpg"
+                  alt="Desiderio – Dettaglio 4" loading="lazy"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/DESIDERIO (6).jpg"
+                  alt="Desiderio – Dettaglio 5" loading="lazy"></div>
+              <div class="carousel-slide" data-index="6"><img src="../content/foto/DESIDERIO (7).jpg"
+                  alt="Desiderio – Dettaglio 6" loading="lazy"></div>
+              <div class="carousel-slide" data-index="7"><img src="../content/foto/DESIDERIO (8).jpg"
+                  alt="Desiderio – Dettaglio 7" loading="lazy"></div>
+              <div class="carousel-slide" data-index="8"><img src="../content/foto/DESIDERIO (9).jpg"
+                  alt="Desiderio – Dettaglio 8" loading="lazy"></div>
+              <div class="carousel-slide" data-index="9"><img src="../content/foto/DESIDERIO (10).jpg"
+                  alt="Desiderio – Dettaglio 9" loading="lazy"></div>
+              <div class="carousel-slide" data-index="10"><img src="../content/foto/DESIDERIO (11).jpg"
+                  alt="Desiderio – Dettaglio 10" loading="lazy"></div>
+              <div class="carousel-slide" data-index="11"><img src="../content/foto/DESIDERIO (12).jpg"
+                  alt="Desiderio – Dettaglio 11" loading="lazy"></div>
+              <div class="carousel-slide" data-index="12"><img src="../content/foto/DESIDERIO (13).jpg"
+                  alt="Desiderio – Dettaglio 12" loading="lazy"></div>
+            </div>
+            <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="carousel-arrow next" aria-label="Nächstes Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">13</span>
+            </div>
+          </div>
+          <div class="carousel-thumbs">
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img
+                src="../content/foto/DESIDERIO.jpg" alt="Desiderio – Panoramica"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img
+                src="../content/foto/DESIDERIO (2).jpg" alt="Desiderio – Dettaglio 1"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img
+                src="../content/foto/DESIDERIO (3).jpg" alt="Desiderio – Dettaglio 2"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img
+                src="../content/foto/DESIDERIO (4).jpg" alt="Desiderio – Dettaglio 3"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img
+                src="../content/foto/DESIDERIO (5).jpg" alt="Desiderio – Dettaglio 4"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img
+                src="../content/foto/DESIDERIO (6).jpg" alt="Desiderio – Dettaglio 5"></button>
+            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img
+                src="../content/foto/DESIDERIO (7).jpg" alt="Desiderio – Dettaglio 6"></button>
+            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img
+                src="../content/foto/DESIDERIO (8).jpg" alt="Desiderio – Dettaglio 7"></button>
+            <button type="button" class="carousel-thumb" data-index="8" aria-label="Foto 9"><img
+                src="../content/foto/DESIDERIO (9).jpg" alt="Desiderio – Dettaglio 8"></button>
+            <button type="button" class="carousel-thumb" data-index="9" aria-label="Foto 10"><img
+                src="../content/foto/DESIDERIO (10).jpg" alt="Desiderio – Dettaglio 9"></button>
+            <button type="button" class="carousel-thumb" data-index="10" aria-label="Foto 11"><img
+                src="../content/foto/DESIDERIO (11).jpg" alt="Desiderio – Dettaglio 10"></button>
+            <button type="button" class="carousel-thumb" data-index="11" aria-label="Foto 12"><img
+                src="../content/foto/DESIDERIO (12).jpg" alt="Desiderio – Dettaglio 11"></button>
+            <button type="button" class="carousel-thumb" data-index="12" aria-label="Foto 13"><img
+                src="../content/foto/DESIDERIO (13).jpg" alt="Desiderio – Dettaglio 12"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== INCANTO ===== -->
+      <section class="room-section reveal" id="incanto">
+        <div class="room-header">
+          <div>
+            <p class="overline" style="text-align:left;">Vierbettzimmer</p>
+            <h2>Incanto <span class="room-type-tag">Vierbettzimmer</span></h2>
+          </div>
+          <button class="btn btn-primary btn-richiedi" data-camera="Incanto">Angebot anfordern</button>
+        </div>
+        <p class="room-desc">Geräumige Unterkunft für Familien mit bis zu 4 Personen, ausgestattet mit allem modernen Komfort, eigenem Bad, Klimaanlage, All-Inclusive-Minibar, 40" Smart-TV und WLAN.</p>
+        <div class="room-amenities">
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="users"></i></span> Bis zu 4 Personen</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="sparkles"></i></span> Moderner Komfort</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="bath"></i></span> Eigenes Bad</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wind"></i></span> Klimaanlage</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="tv"></i></span> Smart-TV 40"</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wine"></i></span> All-Inclusive-Minibar</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wifi"></i></span> WLAN</span>
+        </div>
+        <div class="room-carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-slides">
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/INCANTO.jpg"
+                  alt="Incanto – Panoramica" loading="lazy"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/INCANTO (2).jpg"
+                  alt="Incanto – Dettaglio 1" loading="lazy"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/INCANTO (3).jpg"
+                  alt="Incanto – Dettaglio 2" loading="lazy"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/INCANTO (4).jpg"
+                  alt="Incanto – Dettaglio 3" loading="lazy"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/INCANTO (5).jpg"
+                  alt="Incanto – Dettaglio 4" loading="lazy"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/INCANTO (6).jpg"
+                  alt="Incanto – Dettaglio 5" loading="lazy"></div>
+              <div class="carousel-slide" data-index="6"><img src="../content/foto/INCANTO (7).jpg"
+                  alt="Incanto – Dettaglio 6" loading="lazy"></div>
+              <div class="carousel-slide" data-index="7"><img src="../content/foto/INCANTO (8).jpg"
+                  alt="Incanto – Dettaglio 7" loading="lazy"></div>
+              <div class="carousel-slide" data-index="8"><img src="../content/foto/INCANTO (9).jpg"
+                  alt="Incanto – Dettaglio 8" loading="lazy"></div>
+              <div class="carousel-slide" data-index="9"><img src="../content/foto/INCANTO (10).jpg"
+                  alt="Incanto – Dettaglio 9" loading="lazy"></div>
+              <div class="carousel-slide" data-index="10"><img src="../content/foto/INCANTO (11).jpg"
+                  alt="Incanto – Dettaglio 10" loading="lazy"></div>
+              <div class="carousel-slide" data-index="11"><img src="../content/foto/INCANTO (12).jpg"
+                  alt="Incanto – Dettaglio 11" loading="lazy"></div>
+              <div class="carousel-slide" data-index="12"><img src="../content/foto/INCANTO (13).jpg"
+                  alt="Incanto – Dettaglio 12" loading="lazy"></div>
+              <div class="carousel-slide" data-index="13"><img src="../content/foto/INCANTO (14).jpg"
+                  alt="Incanto – Dettaglio 13" loading="lazy"></div>
+              <div class="carousel-slide" data-index="14"><img src="../content/foto/INCANTO (15).jpg"
+                  alt="Incanto – Dettaglio 14" loading="lazy"></div>
+              <div class="carousel-slide" data-index="15"><img src="../content/foto/INCANTO (16).jpg"
+                  alt="Incanto – Dettaglio 15" loading="lazy"></div>
+            </div>
+            <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="carousel-arrow next" aria-label="Nächstes Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">16</span>
+            </div>
+          </div>
+          <div class="carousel-thumbs">
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img
+                src="../content/foto/INCANTO.jpg" alt="Incanto – Panoramica"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img
+                src="../content/foto/INCANTO (2).jpg" alt="Incanto – Dettaglio 1"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img
+                src="../content/foto/INCANTO (3).jpg" alt="Incanto – Dettaglio 2"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img
+                src="../content/foto/INCANTO (4).jpg" alt="Incanto – Dettaglio 3"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img
+                src="../content/foto/INCANTO (5).jpg" alt="Incanto – Dettaglio 4"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img
+                src="../content/foto/INCANTO (6).jpg" alt="Incanto – Dettaglio 5"></button>
+            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img
+                src="../content/foto/INCANTO (7).jpg" alt="Incanto – Dettaglio 6"></button>
+            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img
+                src="../content/foto/INCANTO (8).jpg" alt="Incanto – Dettaglio 7"></button>
+            <button type="button" class="carousel-thumb" data-index="8" aria-label="Foto 9"><img
+                src="../content/foto/INCANTO (9).jpg" alt="Incanto – Dettaglio 8"></button>
+            <button type="button" class="carousel-thumb" data-index="9" aria-label="Foto 10"><img
+                src="../content/foto/INCANTO (10).jpg" alt="Incanto – Dettaglio 9"></button>
+            <button type="button" class="carousel-thumb" data-index="10" aria-label="Foto 11"><img
+                src="../content/foto/INCANTO (11).jpg" alt="Incanto – Dettaglio 10"></button>
+            <button type="button" class="carousel-thumb" data-index="11" aria-label="Foto 12"><img
+                src="../content/foto/INCANTO (12).jpg" alt="Incanto – Dettaglio 11"></button>
+            <button type="button" class="carousel-thumb" data-index="12" aria-label="Foto 13"><img
+                src="../content/foto/INCANTO (13).jpg" alt="Incanto – Dettaglio 12"></button>
+            <button type="button" class="carousel-thumb" data-index="13" aria-label="Foto 14"><img
+                src="../content/foto/INCANTO (14).jpg" alt="Incanto – Dettaglio 13"></button>
+            <button type="button" class="carousel-thumb" data-index="14" aria-label="Foto 15"><img
+                src="../content/foto/INCANTO (15).jpg" alt="Incanto – Dettaglio 14"></button>
+            <button type="button" class="carousel-thumb" data-index="15" aria-label="Foto 16"><img
+                src="../content/foto/INCANTO (16).jpg" alt="Incanto – Dettaglio 15"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== LEGAME ===== -->
+      <section class="room-section reveal" id="legame">
+        <div class="room-header">
+          <div>
+            <p class="overline" style="text-align:left;">Dreibettzimmer</p>
+            <h2>Legame <span class="room-type-tag">Dreibettzimmer</span></h2>
+          </div>
+          <button class="btn btn-primary btn-richiedi" data-camera="Legame">Angebot anfordern</button>
+        </div>
+        <p class="room-desc">1 Doppelbett + 1 Einzelbett. Große Panoramafenster mit Blick ins Tal, frisch renoviert, eigenes Bad, Klimaanlage, All-Inclusive-Minibar, 40" Smart-TV und WLAN.</p>
+        <div class="room-amenities">
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="bed-double"></i></span> 1 Doppel- + 1 Einzelbett</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="sparkles"></i></span> Frisch renoviert</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="mountain"></i></span> Große Panoramafenster mit Talblick</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="bath"></i></span> Eigenes Bad</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wind"></i></span> Klimaanlage</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="tv"></i></span> Smart-TV 40"</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wine"></i></span> All-Inclusive-Minibar</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wifi"></i></span> WLAN</span>
+        </div>
+        <div class="room-carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-slides">
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/LEGAME.jpg"
+                  alt="Legame – Panoramica" loading="lazy"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/LEGAME (2).jpg"
+                  alt="Legame – Dettaglio 1" loading="lazy"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/LEGAME (3).jpg"
+                  alt="Legame – Dettaglio 2" loading="lazy"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/LEGAME (4).jpg"
+                  alt="Legame – Dettaglio 3" loading="lazy"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/LEGAME (5).jpg"
+                  alt="Legame – Dettaglio 4" loading="lazy"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/LEGAME (6).jpg"
+                  alt="Legame – Dettaglio 5" loading="lazy"></div>
+              <div class="carousel-slide" data-index="6"><img src="../content/foto/LEGAME (7).jpg"
+                  alt="Legame – Dettaglio 6" loading="lazy"></div>
+              <div class="carousel-slide" data-index="7"><img src="../content/foto/LEGAME (8).jpg"
+                  alt="Legame – Dettaglio 7" loading="lazy"></div>
+              <div class="carousel-slide" data-index="8"><img src="../content/foto/LEGAME (9).jpg"
+                  alt="Legame – Dettaglio 8" loading="lazy"></div>
+              <div class="carousel-slide" data-index="9"><img src="../content/foto/LEGAME (10).jpg"
+                  alt="Legame – Dettaglio 9" loading="lazy"></div>
+            </div>
+            <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="carousel-arrow next" aria-label="Nächstes Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">10</span>
+            </div>
+          </div>
+          <div class="carousel-thumbs">
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img
+                src="../content/foto/LEGAME.jpg" alt="Legame – Panoramica"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img
+                src="../content/foto/LEGAME (2).jpg" alt="Legame – Dettaglio 1"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img
+                src="../content/foto/LEGAME (3).jpg" alt="Legame – Dettaglio 2"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img
+                src="../content/foto/LEGAME (4).jpg" alt="Legame – Dettaglio 3"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img
+                src="../content/foto/LEGAME (5).jpg" alt="Legame – Dettaglio 4"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img
+                src="../content/foto/LEGAME (6).jpg" alt="Legame – Dettaglio 5"></button>
+            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img
+                src="../content/foto/LEGAME (7).jpg" alt="Legame – Dettaglio 6"></button>
+            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img
+                src="../content/foto/LEGAME (8).jpg" alt="Legame – Dettaglio 7"></button>
+            <button type="button" class="carousel-thumb" data-index="8" aria-label="Foto 9"><img
+                src="../content/foto/LEGAME (9).jpg" alt="Legame – Dettaglio 8"></button>
+            <button type="button" class="carousel-thumb" data-index="9" aria-label="Foto 10"><img
+                src="../content/foto/LEGAME (10).jpg" alt="Legame – Dettaglio 9"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ORIGINI ===== -->
+      <section class="room-section reveal" id="origini">
+        <div class="room-header">
+          <div>
+            <p class="overline" style="text-align:left;">Doppelzimmer</p>
+            <h2>Origini <span class="room-type-tag">Doppelzimmer</span></h2>
+          </div>
+          <button class="btn btn-primary btn-richiedi" data-camera="Origini">Angebot anfordern</button>
+        </div>
+        <p class="room-desc">Frisch renoviert. Im Herzen des historischen Dorfes gelegen, eigenes Bad, Klimaanlage, All-Inclusive-Minibar, 40" Smart-TV und WLAN.</p>
+        <div class="room-amenities">
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="sparkles"></i></span> Frisch renoviert</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="map-pin"></i></span> Im Herzen der Altstadt</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="bath"></i></span> Eigenes Bad</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wind"></i></span> Klimaanlage</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="tv"></i></span> Smart-TV 40"</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wine"></i></span> All-Inclusive-Minibar</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wifi"></i></span> WLAN</span>
+        </div>
+        <div class="room-carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-slides">
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/ORIGINI.jpg"
+                  alt="Origini – Panoramica" loading="lazy"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/ORIGINI (2).jpg"
+                  alt="Origini – Dettaglio 1" loading="lazy"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/ORIGINI (3).jpg"
+                  alt="Origini – Dettaglio 2" loading="lazy"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/ORIGINI (4).jpg"
+                  alt="Origini – Dettaglio 3" loading="lazy"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/ORIGINI (5).jpg"
+                  alt="Origini – Dettaglio 4" loading="lazy"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/ORIGINI (6).jpg"
+                  alt="Origini – Dettaglio 5" loading="lazy"></div>
+            </div>
+            <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="carousel-arrow next" aria-label="Nächstes Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">6</span>
+            </div>
+          </div>
+          <div class="carousel-thumbs">
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img
+                src="../content/foto/ORIGINI.jpg" alt="Origini – Panoramica"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img
+                src="../content/foto/ORIGINI (2).jpg" alt="Origini – Dettaglio 1"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img
+                src="../content/foto/ORIGINI (3).jpg" alt="Origini – Dettaglio 2"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img
+                src="../content/foto/ORIGINI (4).jpg" alt="Origini – Dettaglio 3"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img
+                src="../content/foto/ORIGINI (5).jpg" alt="Origini – Dettaglio 4"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img
+                src="../content/foto/ORIGINI (6).jpg" alt="Origini – Dettaglio 5"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== QUIETE ===== -->
+      <section class="room-section reveal" id="quiete">
+        <div class="room-header">
+          <div>
+            <p class="overline" style="text-align:left;">Einzelzimmer</p>
+            <h2>Quiete <span class="room-type-tag">Einzelzimmer</span></h2>
+          </div>
+          <button class="btn btn-primary btn-richiedi" data-camera="Quiete">Angebot anfordern</button>
+        </div>
+        <p class="room-desc">Komfortables Einzelzimmer für Alleinreisende, Blick auf die historische Altstadt, eigenes Bad, WLAN, TV und All-Inclusive-Minibar.</p>
+        <div class="room-amenities">
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="user"></i></span> Für Alleinreisende</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="castle"></i></span> Blick auf die Altstadt</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="bath"></i></span> Eigenes Bad</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="tv"></i></span> TV</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wine"></i></span> All-Inclusive-Minibar</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wifi"></i></span> WLAN</span>
+        </div>
+        <div class="room-carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-slides">
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/QUIETE.jpg"
+                  alt="Quiete – Panoramica" loading="lazy"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/QUIETE (2).jpg"
+                  alt="Quiete – Dettaglio 1" loading="lazy"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/QUIETE (3).jpg"
+                  alt="Quiete – Dettaglio 2" loading="lazy"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/QUIETE (4).jpg"
+                  alt="Quiete – Dettaglio 3" loading="lazy"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/QUIETE (5).jpg"
+                  alt="Quiete – Dettaglio 4" loading="lazy"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/QUIETE (6).jpg"
+                  alt="Quiete – Dettaglio 5" loading="lazy"></div>
+              <div class="carousel-slide" data-index="6"><img src="../content/foto/QUIETE (7).jpg"
+                  alt="Quiete – Dettaglio 6" loading="lazy"></div>
+              <div class="carousel-slide" data-index="7"><img src="../content/foto/QUIETE (8).jpg"
+                  alt="Quiete – Dettaglio 7" loading="lazy"></div>
+            </div>
+            <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="carousel-arrow next" aria-label="Nächstes Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">8</span>
+            </div>
+          </div>
+          <div class="carousel-thumbs">
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img
+                src="../content/foto/QUIETE.jpg" alt="Quiete – Panoramica"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img
+                src="../content/foto/QUIETE (2).jpg" alt="Quiete – Dettaglio 1"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img
+                src="../content/foto/QUIETE (3).jpg" alt="Quiete – Dettaglio 2"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img
+                src="../content/foto/QUIETE (4).jpg" alt="Quiete – Dettaglio 3"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img
+                src="../content/foto/QUIETE (5).jpg" alt="Quiete – Dettaglio 4"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img
+                src="../content/foto/QUIETE (6).jpg" alt="Quiete – Dettaglio 5"></button>
+            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img
+                src="../content/foto/QUIETE (7).jpg" alt="Quiete – Dettaglio 6"></button>
+            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img
+                src="../content/foto/QUIETE (8).jpg" alt="Quiete – Dettaglio 7"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== RADICI ===== -->
+      <section class="room-section reveal" id="radici">
+        <div class="room-header">
+          <div>
+            <p class="overline" style="text-align:left;">Doppelzimmer</p>
+            <h2>Radici <span class="room-type-tag">Doppelzimmer</span></h2>
+          </div>
+          <button class="btn btn-primary btn-richiedi" data-camera="Radici">Angebot anfordern</button>
+        </div>
+        <p class="room-desc">Frisch renoviert. Blick auf die Hauptgasse des historischen Zentrums, authentische Atmosphäre. Eigenes Bad, Klimaanlage, All-Inclusive-Minibar, 40" Smart-TV und WLAN.</p>
+        <div class="room-amenities">
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="sparkles"></i></span> Frisch renoviert</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="castle"></i></span> Blick auf historische Gasse</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="heart"></i></span> Authentische Atmosphäre</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="bath"></i></span> Eigenes Bad</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wind"></i></span> Klimaanlage</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="tv"></i></span> Smart-TV 40"</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wine"></i></span> All-Inclusive-Minibar</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wifi"></i></span> WLAN</span>
+        </div>
+        <div class="room-carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-slides">
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/RADICI.jpg"
+                  alt="Radici – Panoramica" loading="lazy"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/RADICI (2).jpg"
+                  alt="Radici – Dettaglio 1" loading="lazy"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/RADICI (3).jpg"
+                  alt="Radici – Dettaglio 2" loading="lazy"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/RADICI (4).jpg"
+                  alt="Radici – Dettaglio 3" loading="lazy"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/RADICI (5).jpg"
+                  alt="Radici – Dettaglio 4" loading="lazy"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/RADICI (6).jpg"
+                  alt="Radici – Dettaglio 5" loading="lazy"></div>
+              <div class="carousel-slide" data-index="6"><img src="../content/foto/RADICI (7).jpg"
+                  alt="Radici – Dettaglio 6" loading="lazy"></div>
+              <div class="carousel-slide" data-index="7"><img src="../content/foto/RADICI (8).jpg"
+                  alt="Radici – Dettaglio 7" loading="lazy"></div>
+              <div class="carousel-slide" data-index="8"><img src="../content/foto/RADICI (9).jpg"
+                  alt="Radici – Dettaglio 8" loading="lazy"></div>
+              <div class="carousel-slide" data-index="9"><img src="../content/foto/RADICI (10).jpg"
+                  alt="Radici – Dettaglio 9" loading="lazy"></div>
+              <div class="carousel-slide" data-index="10"><img src="../content/foto/RADICI (11).jpg"
+                  alt="Radici – Dettaglio 10" loading="lazy"></div>
+              <div class="carousel-slide" data-index="11"><img src="../content/foto/RADICI (12).jpg"
+                  alt="Radici – Dettaglio 11" loading="lazy"></div>
+            </div>
+            <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="carousel-arrow next" aria-label="Nächstes Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">12</span>
+            </div>
+          </div>
+          <div class="carousel-thumbs">
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img
+                src="../content/foto/RADICI.jpg" alt="Radici – Panoramica"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img
+                src="../content/foto/RADICI (2).jpg" alt="Radici – Dettaglio 1"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img
+                src="../content/foto/RADICI (3).jpg" alt="Radici – Dettaglio 2"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img
+                src="../content/foto/RADICI (4).jpg" alt="Radici – Dettaglio 3"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img
+                src="../content/foto/RADICI (5).jpg" alt="Radici – Dettaglio 4"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img
+                src="../content/foto/RADICI (6).jpg" alt="Radici – Dettaglio 5"></button>
+            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img
+                src="../content/foto/RADICI (7).jpg" alt="Radici – Dettaglio 6"></button>
+            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img
+                src="../content/foto/RADICI (8).jpg" alt="Radici – Dettaglio 7"></button>
+            <button type="button" class="carousel-thumb" data-index="8" aria-label="Foto 9"><img
+                src="../content/foto/RADICI (9).jpg" alt="Radici – Dettaglio 8"></button>
+            <button type="button" class="carousel-thumb" data-index="9" aria-label="Foto 10"><img
+                src="../content/foto/RADICI (10).jpg" alt="Radici – Dettaglio 9"></button>
+            <button type="button" class="carousel-thumb" data-index="10" aria-label="Foto 11"><img
+                src="../content/foto/RADICI (11).jpg" alt="Radici – Dettaglio 10"></button>
+            <button type="button" class="carousel-thumb" data-index="11" aria-label="Foto 12"><img
+                src="../content/foto/RADICI (12).jpg" alt="Radici – Dettaglio 11"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== RINASCITA ===== -->
+      <section class="room-section reveal" id="rinascita">
+        <div class="room-header">
+          <div>
+            <p class="overline" style="text-align:left;">Doppelzimmer</p>
+            <h2>Rinascita <span class="room-type-tag">Doppelzimmer</span></h2>
+          </div>
+          <button class="btn btn-primary btn-richiedi" data-camera="Rinascita">Angebot anfordern</button>
+        </div>
+        <p class="room-desc">Frisch renoviert. Blick auf die historische Altstadt, nahe Geschäften und Sehenswürdigkeiten. Eigenes Bad, Klimaanlage, All-Inclusive-Minibar, 40" Smart-TV und WLAN.</p>
+        <div class="room-amenities">
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="sparkles"></i></span> Frisch renoviert</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="castle"></i></span> Blick auf die Altstadt</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="map-pin"></i></span> Nahe an Sehenswürdigkeiten</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="bath"></i></span> Eigenes Bad</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wind"></i></span> Klimaanlage</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="tv"></i></span> Smart-TV 40"</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wine"></i></span> All-Inclusive-Minibar</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wifi"></i></span> WLAN</span>
+        </div>
+        <div class="room-carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-slides">
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/RINASCITA.jpg"
+                  alt="Rinascita – Panoramica" loading="lazy"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/RINASCITA (2).jpg"
+                  alt="Rinascita – Dettaglio 1" loading="lazy"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/RINASCITA (3).jpg"
+                  alt="Rinascita – Dettaglio 2" loading="lazy"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/RINASCITA (4).jpg"
+                  alt="Rinascita – Dettaglio 3" loading="lazy"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/RINASCITA (5).jpg"
+                  alt="Rinascita – Dettaglio 4" loading="lazy"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/RINASCITA (6).jpg"
+                  alt="Rinascita – Dettaglio 5" loading="lazy"></div>
+            </div>
+            <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="carousel-arrow next" aria-label="Nächstes Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">6</span>
+            </div>
+          </div>
+          <div class="carousel-thumbs">
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img
+                src="../content/foto/RINASCITA.jpg" alt="Rinascita – Panoramica"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img
+                src="../content/foto/RINASCITA (2).jpg" alt="Rinascita – Dettaglio 1"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img
+                src="../content/foto/RINASCITA (3).jpg" alt="Rinascita – Dettaglio 2"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img
+                src="../content/foto/RINASCITA (4).jpg" alt="Rinascita – Dettaglio 3"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img
+                src="../content/foto/RINASCITA (5).jpg" alt="Rinascita – Dettaglio 4"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img
+                src="../content/foto/RINASCITA (6).jpg" alt="Rinascita – Dettaglio 5"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SOGNO ===== -->
+      <section class="room-section reveal" id="sogno">
+        <div class="room-header">
+          <div>
+            <p class="overline" style="text-align:left;">Deluxe-Doppelzimmer</p>
+            <h2>Sogno <span class="room-type-tag">Deluxe-Doppelzimmer</span></h2>
+          </div>
+          <button class="btn btn-primary btn-richiedi" data-camera="Sogno">Angebot anfordern</button>
+        </div>
+        <p class="room-desc">Frisch renoviert. Eigenes Bad, Haartrockner, Klimaanlage, All-Inclusive-Minibar, 40" Smart-TV, WLAN. Besonderheit: Vom Mond inspiriertes Gestaltungselement und privater Panoramabalkon mit Talblick.</p>
+        <div class="room-amenities">
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="sparkles"></i></span> Frisch renoviert</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="moon"></i></span> Mond-Designelement</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="mountain"></i></span> Panoramabalkon mit Talblick</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="bath"></i></span> Eigenes Bad mit Haartrockner</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wind"></i></span> Klimaanlage</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="tv"></i></span> Smart-TV 40"</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wine"></i></span> All-Inclusive-Minibar</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wifi"></i></span> WLAN</span>
+        </div>
+        <div class="room-carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-slides">
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/SOGNO.jpg"
+                  alt="Sogno – Panoramica" loading="lazy"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/SOGNO (2).jpg" alt="Sogno – Dettaglio 1"
+                  loading="lazy"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/SOGNO (3).jpg" alt="Sogno – Dettaglio 2"
+                  loading="lazy"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/SOGNO (4).jpg" alt="Sogno – Dettaglio 3"
+                  loading="lazy"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/SOGNO (5).jpg" alt="Sogno – Dettaglio 4"
+                  loading="lazy"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/SOGNO (6).jpg" alt="Sogno – Dettaglio 5"
+                  loading="lazy"></div>
+              <div class="carousel-slide" data-index="6"><img src="../content/foto/SOGNO (7).jpg" alt="Sogno – Dettaglio 6"
+                  loading="lazy"></div>
+              <div class="carousel-slide" data-index="7"><img src="../content/foto/SOGNO (8).jpg" alt="Sogno – Dettaglio 7"
+                  loading="lazy"></div>
+            </div>
+            <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="carousel-arrow next" aria-label="Nächstes Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">8</span>
+            </div>
+          </div>
+          <div class="carousel-thumbs">
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img
+                src="../content/foto/SOGNO.jpg" alt="Sogno – Panoramica"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img
+                src="../content/foto/SOGNO (2).jpg" alt="Sogno – Dettaglio 1"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img
+                src="../content/foto/SOGNO (3).jpg" alt="Sogno – Dettaglio 2"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img
+                src="../content/foto/SOGNO (4).jpg" alt="Sogno – Dettaglio 3"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img
+                src="../content/foto/SOGNO (5).jpg" alt="Sogno – Dettaglio 4"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img
+                src="../content/foto/SOGNO (6).jpg" alt="Sogno – Dettaglio 5"></button>
+            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img
+                src="../content/foto/SOGNO (7).jpg" alt="Sogno – Dettaglio 6"></button>
+            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img
+                src="../content/foto/SOGNO (8).jpg" alt="Sogno – Dettaglio 7"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SPERANZA ===== -->
+      <section class="room-section reveal" id="speranza">
+        <div class="room-header">
+          <div>
+            <p class="overline" style="text-align:left;">Dreibettzimmer</p>
+            <h2>Speranza <span class="room-type-tag">Dreibettzimmer</span></h2>
+          </div>
+          <button class="btn btn-primary btn-richiedi" data-camera="Speranza">Angebot anfordern</button>
+        </div>
+        <p class="room-desc">1 Doppelbett + 1 Einzelbett. Herrlicher Panoramablick ins Tal, eigenes Bad, Klimaanlage, All-Inclusive-Minibar, 40" Smart-TV und WLAN.</p>
+        <div class="room-amenities">
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="bed-double"></i></span> 1 Doppel- + 1 Einzelbett</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="mountain"></i></span> Panoramablick ins Tal</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="bath"></i></span> Eigenes Bad</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wind"></i></span> Klimaanlage</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="tv"></i></span> Smart-TV 40"</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wine"></i></span> All-Inclusive-Minibar</span>
+          <span class="room-amenity-badge"><span class="badge-icon"><i data-lucide="wifi"></i></span> WLAN</span>
+        </div>
+        <div class="room-carousel">
+          <div class="carousel-viewport">
+            <div class="carousel-slides">
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/SPERANZA.jpg"
+                  alt="Speranza – Panoramica" loading="lazy"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/SPERANZA (2).jpg"
+                  alt="Speranza – Dettaglio 1" loading="lazy"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/SPERANZA (3).jpg"
+                  alt="Speranza – Dettaglio 2" loading="lazy"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/SPERANZA (4).jpg"
+                  alt="Speranza – Dettaglio 3" loading="lazy"></div>
+            </div>
+            <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="carousel-arrow next" aria-label="Nächstes Foto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+            <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">4</span>
+            </div>
+          </div>
+          <div class="carousel-thumbs">
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img
+                src="../content/foto/SPERANZA.jpg" alt="Speranza – Panoramica"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img
+                src="../content/foto/SPERANZA (2).jpg" alt="Speranza – Dettaglio 1"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img
+                src="../content/foto/SPERANZA (3).jpg" alt="Speranza – Dettaglio 2"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img
+                src="../content/foto/SPERANZA (4).jpg" alt="Speranza – Dettaglio 3"></button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close" aria-label="Lightbox schließen">&times;</button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Vorheriges">&#8249;</button>
+    <img id="lightbox-img" src="" alt="Zimmerfoto">
+    <button class="lightbox-nav lightbox-next" aria-label="Nächstes">&#8250;</button>
+  </div>
+
+  <!-- MODAL PREVENTIVO -->
+  <div class="modal-overlay" id="modal-preventivo">
+    <div class="modal">
+            <div class="modal-header">
+        <div class="modal-pre-title">
+          <img src="../content/logo.png" alt="Hotel La Rocca">
+          <span data-i18n="form_badge">Hotel La Rocca &bull; San Marino</span>
+        </div>
+        <h2>Richiedi <span class="text-gold">Preventivo</span></h2>
+        <p class="modal-subtitle" data-i18n="form_subtitle">Preventivo gratuito e senza impegno con la miglior tariffa garantita.</p>
+        <button class="modal-close" aria-label="Chiudi">&times;</button>
+      </div>
+      <form id="form-preventivo" action="../invia-richiesta.php" method="POST">
+        <input type="hidden" name="lang" value="de">
+        <div class="form-group">
+          <label for="camera_selezionata">Ausgewähltes Zimmer <span class="required">*</span></label>
+          <select id="camera_selezionata" name="camera_selezionata" required>
+            <option value="">Wählen Sie ein Zimmer</option>
+            <option value="Anima">Anima (Einzelzimmer)</option>
+            <option value="Quiete">Quiete (Einzelzimmer)</option>
+            <option value="Desiderio">Desiderio (Superior-Doppelzimmer)</option>
+            <option value="Sogno">Sogno (Deluxe-Doppelzimmer)</option>
+            <option value="Radici">Radici (Doppelzimmer)</option>
+            <option value="Rinascita">Rinascita (Doppelzimmer)</option>
+            <option value="Origini">Origini (Doppelzimmer)</option>
+            <option value="Legame">Legame (Dreibettzimmer)</option>
+            <option value="Speranza">Speranza (Dreibettzimmer)</option>
+            <option value="Armonia">Armonia (Dreibettzimmer)</option>
+            <option value="Incanto">Incanto (Vierbettzimmer)</option>
+            <option value="Da definire">Noch festzulegen</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkin">Check-in <span class="required">*</span></label>
+            <input type="date" id="checkin" name="checkin" required>
+          </div>
+          <div class="form-group">
+            <label for="checkout">Check-out <span class="required">*</span></label>
+            <input type="date" id="checkout" name="checkout" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ospiti_adulti">Anzahl der Gäste <span class="required">*</span></label>
+            <select id="ospiti_adulti" name="ospiti_adulti" required>
+              <option value="">Auswählen</option>
+              <option value="1">1 Person</option>
+              <option value="2" selected>2 Personen</option>
+              <option value="3">3 Personen</option>
+              <option value="4">4 Personen</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ospiti_bambini">Kinder</label>
+            <select id="ospiti_bambini" name="ospiti_bambini">
+              <option value="0" selected>Keine Kinder</option>
+              <option value="1">1 Kind</option>
+              <option value="2">2 Kinder</option>
+              <option value="3">3 Kinder</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="nome_cognome">Vor- und Nachname <span class="required">*</span></label>
+          <input type="text" id="nome_cognome" name="nome_cognome" placeholder="z.B. Max Mustermann" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="email@beispiel.de" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Telefonnummer <span class="optional-tag" data-i18n="form_optional">(optional)</span></label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+49 ___________">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="richieste_speciali">Besondere Wünsche / Anmerkungen <span class="optional-tag" data-i18n="form_optional">(optional)</span></label>
+          <textarea id="richieste_speciali" name="richieste_speciali"
+            placeholder="z.B. späte Anreise, Babybett, getrennte Betten..."></textarea>
+          <p class="form-disclaimer-note">Hinweis: Bitte übermitteln Sie keine Gesundheitsdaten, sensiblen Daten oder medizinischen Angaben/Allergiehinweise, es sei denn, diese sind für die Abwicklung Ihres Aufenthalts zwingend erforderlich.</p>
+        </div>
+        <!-- Honeypot -->
+        <div class="ohnohoney">
+          <label for="website">Wenn Sie ein Mensch sind, lassen Sie dieses Feld leer</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <!-- reCAPTCHA v2 -->
+        <div class="recaptcha-wrapper">
+          <div class="g-recaptcha" data-sitekey="6LeayI8tAAAAABW8OtaExPvf7Fk1sF-on3CQiWGZ"></div>
+        </div>
+        <!-- Privacy GDPR -->
+        <div class="form-group">
+          <label class="form-checkbox">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <span>Ich erkläre, dass ich die <a href="privacy" target="_blank">Datenschutzerklärung</a> zur Kenntnis genommen habe und die <a href="termini" target="_blank">Allgemeinen Geschäftsbedingungen</a> akzeptiere. <span class="required">*</span></span>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100;">Anfrage absenden</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+
+        <!-- Colonna 1: Brand & Social -->
+        <div class="footer-col footer-col-brand">
+          <a href="./" class="footer-logo">
+            <img src="../content/logo-stracked.png" alt="Hotel La Rocca San Marino">
+          </a>
+          <p class="footer-about" data-i18n="footer_about">
+            Eine authentische Residenz von Charme und Eleganz, eingebettet in die mittelalterlichen Mauern des Monte Titano, einem UNESCO-Weltkulturerbe. Atemberaubende Ausblicke und herzliche Gastfreundschaft.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/hotellaroccasm/" target="_blank" rel="noopener noreferrer"
+              class="social-icon" aria-label="Instagram Hotel La Rocca">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61563815469908&ref=NONE_xav_ig_profile_page_web#"
+              target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook Hotel La Rocca">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Colonna 2: Navigazione -->
+        <div class="footer-col">
+          <h4 data-i18n="footer_col_explore">Navigation</h4>
+          <ul>
+            <li><a href="./" data-i18n="nav_home">Startseite</a></li>
+            <li><a href="camere" data-i18n="nav_rooms">Zimmer</a></li>
+            <li><a href="servizi" data-i18n="nav_services">Leistungen</a></li>
+        <li><a href="bar">Unsere Bar</a></li>
+        <li><a href="attivita">Aktivitäten</a></li>
+            <li><a href="dove-siamo" data-i18n="nav_location">Anreise &amp; ZTL-Info</a></li>
+
+          </ul>
+        </div>
+
+        <!-- Colonna 3: Contatti Diretti -->
+        <div class="footer-col">
+          <h4 data-i18n="footer_col_contacts">Direkter Kontakt</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i data-lucide="map-pin"></i>
+              <span>Via Salita alla Rocca n°33/35<br>47890 San Marino (R.S.M.)</span>
+            </li>
+            <li>
+              <i data-lucide="phone"></i>
+              <a href="tel:+3780549991166">+378 0549 991166</a>
+            </li>
+            <li>
+              <i data-lucide="mail"></i>
+              <a href="mailto:hotellarocca@omniway.sm">hotellarocca@omniway.sm</a>
+            </li>
+            <li>
+              <i data-lucide="clock"></i>
+              <span data-i18n="footer_checkin_info">Check-in: Von 14:00 bis 19:00 Uhr</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Colonna 4: Recensioni e Certificazioni -->
+        <div class="footer-col footer-col-reviews">
+          <h4 data-i18n="footer_col_reviews">Gäste &amp; Bewertungen</h4>
+          <div class="footer-rating-badge">
+            <div class="stars" aria-label="4.5 / 5">
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-half" width="18" height="18" viewBox="0 0 24 24">
+                <defs>
+                  <linearGradient id="starHalfGrad">
+                    <stop offset="50%" stop-color="#C5A059"/>
+                    <stop offset="50%" stop-color="rgba(197, 160, 89, 0.2)"/>
+                  </linearGradient>
+                </defs>
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="url(#starHalfGrad)" stroke="#C5A059" stroke-width="1"/>
+              </svg>
+            </div>
+            <p><strong>4.5 / 5</strong> <span data-i18n="footer_rating_label">basierend auf zertifizierten
+                Bewertungen</span></p>
+          </div>
+          <div class="footer-review-actions">
+            <a href="https://www.tripadvisor.it/UserReviewEdit-g187809-d2019489-Hotel_La_Rocca-City_of_San_Marino.html"
+              target="_blank" rel="noopener noreferrer" class="btn-review-link tripadvisor-btn">
+              <img src="../content/tripadvisor-logo.svg" alt="TripAdvisor" class="review-btn-icon" width="18" height="18"
+                style="object-fit: contain;">
+              <span data-i18n="footer_btn_tripadvisor">Bewerten Sie uns auf TripAdvisor</span>
+            </a>
+            <a href="https://www.google.com/search?sca_esv=f04dc0b0de07faa0&sxsrf=APpeQntQlY_uVYCWjJ60WfoZM-cglINZ3g:1790684323099&q=recensioni+di+hotel+la+rocca+citt%C3%A0+di+san+marino&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r4-cA-MTawr_HrlB-OgOOdH_LDj5byOYIH9-I0oYomaXAq7rRqMOl41kfOJmU2WZCGxANkeSet3gq631bPCpohxmVrZz2aNMTY3eqfRkU8fHQ-6h4MEERZse4UgRI90kF5f3Cg4Dzb7gVP9_C1gUnMFJfoRGtfjQOnQOBfmpjQTP7wgDr&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_wQgZmVwk0Bz_HT9RrlTuyy67WjbNgP8U31hvX_KdvWPwJXTLPghoysRWI5ybCX5PVPyqcKCnkQvE2oejCBaHkTqkBIrwgdTRRsxfkCuraRz5wS_EqXDUNoU9orpc8kbXs5KUes%3D&sa=X&ved=2ahUKEwiKru734pOXAxXj3AIHHVuRAUQQxKsJKAN6BAgmEAE&ictx=1&biw=1710&bih=927&dpr=2#sv=CAESzQEKuQEStgEKd0FKaVQ0dEpMRm52SnEwMWJrblB1N3BnNkJoQkljQkZuZHNsUm45b1I5S1lxMXZnZjdNYnM3b2ZGbHpCYTVDTmxZX2ZwdWFxUDRtOHpKajRiYl9UaVlkMC1IbVhDQ29FZWNySV9FV1ljX2FkbUxXVEJiMnFlcUk4Ehd4S3k3YXF1a0diU25pLWdQaS1LQmdRVRoiQURzcjlmU0NnNEJONFZTb05NdmRqX2piVHNlelExU1NMQRIEODA1MRoBMyoAMAA4AUAAGAAg2ZTMkw9KAhAB"
+              target="_blank" rel="noopener noreferrer" class="btn-review-link google-btn">
+              <svg class="review-btn-icon" width="16" height="16" viewBox="0 0 48 48">
+                <path fill="#EA4335"
+                  d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                <path fill="#4285F4"
+                  d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                <path fill="#FBBC05"
+                  d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                <path fill="#34A853"
+                  d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+              </svg>
+              <span data-i18n="footer_btn_google">Bewerten Sie uns auf Google</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra Inferiore Footer -->
+      <div class="footer-bottom">
+        <p>© 2026 Hotel La Rocca – LA ROCCA SRL | Via Salita alla Rocca n° 33/35, 47890 San Marino (R.S.M.) | C.O.E. SM 30254 | Tel. +378 0549 991166 | Email: hotellarocca@omniway.sm – Alle Rechte vorbehalten.</p>
+        <div class="legal-links">
+          <a href="privacy">Datenschutzerklärung</a>
+          <span>•</span>
+          <a href="termini">Allgemeine Geschäftsbedingungen</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script>lucide.createIcons();</script>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const cameraSelect = document.getElementById('camera_selezionata');
+  const ospitiSelect = document.getElementById('ospiti_adulti');
+  
+  if (!cameraSelect || !ospitiSelect) return;
+
+  function updateGuestCapacity() {
+    const val = (cameraSelect.value || '').toLowerCase().trim();
+    let maxGuests = 4;
+    
+    // Regole capienza camere
+    if (val.includes('anima') || val.includes('quiete')) {
+      maxGuests = 1;
+    } else if (['desiderio', 'sogno', 'radici', 'rinascita', 'origini'].some(v => val.includes(v))) {
+      maxGuests = 2;
+    } else if (['legame', 'speranza', 'armonia'].some(v => val.includes(v))) {
+      maxGuests = 3;
+    } else if (val.includes('incanto')) {
+      maxGuests = 4;
+    }
+
+    // Aggiorna le opzioni del select Numero Ospiti
+    Array.from(ospitiSelect.options).forEach(opt => {
+      const v = parseInt(opt.value, 10);
+      if (!isNaN(v)) {
+        if (v > maxGuests) {
+          opt.disabled = true;
+          opt.hidden = true;
+          opt.style.display = 'none';
+        } else {
+          opt.disabled = false;
+          opt.hidden = false;
+          opt.style.display = '';
+        }
+      }
+    });
+
+    // Se il valore selezionato supera il massimo consentito per la camera scelta, reimposta al massimo
+    const currentVal = parseInt(ospitiSelect.value, 10);
+    if (!isNaN(currentVal) && currentVal > maxGuests) {
+      ospitiSelect.value = String(maxGuests);
+    } else if (!ospitiSelect.value && maxGuests === 1) {
+      ospitiSelect.value = '1';
+    }
+  }
+
+  // Ascolta l'evento change sul menu a tendina della selezione camera
+  cameraSelect.addEventListener('change', updateGuestCapacity);
+
+  // Esegui anche all'avvio o quando viene aperto il modal
+  if (cameraSelect.value) {
+    updateGuestCapacity();
+  }
+});
+</script>
+</body>
+
+
+</html>

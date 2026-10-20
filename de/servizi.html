@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service – Hotel La Rocca | San Marino Historisches Zentrum</title>
+  <meta name="description" content="Hotelservice im Hotel La Rocca in San Marino: Frühstück inklusive, kostenloses WLAN, Partnerparkplätze, Gepäckaufbewahrung und nützliche Informationen für Ihren Aufenthalt.">
+  <link rel="canonical" href="https://www.hotellaroccasm.com/de/servizi">
+  <link rel="icon" type="image/png" href="../content/favicon.png">
+  <link rel="apple-touch-icon" href="../content/favicon.png">
+  <link rel="alternate" hreflang="it" href="https://www.hotellaroccasm.com/servizi">
+  <link rel="alternate" hreflang="en" href="https://www.hotellaroccasm.com/en/servizi">
+  <link rel="alternate" hreflang="de" href="https://www.hotellaroccasm.com/de/servizi">
+  <link rel="alternate" hreflang="x-default" href="https://www.hotellaroccasm.com/servizi">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ==================== NAVBAR / HEADER ==================== -->
+  <header class="navbar header-grand" id="navbar">
+    <div class="header-inner">
+      <!-- A SINISTRA: Blocco Navigazione (#232920) -->
+      <div class="nav-block-left">
+        <button type="button" class="nav-menu-btn" id="navMenuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navOverlay">
+          <span class="hamburger-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="nav-menu-label" data-i18n="nav_menu">MENÜ</span>
+        </button>
+        <a href="#" class="nav-block-action btn-richiedi" data-camera="Noch festzulegen" data-i18n="nav_book_short">BUCHEN</a>
+      </div>
+
+      <!-- A DESTRA: Social Ufficiali e Lingua -->
+      <div class="nav-block-right">
+        <div class="nav-socials">
+          <a href="https://www.instagram.com/hotellaroccasm/" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="Instagram Hotel La Rocca">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61563815469908&ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener noreferrer" class="nav-social-link" aria-label="Facebook Hotel La Rocca">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+
+        <!-- Selettore Lingua a Tendina IT | EN | DE -->
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button type="button" class="lang-dropdown-trigger" id="langDropdownBtn" aria-expanded="false" aria-haspopup="true" aria-label="Sprache wählen">
+            <span class="lang-flag" id="activeLangFlag">🇩🇪</span>
+            <span class="lang-code" id="activeLangCode">DE</span>
+            <svg class="lang-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="lang-dropdown-menu" id="langDropdownMenu" role="menu">
+            <button type="button" class="lang-option" data-lang="it" role="menuitem">
+              <span class="flag">🇮🇹</span>
+              <span class="name">Italiano</span>
+              <span class="code">IT</span>
+            </button>
+            <button type="button" class="lang-option" data-lang="en" role="menuitem">
+              <span class="flag">🇬🇧</span>
+              <span class="name">English</span>
+              <span class="code">EN</span>
+            </button>
+            <button type="button" class="lang-option active" data-lang="de" role="menuitem">
+              <span class="flag">🇩🇪</span>
+              <span class="name">Deutsch</span>
+              <span class="code">DE</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== OVERLAY MENU DRAWER ==================== -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <div class="nav-overlay-backdrop" id="navOverlayBackdrop"></div>
+    <div class="nav-overlay-panel">
+      <div class="nav-overlay-header">
+        <button type="button" class="nav-overlay-close" id="navOverlayClose" aria-label="Menü schließen">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+          <span data-i18n="nav_close">SCHLIESSEN</span>
+        </button>
+        <div class="nav-overlay-brand">
+          <a href="./" title="Hotel La Rocca San Marino">
+            <img src="../content/logo.png" alt="Hotel La Rocca San Marino">
+          </a>
+        </div>
+      </div>
+      <div class="nav-overlay-content">
+        <div class="nav-overlay-col nav-overlay-nav">
+          <ul class="nav-overlay-links">
+            <li><a href="./" data-i18n="nav_home">STARTSEITE</a></li>
+            <li><a href="camere" data-i18n="nav_rooms">ZIMMER</a></li>
+            <li><a href="servizi" class="active" data-i18n="nav_services">LEISTUNGEN</a></li>
+            <li><a href="bar" data-i18n="nav_bar">UNSERE BAR</a></li>
+            <li><a href="attivita" data-i18n="nav_activities">AKTIVITÄTEN</a></li>
+            <li><a href="dove-siamo" data-i18n="nav_location">LAGE &amp; ANFAHRT</a></li>
+          </ul>
+          <div class="nav-overlay-actions">
+            <a href="#" class="btn btn-primary btn-richiedi" data-camera="Noch festzulegen" data-i18n="nav_book">JETZT BUCHEN</a>
+          </div>
+        </div>
+        <div class="nav-overlay-col nav-overlay-info">
+          <h4 class="nav-overlay-hotel-title">Hotel La Rocca</h4>
+          <p class="nav-overlay-address">
+            Salita alla Rocca, 35<br>
+            47890 Città di San Marino (RSM)<br>
+            Republik San Marino
+          </p>
+          <div class="nav-overlay-contacts">
+            <a href="tel:+3780549991166" class="nav-overlay-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+378 0549 991166</span>
+            </a>
+            <a href="mailto:hotellarocca@omniway.sm" class="nav-overlay-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span>hotellarocca@omniway.sm</span>
+            </a>
+          </div>
+          <div class="nav-overlay-socials">
+            <a href="https://www.instagram.com/hotellaroccasm/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Hotel La Rocca">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61563815469908&ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener noreferrer" aria-label="Facebook Hotel La Rocca">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg">
+      <img src="../content/foto/RADICI (4).jpg" alt="Servizi Hotel la Rocca">
+    </div>
+    <div class="page-hero-content">
+      <div class="page-hero-brand-logo">
+        <a href="./" title="Hotel La Rocca San Marino">
+          <img src="../content/logo.png" alt="Hotel La Rocca San Marino">
+        </a>
+      </div>
+<p class="overline">Service</p>
+      <h1>Für Ihren Komfort Gestaltet</h1>
+      <p>Jedes Detail ist gestaltet, um Ihren Aufenthalt unvergesslich zu machen. Entdecken Sie, was wir für Sie vorbereitet haben.</p>
+    </div>
+  </section>
+
+  <!-- SERVIZI PRINCIPALI -->
+  <section class="section-padding services-main-section" id="servizi-main">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="overline">Unser Service</p>
+        <h2>Umfassende Gastfreundschaft</h2>
+        <div class="section-divider"></div>
+        <p>Vom Check-in bis zum Check-out kümmern wir uns um jeden Aspekt Ihres Aufenthalts.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <span class="service-icon"><i data-lucide="coffee"></i></span>
+          <h3>Hotelbar</h3>
+          <p>Im Hotel lädt unsere gemütliche Bar zu Frühstück, Aperitifs und entspannten Momenten ein. Der Verzehr an der Bar ist nicht im Übernachtungspreis enthalten (optionaler kostenpflichtiger Service).</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-icon"><i data-lucide="wifi"></i></span>
+          <h3>Kostenloses WLAN</h3>
+          <p>Kostenlose Highspeed-Internetverbindung in allen Zimmern und öffentlichen Bereichen des Hotels. Bleiben Sie während Ihres Aufenthalts stets verbunden.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-icon"><i data-lucide="parking-circle"></i></span>
+          <h3>Parkplätze in der Nähe</h3>
+          <p>Detaillierte Informationen zu öffentlichen und Partnerparkplätzen (z. B. Parkplatz 6 und 7), nur 2-3 Gehminuten entfernt. Wir beraten Sie gern für die bequemste Ankunft.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-icon"><i data-lucide="luggage"></i></span>
+          <h3>Gepäckaufbewahrung</h3>
+          <p>Kostenlose Gepäckaufbewahrung vor dem Check-in und nach dem Check-out, damit Sie San Marino völlig unbeschwert und frei erkunden können.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-icon"><i data-lucide="concierge-bell"></i></span>
+          <h3>Persönlicher Empfang</h3>
+          <p>Unser Team steht Ihnen jederzeit mit wertvollen Empfehlungen zu Restaurants, Sehenswürdigkeiten und Panoramawegen zur Seite.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-icon"><i data-lucide="mountain"></i></span>
+          <h3>Panoramablick</h3>
+          <p>Zimmer mit spektakulärer Aussicht auf die sanften Hügel, die Täler von San Marino und die historischen Befestigungsmauern des Monte Titano.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-icon"><i data-lucide="sparkles"></i></span>
+          <h3>Tägliche Reinigung</h3>
+          <p>Täglicher Zimmerreinigungsservice mit frischem Wäschewechsel und ausgewählten hochwertigen Pflegeprodukten für ein rundum gepflegtes Ambiente.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-icon"><i data-lucide="snowflake"></i></span>
+          <h3>Klimaanlage</h3>
+          <p>Alle Zimmer sind mit individuell regelbarer Klimaanlage ausgestattet, um in jeder Jahreszeit perfekten Wohnkomfort zu gewährleisten.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <span class="service-icon"><i data-lucide="tv"></i></span>
+          <h3>TV im Zimmer</h3>
+          <p>Flachbild-Fernseher mit nationalen und internationalen Sendern für Ihre erholsamen Momente im Zimmer.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO ZTL & PARCHEGGI -->
+  <section class="ztl-section">
+    <div class="container">
+      <div class="ztl-info-card reveal">
+        <div class="ztl-grid">
+          <div class="ztl-content">
+            <p class="overline">Nützliche Informationen</p>
+            <h3>Zugang zur <span class="text-gold">Altstadt</span> &amp; Parken</h3>
+            <p>
+              Das Hotel befindet sich in der verkehrsberuhigten Fußgängerzone (ZTL-Zone) der Altstadt und ist mit dem Auto nicht direkt erreichbar. Nur 2-3 Gehminuten entfernt stehen Ihnen jedoch bequeme öffentliche und Partnerparkplätze zur Verfügung (z. B. Parkplatz 6 und Parkplatz 7).
+            </p>
+            <p>
+              Für das Be- und Entladen des Gepäcks oder Fragen bei Ihrer Ankunft unterstützt Sie unser Team jederzeit gern, um Ihnen den schnellsten Fußweg zu zeigen.
+            </p>
+
+            <div class="ztl-features-grid">
+              <div class="ztl-feature-item">
+                <span class="icon"><i data-lucide="shield-alert"></i></span>
+                <div>
+                  <h4>ZTL-Fußgängerzone</h4>
+                  <p>Keine direkte Zufahrt mit dem Auto</p>
+                </div>
+              </div>
+              <div class="ztl-feature-item">
+                <span class="icon"><i data-lucide="parking-circle"></i></span>
+                <div>
+                  <h4>Parkplätze P6 &amp; P7</h4>
+                  <p>Nur 2-3 Gehminuten entfernt</p>
+                </div>
+              </div>
+              <div class="ztl-feature-item">
+                <span class="icon"><i data-lucide="luggage"></i></span>
+                <div>
+                  <h4>Gepäck Be-/Entladen</h4>
+                  <p>Hilfe &amp; Wegweisung vor Ort</p>
+                </div>
+              </div>
+              <div class="ztl-feature-item">
+                <span class="icon"><i data-lucide="map-pin"></i></span>
+                <div>
+                  <h4>Historische Altstadt</h4>
+                  <p>Alles bequem zu Fuß erreichbar</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ztl-cta-wrap">
+              <a href="dove-siamo" class="btn btn-primary ztl-btn">
+                <span>So erreichen Sie uns &amp; Parkplatz-Hinweise</span>
+                <i data-lucide="arrow-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="ztl-image-box">
+            <img src="../content/foto/SOGNO (5).jpg" alt="Historisches Zentrum San Marino" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA SECTION ==================== -->
+  <section class="section-padding" style="background: var(--color-bg-alt);" id="preventivo">
+    <div class="container">
+      <div class="quote-card text-center reveal">
+        <p class="overline" data-i18n="services_quote_overline">Informationen &amp; Services</p>
+        <h2 data-i18n="services_quote_title">Benötigen Sie weitere Informationen?</h2>
+        <p class="quote-card-lead" data-i18n="services_quote_lead">Kontaktieren Sie uns, um alle Details zu unseren Services zu erfahren – wie Parkmöglichkeiten oder die Organisation geführter Ausflüge in San Marino.</p>
+        <a href="mailto:hotellarocca@omniway.sm?subject=Richiesta%20Informazioni%20Servizi" class="btn btn-primary" data-i18n="services_quote_btn">Informationen Anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL PREVENTIVO -->
+  <div class="modal-overlay" id="modal-preventivo">
+    <div class="modal">
+            <div class="modal-header">
+        <div class="modal-pre-title">
+          <img src="../content/logo.png" alt="Hotel La Rocca">
+          <span data-i18n="form_badge">Hotel La Rocca &bull; San Marino</span>
+        </div>
+        <h2>Richiedi <span class="text-gold">Preventivo</span></h2>
+        <p class="modal-subtitle" data-i18n="form_subtitle">Preventivo gratuito e senza impegno con la miglior tariffa garantita.</p>
+        <button class="modal-close" aria-label="Chiudi">&times;</button>
+      </div>
+      <form id="form-preventivo" action="../invia-richiesta.php" method="POST">
+        <input type="hidden" name="lang" value="de">
+        <div class="form-group">
+          <label for="camera_selezionata">Gewünschtes Zimmer <span class="required">*</span></label>
+          <input type="text" id="camera_selezionata" name="camera_selezionata" readonly required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="checkin">Check-in <span class="required">*</span></label>
+            <input type="date" id="checkin" name="checkin" required>
+          </div>
+          <div class="form-group">
+            <label for="checkout">Check-out <span class="required">*</span></label>
+            <input type="date" id="checkout" name="checkout" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="ospiti_adulti">Erwachsene <span class="required">*</span></label>
+            <select id="ospiti_adulti" name="ospiti_adulti" required>
+              <option value="">Auswählen</option>
+              <option value="1">1 Erwachsener</option>
+              <option value="2" selected>2 Erwachsene</option>
+              <option value="3">3 Erwachsene</option>
+              <option value="4">4 Erwachsene</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ospiti_bambini">Kinder</label>
+            <select id="ospiti_bambini" name="ospiti_bambini">
+              <option value="0" selected>Keine Kinder</option>
+              <option value="1">1 Kind</option>
+              <option value="2">2 Kinder</option>
+              <option value="3">3 Kinder</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="nome_cognome">Vor- und Nachname <span class="required">*</span></label>
+          <input type="text" id="nome_cognome" name="nome_cognome" placeholder="z.B. Max Mustermann" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">E-Mail <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="name@beispiel.de" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono"><span class="lbl-text">Telefon</span> <span class="optional-tag">(optional)</span></label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+49 170 1234567">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="richieste_speciali">Besondere Wünsche / Notizen <span class="optional-tag" data-i18n="form_optional">(optional)</span></label>
+          <textarea id="richieste_speciali" name="richieste_speciali" placeholder="z.B. späte Anreise, Babybett, getrennte Betten..."></textarea>
+          <p class="form-disclaimer-note">Hinweis: Bitte übermitteln Sie keine Gesundheitsdaten, sensiblen Daten oder medizinischen Angaben/Allergiehinweise, es sei denn, diese sind für die Abwicklung Ihres Aufenthalts zwingend erforderlich.</p>
+        </div>
+        <div class="ohnohoney">
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="recaptcha-wrapper">
+          <div class="g-recaptcha" data-sitekey="6LeayI8tAAAAABW8OtaExPvf7Fk1sF-on3CQiWGZ"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-checkbox">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <span>Ich erkläre, dass ich die <a href="privacy" target="_blank">Datenschutzerklärung</a> zur Kenntnis genommen habe und die <a href="termini" target="_blank">Allgemeinen Geschäftsbedingungen</a> akzeptiere. <span class="required">*</span></span>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Anfrage Absenden</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        
+        <!-- Colonna 1: Brand & Social -->
+        <div class="footer-col footer-col-brand">
+          <a href="./" class="footer-logo">
+            <img src="../content/logo-stracked.png" alt="Hotel La Rocca San Marino">
+          </a>
+          <p class="footer-about" data-i18n="footer_about">
+            Ein historischer Ort voller Charme und zeitloser Schönheit an den mittelalterlichen Festungsmauern des Monte Titano, UNESCO-Welterbe. Traumhafte Aussichten und herzliche Gastfreundschaft.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/hotellaroccasm/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram Hotel La Rocca">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61563815469908&ref=NONE_xav_ig_profile_page_web#" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook Hotel La Rocca">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Colonna 2: Navigazione -->
+        <div class="footer-col">
+          <h4 data-i18n="footer_col_explore">Navigation</h4>
+          <ul>
+            <li><a href="./" data-i18n="nav_home">Home</a></li>
+            <li><a href="camere" data-i18n="nav_rooms">Zimmer</a></li>
+            <li><a href="servizi" data-i18n="nav_services">Service</a></li>
+            <li><a href="bar">Unsere Bar</a></li>
+            <li><a href="attivita">Aktivitäten</a></li>
+            <li><a href="dove-siamo" data-i18n="nav_location">Anreise &amp; ZTL-Info</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonna 3: Contatti Diretti -->
+        <div class="footer-col">
+          <h4 data-i18n="footer_col_contacts">Contatti Diretti</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i data-lucide="map-pin"></i>
+              <span>Via Salita alla Rocca n°33/35<br>47890 San Marino (R.S.M.)</span>
+            </li>
+            <li>
+              <i data-lucide="phone"></i>
+              <a href="tel:+3780549991166">+378 0549 991166</a>
+            </li>
+            <li>
+              <i data-lucide="mail"></i>
+              <a href="mailto:hotellarocca@omniway.sm">hotellarocca@omniway.sm</a>
+            </li>
+            <li>
+              <i data-lucide="clock"></i>
+              <span data-i18n="footer_checkin_info">Check-in: 14:00 bis 19:00 Uhr</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Colonna 4: Recensioni e Certificazioni -->
+        <div class="footer-col footer-col-reviews">
+          <h4 data-i18n="footer_col_reviews">Gäste &amp; Bewertungen</h4>
+          <div class="footer-rating-badge">
+            <div class="stars" aria-label="4.5 / 5">
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-full" width="18" height="18" viewBox="0 0 24 24" fill="#C5A059" stroke="#C5A059" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="star-icon star-half" width="18" height="18" viewBox="0 0 24 24">
+                <defs>
+                  <linearGradient id="starHalfGrad">
+                    <stop offset="50%" stop-color="#C5A059"/>
+                    <stop offset="50%" stop-color="rgba(197, 160, 89, 0.2)"/>
+                  </linearGradient>
+                </defs>
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="url(#starHalfGrad)" stroke="#C5A059" stroke-width="1"/>
+              </svg>
+            </div>
+            <p><strong>4.5 / 5</strong> <span data-i18n="footer_rating_label">auf Basis zertifizierter Bewertungen</span></p>
+          </div>
+          <div class="footer-review-actions">
+            <a href="https://www.tripadvisor.it/UserReviewEdit-g187809-d2019489-Hotel_La_Rocca-City_of_San_Marino.html"
+              target="_blank" rel="noopener noreferrer" class="btn-review-link tripadvisor-btn">
+              <img src="../content/tripadvisor-logo.svg" alt="TripAdvisor" class="review-btn-icon" width="18" height="18"
+                style="object-fit: contain;">
+              <span data-i18n="footer_btn_tripadvisor">Bewerten Sie uns auf TripAdvisor</span>
+            </a>
+            <a href="https://www.google.com/search?sca_esv=f04dc0b0de07faa0&sxsrf=APpeQntQlY_uVYCWjJ60WfoZM-cglINZ3g:1790684323099&q=recensioni+di+hotel+la+rocca+citt%C3%A0+di+san+marino&uds=AJ5uw1_a2D0D09lxm8gpKKOTUn4r4-cA-MTawr_HrlB-OgOOdH_LDj5byOYIH9-I0oYomaXAq7rRqMOl41kfOJmU2WZCGxANkeSet3gq631bPCpohxmVrZz2aNMTY3eqfRkU8fHQ-6h4MEERZse4UgRI90kF5f3Cg4Dzb7gVP9_C1gUnMFJfoRGtfjQOnQOBfmpjQTP7wgDr&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_wQgZmVwk0Bz_HT9RrlTuyy67WjbNgP8U31hvX_KdvWPwJXTLPghoysRWI5ybCX5PVPyqcKCnkQvE2oejCBaHkTqkBIrwgdTRRsxfkCuraRz5wS_EqXDUNoU9orpc8kbXs5KUes%3D&sa=X&ved=2ahUKEwiKru734pOXAxXj3AIHHVuRAUQQxKsJKAN6BAgmEAE&ictx=1&biw=1710&bih=927&dpr=2#sv=CAESzQEKuQEStgEKd0FKaVQ0dEpMRm52SnEwMWJrblB1N3BnNkJoQkljQkZuZHNsUm45b1I5S1lxMXZnZjdNYnM3b2ZGbHpCYTVDTmxZX2ZwdWFxUDRtOHpKajRiYl9UaVlkMC1IbVhDQ29FZWNySV9FV1ljX2FkbUxXVEJiMnFlcUk4Ehd4S3k3YXF1a0diU25pLWdQaS1LQmdRVRoiQURzcjlmU0NnNEJONFZTb05NdmRqX2piVHNlelExU1NMQRIEODA1MRoBMyoAMAA4AUAAGAAg2ZTMkw9KAhAB"
+              target="_blank" rel="noopener noreferrer" class="btn-review-link google-btn">
+              <svg class="review-btn-icon" width="16" height="16" viewBox="0 0 48 48">
+                <path fill="#EA4335"
+                  d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+                <path fill="#4285F4"
+                  d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" />
+                <path fill="#FBBC05"
+                  d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" />
+                <path fill="#34A853"
+                  d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+              </svg>
+              <span data-i18n="footer_btn_google">Bewerten Sie uns auf Google</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra Inferiore Footer -->
+      <div class="footer-bottom">
+        <p>© 2026 Hotel La Rocca – LA ROCCA SRL | Via Salita alla Rocca n° 33/35, 47890 San Marino (R.S.M.) | C.O.E. SM 30254 | Tel. +378 0549 991166 | Email: hotellarocca@omniway.sm – Alle Rechte vorbehalten.</p>
+        <div class="legal-links">
+          <a href="privacy">Datenschutzerklärung</a>
+          <span>•</span>
+          <a href="termini">Allgemeine Geschäftsbedingungen</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <script>lucide.createIcons();</script>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Dynamic guest limit based on room type
+  const cameraInput = document.getElementById('camera_selezionata');
+  const adultiSelect = document.getElementById('ospiti_adulti');
+  
+  if (cameraInput && adultiSelect) {
+    // Use MutationObserver to detect value changes on readonly input
+    const observer = new MutationObserver(function() { updateGuestLimit(); });
+    observer.observe(cameraInput, { attributes: true, attributeFilter: ['value'] });
+    
+    // Also listen for direct value setting
+    const origSetter = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set;
+    Object.defineProperty(cameraInput, 'value', {
+      set: function(val) {
+        origSetter.call(this, val);
+        updateGuestLimit();
+      },
+      get: function() {
+        return Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').get.call(this);
+      }
+    });
+  }
+  
+  function updateGuestLimit() {
+    if (!cameraInput || !adultiSelect) return;
+    const val = cameraInput.value.toLowerCase();
+    let maxGuests = 4;
+    
+    if (val.includes('anima') || val.includes('quiete')) {
+      maxGuests = 1;
+    } else if (['desiderio', 'sogno', 'radici', 'rinascita', 'origini'].some(v => val.includes(v))) {
+      maxGuests = 2;
+    } else if (['legame', 'speranza', 'armonia'].some(v => val.includes(v))) {
+      maxGuests = 3;
+    } else if (val.includes('incanto')) {
+      maxGuests = 4;
+    }
+    
+    Array.from(adultiSelect.options).forEach(opt => {
+      const v = parseInt(opt.value);
+      if (!isNaN(v) && v > maxGuests) {
+        opt.style.display = 'none';
+        opt.disabled = true;
+      } else {
+        opt.style.display = '';
+        opt.disabled = false;
+      }
+    });
+    
+    // Reset selection if current exceeds max
+    if (parseInt(adultiSelect.value) > maxGuests) {
+      adultiSelect.value = '1';
+    }
+  }
+});
+</script>
+</body>
+
+</html>
