@@ -29,9 +29,16 @@
   <meta name="twitter:title" content="Erlebnisse & Aktivitäten – Hotel La Rocca | San Marino">
   <meta name="twitter:description" content="Erleben Sie San Marino von seiner schönsten Seite: Panoramawanderungen, Führungen zu den Drei Türmen, Weinverkostungen und einzigartige Kulturmomente.">
   <meta name="twitter:image" content="https://sitodavide-ivory.vercel.app/content/og-image.jpg">
+  
+  <!-- Google Fonts Non-blocking & Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap">
+  </noscript>
   <link rel="stylesheet" href="../css/style.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
 <body>
 
@@ -110,7 +117,7 @@
         </button>
         <div class="nav-overlay-brand">
           <a href="./" title="Hotel La Rocca San Marino">
-            <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async">
+            <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async" width="500" height="500">
           </a>
         </div>
       </div>
@@ -161,12 +168,12 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="page-hero-bg">
-      <img src="../content/foto/trekking.webp" alt="Aktivitäten in San Marino" decoding="async">
+      <img src="../content/foto/trekking.webp" alt="Aktivitäten in San Marino" loading="eager" fetchpriority="high" width="1200" height="500">
     </div>
     <div class="page-hero-content">
       <div class="page-hero-brand-logo">
         <a href="./" title="Hotel La Rocca San Marino">
-          <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async">
+          <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async" width="500" height="500">
         </a>
       </div>
 <p class="overline" data-i18n="att_overline">Einzigartige Erlebnisse</p>
@@ -201,7 +208,7 @@
       <div class="services-grid">
         <div class="service-card reveal">
           <div class="service-card-image">
-            <img src="../content/foto/trekking.webp" alt="Wandern auf dem Monte Titano" loading="lazy" decoding="async">
+            <img src="../content/foto/trekking.webp" alt="Wandern auf dem Monte Titano" loading="lazy" decoding="async" width="1200" height="500">
           </div>
           <span class="service-icon"><i data-lucide="mountain"></i></span>
           <h3 data-i18n="att_card1_title">Trekking &amp; Wanderungen</h3>
@@ -209,7 +216,7 @@
         </div>
         <div class="service-card reveal">
           <div class="service-card-image">
-            <img src="../content/foto/degustazione.webp" alt="Wein- und Spezialitätenverkostung" loading="lazy" decoding="async">
+            <img src="../content/foto/degustazione.webp" alt="Wein- und Spezialitätenverkostung" loading="lazy" decoding="async" width="1200" height="801">
           </div>
           <span class="service-icon"><i data-lucide="wine"></i></span>
           <h3 data-i18n="att_card2_title">Wein- &amp; Spezialitätenverkostung</h3>
@@ -217,7 +224,7 @@
         </div>
         <div class="service-card reveal">
           <div class="service-card-image">
-            <img src="../content/foto/centro-storico-san-marino.webp" alt="Geführte Touren historisches Zentrum" loading="lazy" decoding="async">
+            <img src="../content/foto/centro-storico-san-marino.webp" alt="Geführte Touren historisches Zentrum" loading="lazy" decoding="async" width="734" height="734">
           </div>
           <span class="service-icon"><i data-lucide="castle"></i></span>
           <h3 data-i18n="att_card3_title">Geführte Touren im Historischen Zentrum</h3>
@@ -225,7 +232,7 @@
         </div>
         <div class="service-card reveal">
           <div class="service-card-image">
-            <img src="../content/foto/bici.webp" alt="E-Bike Touren San Marino" loading="lazy" decoding="async">
+            <img src="../content/foto/bici.webp" alt="E-Bike Touren San Marino" loading="lazy" decoding="async" width="669" height="446">
           </div>
           <span class="service-icon"><i data-lucide="bike"></i></span>
           <h3 data-i18n="att_card4_title">Geführte E-Bike-Touren</h3>
@@ -233,7 +240,7 @@
         </div>
         <div class="service-card reveal">
           <div class="service-card-image">
-            <img src="../content/foto/volo.webp" alt="Rundflug über San Marino" loading="lazy" decoding="async">
+            <img src="../content/foto/volo.webp" alt="Rundflug über San Marino" loading="lazy" decoding="async" width="800" height="445">
           </div>
           <span class="service-icon"><i data-lucide="plane"></i></span>
           <h3 data-i18n="att_card5_title">Rundflug über San Marino</h3>
@@ -241,7 +248,7 @@
         </div>
         <div class="service-card reveal">
           <div class="service-card-image">
-            <img src="../content/foto/arco.webp" alt="Bogenschießen in der Natur" loading="lazy" decoding="async">
+            <img src="../content/foto/arco.webp" alt="Bogenschießen in der Natur" loading="lazy" decoding="async" width="1200" height="675">
           </div>
           <span class="service-icon"><i data-lucide="target"></i></span>
           <h3 data-i18n="att_card6_title">Bogenschießen in der Natur</h3>
@@ -256,7 +263,7 @@
     <div class="modal">
             <div class="modal-header">
         <div class="modal-pre-title">
-          <img src="../content/logo.png" alt="Hotel La Rocca" loading="lazy" decoding="async">
+          <img src="../content/logo.png" alt="Hotel La Rocca" loading="lazy" decoding="async" width="500" height="500">
           <span data-i18n="form_badge">Hotel La Rocca &bull; San Marino</span>
         </div>
         <h2>Richiedi <span class="text-gold">Preventivo</span></h2>
@@ -344,7 +351,7 @@
         <!-- Colonna 1: Brand & Social -->
         <div class="footer-col footer-col-brand">
           <a href="./" class="footer-logo">
-            <img src="../content/logo-stracked.png" alt="Hotel La Rocca San Marino" loading="lazy" decoding="async">
+            <img src="../content/logo-stracked.png" alt="Hotel La Rocca San Marino" loading="lazy" decoding="async" width="600" height="235">
           </a>
           <p class="footer-about" data-i18n="footer_about">
             Ein historischer Ort voller Charme und zeitloser Schönheit an den mittelalterlichen Festungsmauern des Monte Titano, UNESCO-Welterbe. Traumhafte Aussichten und herzliche Gastfreundschaft.
@@ -447,8 +454,8 @@
     </div>
   </footer>
 
-  <script src="../js/i18n.js"></script>
-  <script src="../js/main.js"></script>
-  <script>lucide.createIcons();</script>
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script>if(window.lucide&&typeof lucide.createIcons==='function'){lucide.createIcons();}</script>
 </body>
 </html>

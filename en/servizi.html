@@ -35,9 +35,16 @@
   <meta name="twitter:title" content="Exclusive Services – Hotel La Rocca | San Marino">
   <meta name="twitter:description" content="From panoramic breakfast to high-speed Wi-Fi and affiliated parking: discover all the bespoke services crafted for an unforgettable stay at Hotel La Rocca.">
   <meta name="twitter:image" content="https://sitodavide-ivory.vercel.app/content/og-image.jpg">
+  
+  <!-- Google Fonts Non-blocking & Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap">
+  </noscript>
   <link rel="stylesheet" href="../css/style.css">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
 <body>
 
@@ -116,7 +123,7 @@
         </button>
         <div class="nav-overlay-brand">
           <a href="./" title="Hotel La Rocca San Marino">
-            <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async">
+            <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async" width="500" height="500">
           </a>
         </div>
       </div>
@@ -167,12 +174,12 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="page-hero-bg">
-      <img src="../content/foto/radici-4.webp" alt="Hotel La Rocca Exclusive Services" decoding="async">
+      <img src="../content/foto/radici-4.webp" alt="Hotel La Rocca Exclusive Services" loading="eager" fetchpriority="high" width="1600" height="843">
     </div>
     <div class="page-hero-content">
       <div class="page-hero-brand-logo">
         <a href="./" title="Hotel La Rocca San Marino">
-          <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async">
+          <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async" width="500" height="500">
         </a>
       </div>
 <p class="overline">Services</p>
@@ -305,7 +312,7 @@
             </div>
           </div>
           <div class="ztl-image-box">
-            <img src="../content/foto/sogno-5.webp" alt="San Marino Historic Center" loading="lazy" decoding="async">
+            <img src="../content/foto/sogno-5.webp" alt="San Marino Historic Center" loading="lazy" decoding="async" width="1600" height="843">
           </div>
         </div>
       </div>
@@ -329,7 +336,7 @@
     <div class="modal">
             <div class="modal-header">
         <div class="modal-pre-title">
-          <img src="../content/logo.png" alt="Hotel La Rocca" loading="lazy" decoding="async">
+          <img src="../content/logo.png" alt="Hotel La Rocca" loading="lazy" decoding="async" width="500" height="500">
           <span data-i18n="form_badge">Hotel La Rocca &bull; San Marino</span>
         </div>
         <h2>Richiedi <span class="text-gold">Preventivo</span></h2>
@@ -417,7 +424,7 @@
         <!-- Colonna 1: Brand & Social -->
         <div class="footer-col footer-col-brand">
           <a href="./" class="footer-logo">
-            <img src="../content/logo-stracked.png" alt="Hotel La Rocca San Marino" loading="lazy" decoding="async">
+            <img src="../content/logo-stracked.png" alt="Hotel La Rocca San Marino" loading="lazy" decoding="async" width="600" height="235">
           </a>
           <p class="footer-about" data-i18n="footer_about">
             An authentic sanctuary of charm and timeless beauty nestled within the medieval towers of Mount Titano, a UNESCO World Heritage site. Breathtaking panoramas and warm hospitality.
@@ -526,9 +533,9 @@
     </div>
   </footer>
 
-  <script src="../js/i18n.js"></script>
-  <script src="../js/main.js"></script>
-  <script>lucide.createIcons();</script>
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script>if(window.lucide&&typeof lucide.createIcons==='function'){lucide.createIcons();}</script>
 
 
 

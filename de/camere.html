@@ -31,9 +31,16 @@
   <meta name="twitter:title" content="Zimmer & Suiten – Hotel La Rocca | San Marino">
   <meta name="twitter:description" content="Entdecken Sie die 11 einzigartigen Zimmer und Suiten des Hotel La Rocca in San Marino. Höchster Komfort, stilvolles Design und Panoramablick im historischen Zentrum.">
   <meta name="twitter:image" content="https://sitodavide-ivory.vercel.app/content/og-image.jpg">
+  
+  <!-- Google Fonts Non-blocking & Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap">
+  </noscript>
   <link rel="stylesheet" href="../css/style.css">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
 
 <body>
@@ -113,7 +120,7 @@
         </button>
         <div class="nav-overlay-brand">
           <a href="./" title="Hotel La Rocca San Marino">
-            <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async">
+            <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async" width="500" height="500">
           </a>
         </div>
       </div>
@@ -164,12 +171,12 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="page-hero-bg">
-      <img src="../content/foto/incanto-3.webp" alt="Camere Hotel la Rocca" decoding="async">
+      <img src="../content/foto/incanto-3.webp" alt="Camere Hotel la Rocca" loading="eager" fetchpriority="high" width="1600" height="843">
     </div>
     <div class="page-hero-content">
       <div class="page-hero-brand-logo">
         <a href="./" title="Hotel La Rocca San Marino">
-          <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async">
+          <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async" width="500" height="500">
         </a>
       </div>
 <p class="overline">Unsere Zimmer</p>
@@ -204,10 +211,10 @@
         <div class="room-carousel">
           <div class="carousel-viewport">
             <div class="carousel-slides">
-              <div class="carousel-slide active" data-index="0"><img src="../content/foto/anima.webp" alt="Anima – Überblick" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="1"><img src="../content/foto/anima-2.webp" alt="Anima – Detail 1" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="2"><img src="../content/foto/anima-3.webp" alt="Anima – Detail 2" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="3"><img src="../content/foto/anima-5.webp" alt="Anima – Detail 3" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/anima.webp" alt="Anima – Überblick" loading="lazy" decoding="async" width="1200" height="632"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/anima-2.webp" alt="Anima – Detail 1" loading="lazy" decoding="async" width="1200" height="632"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/anima-3.webp" alt="Anima – Detail 2" loading="lazy" decoding="async" width="1200" height="632"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/anima-5.webp" alt="Anima – Detail 3" loading="lazy" decoding="async" width="1200" height="632"></div>
             </div>
             <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
@@ -218,10 +225,10 @@
             <div class="carousel-counter"><span class="current-slide">1</span> / <span class="total-slides">4</span></div>
           </div>
           <div class="carousel-thumbs">
-            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/anima.webp" alt="Anima – Überblick" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/anima-2.webp" alt="Anima – Detail 1" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/anima-3.webp" alt="Anima – Detail 2" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/anima-5.webp" alt="Anima – Detail 3" loading="lazy" decoding="async"></button>
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/anima.webp" alt="Anima – Überblick" loading="lazy" decoding="async" width="1200" height="632"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/anima-2.webp" alt="Anima – Detail 1" loading="lazy" decoding="async" width="1200" height="632"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/anima-3.webp" alt="Anima – Detail 2" loading="lazy" decoding="async" width="1200" height="632"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/anima-5.webp" alt="Anima – Detail 3" loading="lazy" decoding="async" width="1200" height="632"></button>
           </div>
         </div>
       </section>
@@ -249,12 +256,12 @@
         <div class="room-carousel">
           <div class="carousel-viewport">
             <div class="carousel-slides">
-              <div class="carousel-slide active" data-index="0"><img src="../content/foto/armonia.webp" alt="Armonia – Überblick" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="1"><img src="../content/foto/armonia-7.webp" alt="Armonia – Detail 1" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="2"><img src="../content/foto/armonia-8.webp" alt="Armonia – Detail 2" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="3"><img src="../content/foto/armonia-9.webp" alt="Armonia – Detail 3" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="4"><img src="../content/foto/armonia-10.webp" alt="Armonia – Detail 4" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="5"><img src="../content/foto/armonia-11.webp" alt="Armonia – Detail 5" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/armonia.webp" alt="Armonia – Überblick" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/armonia-7.webp" alt="Armonia – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/armonia-8.webp" alt="Armonia – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/armonia-9.webp" alt="Armonia – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/armonia-10.webp" alt="Armonia – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/armonia-11.webp" alt="Armonia – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></div>
             </div>
             <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -270,12 +277,12 @@
             </div>
           </div>
           <div class="carousel-thumbs">
-            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/armonia.webp" alt="Armonia – Überblick" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/armonia-7.webp" alt="Armonia – Detail 1" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/armonia-8.webp" alt="Armonia – Detail 2" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/armonia-9.webp" alt="Armonia – Detail 3" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/armonia-10.webp" alt="Armonia – Detail 4" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/armonia-11.webp" alt="Armonia – Detail 5" loading="lazy" decoding="async"></button>
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/armonia.webp" alt="Armonia – Überblick" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/armonia-7.webp" alt="Armonia – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/armonia-8.webp" alt="Armonia – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/armonia-9.webp" alt="Armonia – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/armonia-10.webp" alt="Armonia – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/armonia-11.webp" alt="Armonia – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></button>
           </div>
         </div>
       </section>
@@ -303,19 +310,19 @@
         <div class="room-carousel">
           <div class="carousel-viewport">
             <div class="carousel-slides">
-              <div class="carousel-slide active" data-index="0"><img src="../content/foto/desiderio.webp" alt="Desiderio – Überblick" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="1"><img src="../content/foto/desiderio-2.webp" alt="Desiderio – Detail 1" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="2"><img src="../content/foto/desiderio-3.webp" alt="Desiderio – Detail 2" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="3"><img src="../content/foto/desiderio-4.webp" alt="Desiderio – Detail 3" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="4"><img src="../content/foto/desiderio-5.webp" alt="Desiderio – Detail 4" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="5"><img src="../content/foto/desiderio-6.webp" alt="Desiderio – Detail 5" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="6"><img src="../content/foto/desiderio-7.webp" alt="Desiderio – Detail 6" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="7"><img src="../content/foto/desiderio-8.webp" alt="Desiderio – Detail 7" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="8"><img src="../content/foto/desiderio-9.webp" alt="Desiderio – Detail 8" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="9"><img src="../content/foto/desiderio-10.webp" alt="Desiderio – Detail 9" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="10"><img src="../content/foto/desiderio-11.webp" alt="Desiderio – Detail 10" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="11"><img src="../content/foto/desiderio-12.webp" alt="Desiderio – Detail 11" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="12"><img src="../content/foto/desiderio-13.webp" alt="Desiderio – Detail 12" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/desiderio.webp" alt="Desiderio – Überblick" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/desiderio-2.webp" alt="Desiderio – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/desiderio-3.webp" alt="Desiderio – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/desiderio-4.webp" alt="Desiderio – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/desiderio-5.webp" alt="Desiderio – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/desiderio-6.webp" alt="Desiderio – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="6"><img src="../content/foto/desiderio-7.webp" alt="Desiderio – Detail 6" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="7"><img src="../content/foto/desiderio-8.webp" alt="Desiderio – Detail 7" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="8"><img src="../content/foto/desiderio-9.webp" alt="Desiderio – Detail 8" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="9"><img src="../content/foto/desiderio-10.webp" alt="Desiderio – Detail 9" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="10"><img src="../content/foto/desiderio-11.webp" alt="Desiderio – Detail 10" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="11"><img src="../content/foto/desiderio-12.webp" alt="Desiderio – Detail 11" loading="lazy" decoding="async" width="1200" height="632"></div>
+              <div class="carousel-slide" data-index="12"><img src="../content/foto/desiderio-13.webp" alt="Desiderio – Detail 12" loading="lazy" decoding="async" width="1600" height="843"></div>
             </div>
             <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -331,19 +338,19 @@
             </div>
           </div>
           <div class="carousel-thumbs">
-            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/desiderio.webp" alt="Desiderio – Überblick" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/desiderio-2.webp" alt="Desiderio – Detail 1" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/desiderio-3.webp" alt="Desiderio – Detail 2" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/desiderio-4.webp" alt="Desiderio – Detail 3" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/desiderio-5.webp" alt="Desiderio – Detail 4" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/desiderio-6.webp" alt="Desiderio – Detail 5" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img src="../content/foto/desiderio-7.webp" alt="Desiderio – Detail 6" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img src="../content/foto/desiderio-8.webp" alt="Desiderio – Detail 7" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="8" aria-label="Foto 9"><img src="../content/foto/desiderio-9.webp" alt="Desiderio – Detail 8" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="9" aria-label="Foto 10"><img src="../content/foto/desiderio-10.webp" alt="Desiderio – Detail 9" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="10" aria-label="Foto 11"><img src="../content/foto/desiderio-11.webp" alt="Desiderio – Detail 10" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="11" aria-label="Foto 12"><img src="../content/foto/desiderio-12.webp" alt="Desiderio – Detail 11" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="12" aria-label="Foto 13"><img src="../content/foto/desiderio-13.webp" alt="Desiderio – Detail 12" loading="lazy" decoding="async"></button>
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/desiderio.webp" alt="Desiderio – Überblick" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/desiderio-2.webp" alt="Desiderio – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/desiderio-3.webp" alt="Desiderio – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/desiderio-4.webp" alt="Desiderio – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/desiderio-5.webp" alt="Desiderio – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/desiderio-6.webp" alt="Desiderio – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img src="../content/foto/desiderio-7.webp" alt="Desiderio – Detail 6" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img src="../content/foto/desiderio-8.webp" alt="Desiderio – Detail 7" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="8" aria-label="Foto 9"><img src="../content/foto/desiderio-9.webp" alt="Desiderio – Detail 8" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="9" aria-label="Foto 10"><img src="../content/foto/desiderio-10.webp" alt="Desiderio – Detail 9" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="10" aria-label="Foto 11"><img src="../content/foto/desiderio-11.webp" alt="Desiderio – Detail 10" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="11" aria-label="Foto 12"><img src="../content/foto/desiderio-12.webp" alt="Desiderio – Detail 11" loading="lazy" decoding="async" width="1200" height="632"></button>
+            <button type="button" class="carousel-thumb" data-index="12" aria-label="Foto 13"><img src="../content/foto/desiderio-13.webp" alt="Desiderio – Detail 12" loading="lazy" decoding="async" width="1600" height="843"></button>
           </div>
         </div>
       </section>
@@ -370,22 +377,22 @@
         <div class="room-carousel">
           <div class="carousel-viewport">
             <div class="carousel-slides">
-              <div class="carousel-slide active" data-index="0"><img src="../content/foto/incanto.webp" alt="Incanto – Überblick" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="1"><img src="../content/foto/incanto-2.webp" alt="Incanto – Detail 1" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="2"><img src="../content/foto/incanto-3.webp" alt="Incanto – Detail 2" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="3"><img src="../content/foto/incanto-4.webp" alt="Incanto – Detail 3" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="4"><img src="../content/foto/incanto-5.webp" alt="Incanto – Detail 4" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="5"><img src="../content/foto/incanto-6.webp" alt="Incanto – Detail 5" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="6"><img src="../content/foto/incanto-7.webp" alt="Incanto – Detail 6" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="7"><img src="../content/foto/incanto-8.webp" alt="Incanto – Detail 7" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="8"><img src="../content/foto/incanto-9.webp" alt="Incanto – Detail 8" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="9"><img src="../content/foto/incanto-10.webp" alt="Incanto – Detail 9" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="10"><img src="../content/foto/incanto-11.webp" alt="Incanto – Detail 10" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="11"><img src="../content/foto/incanto-12.webp" alt="Incanto – Detail 11" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="12"><img src="../content/foto/incanto-13.webp" alt="Incanto – Detail 12" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="13"><img src="../content/foto/incanto-14.webp" alt="Incanto – Detail 13" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="14"><img src="../content/foto/incanto-15.webp" alt="Incanto – Detail 14" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="15"><img src="../content/foto/incanto-16.webp" alt="Incanto – Detail 15" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/incanto.webp" alt="Incanto – Überblick" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/incanto-2.webp" alt="Incanto – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/incanto-3.webp" alt="Incanto – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/incanto-4.webp" alt="Incanto – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/incanto-5.webp" alt="Incanto – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/incanto-6.webp" alt="Incanto – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="6"><img src="../content/foto/incanto-7.webp" alt="Incanto – Detail 6" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="7"><img src="../content/foto/incanto-8.webp" alt="Incanto – Detail 7" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="8"><img src="../content/foto/incanto-9.webp" alt="Incanto – Detail 8" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="9"><img src="../content/foto/incanto-10.webp" alt="Incanto – Detail 9" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="10"><img src="../content/foto/incanto-11.webp" alt="Incanto – Detail 10" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="11"><img src="../content/foto/incanto-12.webp" alt="Incanto – Detail 11" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="12"><img src="../content/foto/incanto-13.webp" alt="Incanto – Detail 12" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="13"><img src="../content/foto/incanto-14.webp" alt="Incanto – Detail 13" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="14"><img src="../content/foto/incanto-15.webp" alt="Incanto – Detail 14" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="15"><img src="../content/foto/incanto-16.webp" alt="Incanto – Detail 15" loading="lazy" decoding="async" width="1600" height="843"></div>
             </div>
             <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -401,22 +408,22 @@
             </div>
           </div>
           <div class="carousel-thumbs">
-            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/incanto.webp" alt="Incanto – Überblick" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/incanto-2.webp" alt="Incanto – Detail 1" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/incanto-3.webp" alt="Incanto – Detail 2" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/incanto-4.webp" alt="Incanto – Detail 3" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/incanto-5.webp" alt="Incanto – Detail 4" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/incanto-6.webp" alt="Incanto – Detail 5" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img src="../content/foto/incanto-7.webp" alt="Incanto – Detail 6" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img src="../content/foto/incanto-8.webp" alt="Incanto – Detail 7" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="8" aria-label="Foto 9"><img src="../content/foto/incanto-9.webp" alt="Incanto – Detail 8" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="9" aria-label="Foto 10"><img src="../content/foto/incanto-10.webp" alt="Incanto – Detail 9" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="10" aria-label="Foto 11"><img src="../content/foto/incanto-11.webp" alt="Incanto – Detail 10" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="11" aria-label="Foto 12"><img src="../content/foto/incanto-12.webp" alt="Incanto – Detail 11" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="12" aria-label="Foto 13"><img src="../content/foto/incanto-13.webp" alt="Incanto – Detail 12" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="13" aria-label="Foto 14"><img src="../content/foto/incanto-14.webp" alt="Incanto – Detail 13" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="14" aria-label="Foto 15"><img src="../content/foto/incanto-15.webp" alt="Incanto – Detail 14" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="15" aria-label="Foto 16"><img src="../content/foto/incanto-16.webp" alt="Incanto – Detail 15" loading="lazy" decoding="async"></button>
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/incanto.webp" alt="Incanto – Überblick" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/incanto-2.webp" alt="Incanto – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/incanto-3.webp" alt="Incanto – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/incanto-4.webp" alt="Incanto – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/incanto-5.webp" alt="Incanto – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/incanto-6.webp" alt="Incanto – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img src="../content/foto/incanto-7.webp" alt="Incanto – Detail 6" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img src="../content/foto/incanto-8.webp" alt="Incanto – Detail 7" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="8" aria-label="Foto 9"><img src="../content/foto/incanto-9.webp" alt="Incanto – Detail 8" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="9" aria-label="Foto 10"><img src="../content/foto/incanto-10.webp" alt="Incanto – Detail 9" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="10" aria-label="Foto 11"><img src="../content/foto/incanto-11.webp" alt="Incanto – Detail 10" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="11" aria-label="Foto 12"><img src="../content/foto/incanto-12.webp" alt="Incanto – Detail 11" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="12" aria-label="Foto 13"><img src="../content/foto/incanto-13.webp" alt="Incanto – Detail 12" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="13" aria-label="Foto 14"><img src="../content/foto/incanto-14.webp" alt="Incanto – Detail 13" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="14" aria-label="Foto 15"><img src="../content/foto/incanto-15.webp" alt="Incanto – Detail 14" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="15" aria-label="Foto 16"><img src="../content/foto/incanto-16.webp" alt="Incanto – Detail 15" loading="lazy" decoding="async" width="1600" height="843"></button>
           </div>
         </div>
       </section>
@@ -444,16 +451,16 @@
         <div class="room-carousel">
           <div class="carousel-viewport">
             <div class="carousel-slides">
-              <div class="carousel-slide active" data-index="0"><img src="../content/foto/legame.webp" alt="Legame – Überblick" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="1"><img src="../content/foto/legame-2.webp" alt="Legame – Detail 1" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="2"><img src="../content/foto/legame-3.webp" alt="Legame – Detail 2" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="3"><img src="../content/foto/legame-4.webp" alt="Legame – Detail 3" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="4"><img src="../content/foto/legame-5.webp" alt="Legame – Detail 4" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="5"><img src="../content/foto/legame-6.webp" alt="Legame – Detail 5" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="6"><img src="../content/foto/legame-7.webp" alt="Legame – Detail 6" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="7"><img src="../content/foto/legame-8.webp" alt="Legame – Detail 7" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="8"><img src="../content/foto/legame-9.webp" alt="Legame – Detail 8" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="9"><img src="../content/foto/legame-10.webp" alt="Legame – Detail 9" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/legame.webp" alt="Legame – Überblick" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/legame-2.webp" alt="Legame – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/legame-3.webp" alt="Legame – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/legame-4.webp" alt="Legame – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/legame-5.webp" alt="Legame – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/legame-6.webp" alt="Legame – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="6"><img src="../content/foto/legame-7.webp" alt="Legame – Detail 6" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="7"><img src="../content/foto/legame-8.webp" alt="Legame – Detail 7" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="8"><img src="../content/foto/legame-9.webp" alt="Legame – Detail 8" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="9"><img src="../content/foto/legame-10.webp" alt="Legame – Detail 9" loading="lazy" decoding="async" width="1600" height="843"></div>
             </div>
             <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -469,16 +476,16 @@
             </div>
           </div>
           <div class="carousel-thumbs">
-            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/legame.webp" alt="Legame – Überblick" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/legame-2.webp" alt="Legame – Detail 1" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/legame-3.webp" alt="Legame – Detail 2" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/legame-4.webp" alt="Legame – Detail 3" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/legame-5.webp" alt="Legame – Detail 4" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/legame-6.webp" alt="Legame – Detail 5" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img src="../content/foto/legame-7.webp" alt="Legame – Detail 6" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img src="../content/foto/legame-8.webp" alt="Legame – Detail 7" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="8" aria-label="Foto 9"><img src="../content/foto/legame-9.webp" alt="Legame – Detail 8" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="9" aria-label="Foto 10"><img src="../content/foto/legame-10.webp" alt="Legame – Detail 9" loading="lazy" decoding="async"></button>
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/legame.webp" alt="Legame – Überblick" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/legame-2.webp" alt="Legame – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/legame-3.webp" alt="Legame – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/legame-4.webp" alt="Legame – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/legame-5.webp" alt="Legame – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/legame-6.webp" alt="Legame – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img src="../content/foto/legame-7.webp" alt="Legame – Detail 6" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img src="../content/foto/legame-8.webp" alt="Legame – Detail 7" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="8" aria-label="Foto 9"><img src="../content/foto/legame-9.webp" alt="Legame – Detail 8" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="9" aria-label="Foto 10"><img src="../content/foto/legame-10.webp" alt="Legame – Detail 9" loading="lazy" decoding="async" width="1600" height="843"></button>
           </div>
         </div>
       </section>
@@ -505,12 +512,12 @@
         <div class="room-carousel">
           <div class="carousel-viewport">
             <div class="carousel-slides">
-              <div class="carousel-slide active" data-index="0"><img src="../content/foto/origini.webp" alt="Origini – Überblick" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="1"><img src="../content/foto/origini-2.webp" alt="Origini – Detail 1" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="2"><img src="../content/foto/origini-3.webp" alt="Origini – Detail 2" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="3"><img src="../content/foto/origini-4.webp" alt="Origini – Detail 3" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="4"><img src="../content/foto/origini-5.webp" alt="Origini – Detail 4" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="5"><img src="../content/foto/origini-6.webp" alt="Origini – Detail 5" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/origini.webp" alt="Origini – Überblick" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/origini-2.webp" alt="Origini – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/origini-3.webp" alt="Origini – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/origini-4.webp" alt="Origini – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/origini-5.webp" alt="Origini – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/origini-6.webp" alt="Origini – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></div>
             </div>
             <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -526,12 +533,12 @@
             </div>
           </div>
           <div class="carousel-thumbs">
-            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/origini.webp" alt="Origini – Überblick" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/origini-2.webp" alt="Origini – Detail 1" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/origini-3.webp" alt="Origini – Detail 2" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/origini-4.webp" alt="Origini – Detail 3" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/origini-5.webp" alt="Origini – Detail 4" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/origini-6.webp" alt="Origini – Detail 5" loading="lazy" decoding="async"></button>
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/origini.webp" alt="Origini – Überblick" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/origini-2.webp" alt="Origini – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/origini-3.webp" alt="Origini – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/origini-4.webp" alt="Origini – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/origini-5.webp" alt="Origini – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/origini-6.webp" alt="Origini – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></button>
           </div>
         </div>
       </section>
@@ -557,14 +564,14 @@
         <div class="room-carousel">
           <div class="carousel-viewport">
             <div class="carousel-slides">
-              <div class="carousel-slide active" data-index="0"><img src="../content/foto/quiete.webp" alt="Quiete – Überblick" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="1"><img src="../content/foto/quiete-2.webp" alt="Quiete – Detail 1" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="2"><img src="../content/foto/quiete-3.webp" alt="Quiete – Detail 2" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="3"><img src="../content/foto/quiete-4.webp" alt="Quiete – Detail 3" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="4"><img src="../content/foto/quiete-5.webp" alt="Quiete – Detail 4" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="5"><img src="../content/foto/quiete-6.webp" alt="Quiete – Detail 5" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="6"><img src="../content/foto/quiete-7.webp" alt="Quiete – Detail 6" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="7"><img src="../content/foto/quiete-8.webp" alt="Quiete – Detail 7" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/quiete.webp" alt="Quiete – Überblick" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/quiete-2.webp" alt="Quiete – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/quiete-3.webp" alt="Quiete – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/quiete-4.webp" alt="Quiete – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/quiete-5.webp" alt="Quiete – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/quiete-6.webp" alt="Quiete – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="6"><img src="../content/foto/quiete-7.webp" alt="Quiete – Detail 6" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="7"><img src="../content/foto/quiete-8.webp" alt="Quiete – Detail 7" loading="lazy" decoding="async" width="1600" height="843"></div>
             </div>
             <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -580,14 +587,14 @@
             </div>
           </div>
           <div class="carousel-thumbs">
-            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/quiete.webp" alt="Quiete – Überblick" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/quiete-2.webp" alt="Quiete – Detail 1" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/quiete-3.webp" alt="Quiete – Detail 2" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/quiete-4.webp" alt="Quiete – Detail 3" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/quiete-5.webp" alt="Quiete – Detail 4" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/quiete-6.webp" alt="Quiete – Detail 5" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img src="../content/foto/quiete-7.webp" alt="Quiete – Detail 6" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img src="../content/foto/quiete-8.webp" alt="Quiete – Detail 7" loading="lazy" decoding="async"></button>
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/quiete.webp" alt="Quiete – Überblick" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/quiete-2.webp" alt="Quiete – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/quiete-3.webp" alt="Quiete – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/quiete-4.webp" alt="Quiete – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/quiete-5.webp" alt="Quiete – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/quiete-6.webp" alt="Quiete – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img src="../content/foto/quiete-7.webp" alt="Quiete – Detail 6" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img src="../content/foto/quiete-8.webp" alt="Quiete – Detail 7" loading="lazy" decoding="async" width="1600" height="843"></button>
           </div>
         </div>
       </section>
@@ -615,18 +622,18 @@
         <div class="room-carousel">
           <div class="carousel-viewport">
             <div class="carousel-slides">
-              <div class="carousel-slide active" data-index="0"><img src="../content/foto/radici.webp" alt="Radici – Überblick" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="1"><img src="../content/foto/radici-2.webp" alt="Radici – Detail 1" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="2"><img src="../content/foto/radici-3.webp" alt="Radici – Detail 2" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="3"><img src="../content/foto/radici-4.webp" alt="Radici – Detail 3" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="4"><img src="../content/foto/radici-5.webp" alt="Radici – Detail 4" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="5"><img src="../content/foto/radici-6.webp" alt="Radici – Detail 5" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="6"><img src="../content/foto/radici-7.webp" alt="Radici – Detail 6" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="7"><img src="../content/foto/radici-8.webp" alt="Radici – Detail 7" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="8"><img src="../content/foto/radici-9.webp" alt="Radici – Detail 8" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="9"><img src="../content/foto/radici-10.webp" alt="Radici – Detail 9" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="10"><img src="../content/foto/radici-11.webp" alt="Radici – Detail 10" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="11"><img src="../content/foto/radici-12.webp" alt="Radici – Detail 11" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/radici.webp" alt="Radici – Überblick" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/radici-2.webp" alt="Radici – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/radici-3.webp" alt="Radici – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/radici-4.webp" alt="Radici – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/radici-5.webp" alt="Radici – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/radici-6.webp" alt="Radici – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="6"><img src="../content/foto/radici-7.webp" alt="Radici – Detail 6" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="7"><img src="../content/foto/radici-8.webp" alt="Radici – Detail 7" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="8"><img src="../content/foto/radici-9.webp" alt="Radici – Detail 8" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="9"><img src="../content/foto/radici-10.webp" alt="Radici – Detail 9" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="10"><img src="../content/foto/radici-11.webp" alt="Radici – Detail 10" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="11"><img src="../content/foto/radici-12.webp" alt="Radici – Detail 11" loading="lazy" decoding="async" width="1600" height="843"></div>
             </div>
             <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -642,18 +649,18 @@
             </div>
           </div>
           <div class="carousel-thumbs">
-            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/radici.webp" alt="Radici – Überblick" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/radici-2.webp" alt="Radici – Detail 1" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/radici-3.webp" alt="Radici – Detail 2" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/radici-4.webp" alt="Radici – Detail 3" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/radici-5.webp" alt="Radici – Detail 4" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/radici-6.webp" alt="Radici – Detail 5" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img src="../content/foto/radici-7.webp" alt="Radici – Detail 6" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img src="../content/foto/radici-8.webp" alt="Radici – Detail 7" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="8" aria-label="Foto 9"><img src="../content/foto/radici-9.webp" alt="Radici – Detail 8" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="9" aria-label="Foto 10"><img src="../content/foto/radici-10.webp" alt="Radici – Detail 9" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="10" aria-label="Foto 11"><img src="../content/foto/radici-11.webp" alt="Radici – Detail 10" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="11" aria-label="Foto 12"><img src="../content/foto/radici-12.webp" alt="Radici – Detail 11" loading="lazy" decoding="async"></button>
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/radici.webp" alt="Radici – Überblick" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/radici-2.webp" alt="Radici – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/radici-3.webp" alt="Radici – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/radici-4.webp" alt="Radici – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/radici-5.webp" alt="Radici – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/radici-6.webp" alt="Radici – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img src="../content/foto/radici-7.webp" alt="Radici – Detail 6" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img src="../content/foto/radici-8.webp" alt="Radici – Detail 7" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="8" aria-label="Foto 9"><img src="../content/foto/radici-9.webp" alt="Radici – Detail 8" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="9" aria-label="Foto 10"><img src="../content/foto/radici-10.webp" alt="Radici – Detail 9" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="10" aria-label="Foto 11"><img src="../content/foto/radici-11.webp" alt="Radici – Detail 10" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="11" aria-label="Foto 12"><img src="../content/foto/radici-12.webp" alt="Radici – Detail 11" loading="lazy" decoding="async" width="1600" height="843"></button>
           </div>
         </div>
       </section>
@@ -681,12 +688,12 @@
         <div class="room-carousel">
           <div class="carousel-viewport">
             <div class="carousel-slides">
-              <div class="carousel-slide active" data-index="0"><img src="../content/foto/rinascita.webp" alt="Rinascita – Überblick" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="1"><img src="../content/foto/rinascita-2.webp" alt="Rinascita – Detail 1" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="2"><img src="../content/foto/rinascita-3.webp" alt="Rinascita – Detail 2" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="3"><img src="../content/foto/rinascita-4.webp" alt="Rinascita – Detail 3" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="4"><img src="../content/foto/rinascita-5.webp" alt="Rinascita – Detail 4" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="5"><img src="../content/foto/rinascita-6.webp" alt="Rinascita – Detail 5" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/rinascita.webp" alt="Rinascita – Überblick" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/rinascita-2.webp" alt="Rinascita – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/rinascita-3.webp" alt="Rinascita – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/rinascita-4.webp" alt="Rinascita – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/rinascita-5.webp" alt="Rinascita – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/rinascita-6.webp" alt="Rinascita – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></div>
             </div>
             <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -702,12 +709,12 @@
             </div>
           </div>
           <div class="carousel-thumbs">
-            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/rinascita.webp" alt="Rinascita – Überblick" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/rinascita-2.webp" alt="Rinascita – Detail 1" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/rinascita-3.webp" alt="Rinascita – Detail 2" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/rinascita-4.webp" alt="Rinascita – Detail 3" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/rinascita-5.webp" alt="Rinascita – Detail 4" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/rinascita-6.webp" alt="Rinascita – Detail 5" loading="lazy" decoding="async"></button>
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/rinascita.webp" alt="Rinascita – Überblick" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/rinascita-2.webp" alt="Rinascita – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/rinascita-3.webp" alt="Rinascita – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/rinascita-4.webp" alt="Rinascita – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/rinascita-5.webp" alt="Rinascita – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/rinascita-6.webp" alt="Rinascita – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></button>
           </div>
         </div>
       </section>
@@ -735,14 +742,14 @@
         <div class="room-carousel">
           <div class="carousel-viewport">
             <div class="carousel-slides">
-              <div class="carousel-slide active" data-index="0"><img src="../content/foto/sogno.webp" alt="Sogno – Überblick" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="1"><img src="../content/foto/sogno-2.webp" alt="Sogno – Detail 1" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="2"><img src="../content/foto/sogno-3.webp" alt="Sogno – Detail 2" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="3"><img src="../content/foto/sogno-4.webp" alt="Sogno – Detail 3" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="4"><img src="../content/foto/sogno-5.webp" alt="Sogno – Detail 4" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="5"><img src="../content/foto/sogno-6.webp" alt="Sogno – Detail 5" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="6"><img src="../content/foto/sogno-7.webp" alt="Sogno – Detail 6" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="7"><img src="../content/foto/sogno-8.webp" alt="Sogno – Detail 7" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/sogno.webp" alt="Sogno – Überblick" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/sogno-2.webp" alt="Sogno – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/sogno-3.webp" alt="Sogno – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/sogno-4.webp" alt="Sogno – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="4"><img src="../content/foto/sogno-5.webp" alt="Sogno – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="5"><img src="../content/foto/sogno-6.webp" alt="Sogno – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="6"><img src="../content/foto/sogno-7.webp" alt="Sogno – Detail 6" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="7"><img src="../content/foto/sogno-8.webp" alt="Sogno – Detail 7" loading="lazy" decoding="async" width="1600" height="843"></div>
             </div>
             <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -758,14 +765,14 @@
             </div>
           </div>
           <div class="carousel-thumbs">
-            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/sogno.webp" alt="Sogno – Überblick" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/sogno-2.webp" alt="Sogno – Detail 1" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/sogno-3.webp" alt="Sogno – Detail 2" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/sogno-4.webp" alt="Sogno – Detail 3" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/sogno-5.webp" alt="Sogno – Detail 4" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/sogno-6.webp" alt="Sogno – Detail 5" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img src="../content/foto/sogno-7.webp" alt="Sogno – Detail 6" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img src="../content/foto/sogno-8.webp" alt="Sogno – Detail 7" loading="lazy" decoding="async"></button>
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/sogno.webp" alt="Sogno – Überblick" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/sogno-2.webp" alt="Sogno – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/sogno-3.webp" alt="Sogno – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/sogno-4.webp" alt="Sogno – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="4" aria-label="Foto 5"><img src="../content/foto/sogno-5.webp" alt="Sogno – Detail 4" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="5" aria-label="Foto 6"><img src="../content/foto/sogno-6.webp" alt="Sogno – Detail 5" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="6" aria-label="Foto 7"><img src="../content/foto/sogno-7.webp" alt="Sogno – Detail 6" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="7" aria-label="Foto 8"><img src="../content/foto/sogno-8.webp" alt="Sogno – Detail 7" loading="lazy" decoding="async" width="1600" height="843"></button>
           </div>
         </div>
       </section>
@@ -792,10 +799,10 @@
         <div class="room-carousel">
           <div class="carousel-viewport">
             <div class="carousel-slides">
-              <div class="carousel-slide active" data-index="0"><img src="../content/foto/speranza.webp" alt="Speranza – Überblick" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="1"><img src="../content/foto/speranza-2.webp" alt="Speranza – Detail 1" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="2"><img src="../content/foto/speranza-3.webp" alt="Speranza – Detail 2" loading="lazy" decoding="async"></div>
-              <div class="carousel-slide" data-index="3"><img src="../content/foto/speranza-4.webp" alt="Speranza – Detail 3" loading="lazy" decoding="async"></div>
+              <div class="carousel-slide active" data-index="0"><img src="../content/foto/speranza.webp" alt="Speranza – Überblick" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="1"><img src="../content/foto/speranza-2.webp" alt="Speranza – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="2"><img src="../content/foto/speranza-3.webp" alt="Speranza – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></div>
+              <div class="carousel-slide" data-index="3"><img src="../content/foto/speranza-4.webp" alt="Speranza – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></div>
             </div>
             <button type="button" class="carousel-arrow prev" aria-label="Vorheriges Foto">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -811,10 +818,10 @@
             </div>
           </div>
           <div class="carousel-thumbs">
-            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/speranza.webp" alt="Speranza – Überblick" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/speranza-2.webp" alt="Speranza – Detail 1" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/speranza-3.webp" alt="Speranza – Detail 2" loading="lazy" decoding="async"></button>
-            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/speranza-4.webp" alt="Speranza – Detail 3" loading="lazy" decoding="async"></button>
+            <button type="button" class="carousel-thumb active" data-index="0" aria-label="Foto 1"><img src="../content/foto/speranza.webp" alt="Speranza – Überblick" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="1" aria-label="Foto 2"><img src="../content/foto/speranza-2.webp" alt="Speranza – Detail 1" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="2" aria-label="Foto 3"><img src="../content/foto/speranza-3.webp" alt="Speranza – Detail 2" loading="lazy" decoding="async" width="1600" height="843"></button>
+            <button type="button" class="carousel-thumb" data-index="3" aria-label="Foto 4"><img src="../content/foto/speranza-4.webp" alt="Speranza – Detail 3" loading="lazy" decoding="async" width="1600" height="843"></button>
           </div>
         </div>
       </section>
@@ -826,7 +833,7 @@
   <div class="lightbox-overlay" id="lightbox">
     <button class="lightbox-close" aria-label="Lightbox schließen">&times;</button>
     <button class="lightbox-nav lightbox-prev" aria-label="Vorheriges">&#8249;</button>
-    <img id="lightbox-img" src="" alt="Zimmerfoto" decoding="async">
+    <img id="lightbox-img" src="" alt="Zimmerfoto" decoding="async" width=\"1200\" height=\"800\">
     <button class="lightbox-nav lightbox-next" aria-label="Nächstes">&#8250;</button>
   </div>
 
@@ -835,7 +842,7 @@
     <div class="modal">
             <div class="modal-header">
         <div class="modal-pre-title">
-          <img src="../content/logo.png" alt="Hotel La Rocca" loading="lazy" decoding="async">
+          <img src="../content/logo.png" alt="Hotel La Rocca" loading="lazy" decoding="async" width="500" height="500">
           <span data-i18n="form_badge">Hotel La Rocca &bull; San Marino</span>
         </div>
         <h2>Richiedi <span class="text-gold">Preventivo</span></h2>
@@ -942,7 +949,7 @@
         <!-- Colonna 1: Brand & Social -->
         <div class="footer-col footer-col-brand">
           <a href="./" class="footer-logo">
-            <img src="../content/logo-stracked.png" alt="Hotel La Rocca San Marino" loading="lazy" decoding="async">
+            <img src="../content/logo-stracked.png" alt="Hotel La Rocca San Marino" loading="lazy" decoding="async" width="600" height="235">
           </a>
           <p class="footer-about" data-i18n="footer_about">
             Eine authentische Residenz von Charme und Eleganz, eingebettet in die mittelalterlichen Mauern des Monte Titano, einem UNESCO-Weltkulturerbe. Atemberaubende Ausblicke und herzliche Gastfreundschaft.
@@ -1063,9 +1070,9 @@
     </div>
   </footer>
 
-  <script src="../js/i18n.js"></script>
-  <script src="../js/main.js"></script>
-  <script>lucide.createIcons();</script>
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script>if(window.lucide&&typeof lucide.createIcons==='function'){lucide.createIcons();}</script>
 
 
 

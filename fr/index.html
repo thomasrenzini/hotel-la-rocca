@@ -9,10 +9,16 @@
     content="Hôtel La Rocca, au cœur du Centre Historique de Saint-Marin. Chambres exclusives avec vue panoramique sur le Mont Titano. Réservez directement et économisez.">
   <meta name="keywords"
     content="hotel saint-marin, hotel la rocca, centre historique saint-marin, chambres saint-marin, séjour saint-marin">
+  
+  <!-- Google Fonts Non-blocking & Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap">
+  </noscript>
   <link rel="stylesheet" href="../css/style.css">
-  <!-- reCAPTCHA v2 -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
   <link rel="canonical" href="https://www.hotellaroccasm.com/fr/">
   <link rel="alternate" hreflang="it" href="https://www.hotellaroccasm.com/">
   <link rel="alternate" hreflang="en" href="https://www.hotellaroccasm.com/en/">
@@ -43,6 +49,7 @@
   <meta name="twitter:title" content="Hôtel La Rocca | Saint-Marin – Centre Historique">
   <meta name="twitter:description" content="Hôtel La Rocca, au cœur du Centre Historique de Saint-Marin. Chambres exclusives avec vue panoramique sur le Mont Titano. Réservez directement et économisez.">
   <meta name="twitter:image" content="https://sitodavide-ivory.vercel.app/content/og-image.jpg">
+  <link rel="preload" as="image" href="../content/foto/incanto.webp" fetchpriority="high">
 </head>
 
 <body>
@@ -122,7 +129,7 @@
         </button>
         <div class="nav-overlay-brand">
           <a href="./" title="Hotel La Rocca San Marino">
-            <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async">
+            <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async" width="500" height="500">
           </a>
         </div>
       </div>
@@ -173,15 +180,15 @@
   <!-- ==================== HERO ==================== -->
   <section class="hero" id="hero">
     <div class="hero-video-wrapper">
-      <video autoplay muted loop playsinline poster="content/foto/incanto.webp">
-        <source src="../content/video/video_mod1.mp4" type="video/mp4">
+      <video autoplay muted loop playsinline preload="none" poster="../content/foto/incanto.webp" id="heroVideo">
+        <source data-src="../content/video/video_mod1.mp4" type="video/mp4">
       </video>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-brand-logo">
         <a href="./" title="Hotel La Rocca San Marino">
-          <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async">
+          <img src="../content/logo.png" alt="Hotel La Rocca San Marino" decoding="async" width="500" height="500">
         </a>
       </div>
 <p class="subtitle">Saint-Marin · Centre Historique</p>
@@ -210,7 +217,7 @@
 
       <div class="about-grid">
         <div class="about-image reveal">
-          <img src="../content/foto/radici-6.webp" alt="Vue panoramique Hôtel La Rocca Saint-Marin" loading="lazy" decoding="async">
+          <img src="../content/foto/radici-6.webp" alt="Vue panoramique Hôtel La Rocca Saint-Marin" loading="lazy" decoding="async" width="1600" height="843">
         </div>
         <div class="about-text reveal">
           <h3>Là où l'Histoire Rencontre le <span class="text-gold">Confort</span></h3>
@@ -266,7 +273,7 @@
         <!-- Camera Anima -->
         <div class="room-card reveal">
           <div class="room-card-image">
-            <img src="../content/foto/anima.webp" alt="Camera Anima – Hotel la Rocca San Marino" loading="lazy" decoding="async">
+            <img src="../content/foto/anima.webp" alt="Camera Anima – Hotel la Rocca San Marino" loading="lazy" decoding="async" width="1200" height="632">
             <span class="room-badge">Simple</span>
           </div>
           <div class="room-card-body">
@@ -282,7 +289,7 @@
         <!-- Camera Armonia -->
         <div class="room-card reveal">
           <div class="room-card-image">
-            <img src="../content/foto/armonia.webp" alt="Camera Armonia – Hotel la Rocca San Marino" loading="lazy" decoding="async">
+            <img src="../content/foto/armonia.webp" alt="Camera Armonia – Hotel la Rocca San Marino" loading="lazy" decoding="async" width="1600" height="843">
             <span class="room-badge">Armonia</span>
           </div>
           <div class="room-card-body">
@@ -298,7 +305,7 @@
         <!-- Camera Desiderio -->
         <div class="room-card reveal">
           <div class="room-card-image">
-            <img src="../content/foto/desiderio.webp" alt="Camera Desiderio – Hotel la Rocca San Marino" loading="lazy" decoding="async">
+            <img src="../content/foto/desiderio.webp" alt="Camera Desiderio – Hotel la Rocca San Marino" loading="lazy" decoding="async" width="1600" height="843">
             <span class="room-badge">Desiderio</span>
           </div>
           <div class="room-card-body">
@@ -314,7 +321,7 @@
         <!-- Camera Incanto -->
         <div class="room-card reveal">
           <div class="room-card-image">
-            <img src="../content/foto/incanto.webp" alt="Camera Incanto – Hotel la Rocca San Marino" loading="lazy" decoding="async">
+            <img src="../content/foto/incanto.webp" alt="Camera Incanto – Hotel la Rocca San Marino" loading="lazy" decoding="async" width="1600" height="843">
             <span class="room-badge">Incanto</span>
           </div>
           <div class="room-card-body">
@@ -330,7 +337,7 @@
         <!-- Camera Sogno -->
         <div class="room-card reveal">
           <div class="room-card-image">
-            <img src="../content/foto/sogno.webp" alt="Camera Sogno – Hotel la Rocca San Marino" loading="lazy" decoding="async">
+            <img src="../content/foto/sogno.webp" alt="Camera Sogno – Hotel la Rocca San Marino" loading="lazy" decoding="async" width="1600" height="843">
             <span class="room-badge">Sogno</span>
           </div>
           <div class="room-card-body">
@@ -346,7 +353,7 @@
         <!-- Camera Radici -->
         <div class="room-card reveal">
           <div class="room-card-image">
-            <img src="../content/foto/radici.webp" alt="Camera Radici – Hotel la Rocca San Marino" loading="lazy" decoding="async">
+            <img src="../content/foto/radici.webp" alt="Camera Radici – Hotel la Rocca San Marino" loading="lazy" decoding="async" width="1600" height="843">
             <span class="room-badge">Radici</span>
           </div>
           <div class="room-card-body">
@@ -362,7 +369,7 @@
         <!-- Camera Quiete (nascosta per preview 6 camere)
         <div class="room-card reveal">
           <div class="room-card-image">
-            <img src="../content/foto/quiete.webp" alt="Camera Quiete – Hotel la Rocca San Marino" loading="lazy" decoding="async">
+            <img src="../content/foto/quiete.webp" alt="Camera Quiete – Hotel la Rocca San Marino" loading="lazy" decoding="async" width="1600" height="843">
             <span class="room-badge">Quiete</span>
           </div>
           <div class="room-card-body">
@@ -541,7 +548,7 @@
     <div class="modal">
             <div class="modal-header">
         <div class="modal-pre-title">
-          <img src="../content/logo.png" alt="Hotel La Rocca" loading="lazy" decoding="async">
+          <img src="../content/logo.png" alt="Hotel La Rocca" loading="lazy" decoding="async" width="500" height="500">
           <span data-i18n="form_badge">Hôtel La Rocca • Saint-Marin</span>
         </div>
         <h2>Demander un <span class="text-gold">Devis</span></h2>
@@ -658,7 +665,7 @@
         <!-- Colonna 1: Brand & Social -->
         <div class="footer-col footer-col-brand">
           <a href="./" class="footer-logo">
-            <img src="../content/logo-stracked.png" alt="Hotel La Rocca San Marino" loading="lazy" decoding="async">
+            <img src="../content/logo-stracked.png" alt="Hotel La Rocca San Marino" loading="lazy" decoding="async" width="600" height="235">
           </a>
           <p class="footer-about" data-i18n="footer_about">Une authentique demeure de charme et d'élégance intemporelle nichée parmi les tours médiévales du Mont Titano, patrimoine mondial de l'UNESCO. Panoramas à couper le souffle et accueil chaleureux.</p>
           <div class="footer-socials">
@@ -776,9 +783,9 @@
     </div>
   </footer>
 
-  <script src="../js/i18n.js"></script>
-  <script src="../js/main.js"></script>
-  <script>lucide.createIcons();</script>
+  <script src="../js/i18n.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script>if(window.lucide&&typeof lucide.createIcons==='function'){lucide.createIcons();}</script>
 
 
 

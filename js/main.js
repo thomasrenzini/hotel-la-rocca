@@ -117,11 +117,42 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalClose = document.querySelector('.modal-close');
   const inputCamera = document.getElementById('camera_selezionata');
 
+  /* -------- Lazy Loading Dinamico di Google reCAPTCHA (0 KB al page load) -------- */
+  let recaptchaLoaded = false;
+  const loadRecaptcha = () => {
+    if (recaptchaLoaded) return;
+    recaptchaLoaded = true;
+
+    if (document.querySelector('script[src*="google.com/recaptcha"]')) return;
+
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoaded&render=explicit';
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+  };
+
+  window.onRecaptchaLoaded = () => {
+    const recaptchaEl = document.querySelector('.g-recaptcha');
+    if (recaptchaEl && window.grecaptcha && typeof grecaptcha.render === 'function') {
+      try {
+        if (recaptchaEl.children.length === 0) {
+          grecaptcha.render(recaptchaEl, {
+            sitekey: recaptchaEl.getAttribute('data-sitekey')
+          });
+        }
+      } catch (err) {}
+    }
+  };
+
   // Apertura modal dal pulsante "Richiedi Preventivo"
   const btnPreventivo = document.querySelectorAll('.btn-richiedi');
   btnPreventivo.forEach(btn => {
+    btn.addEventListener('pointerenter', loadRecaptcha, { once: true });
+    btn.addEventListener('focus', loadRecaptcha, { once: true });
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      loadRecaptcha();
       const nomeCamera = btn.getAttribute('data-camera');
 
       if (inputCamera) {
@@ -140,16 +171,9 @@ document.addEventListener('DOMContentLoaded', () => {
         modalOverlay.classList.add('active');
         document.body.style.overflow = 'hidden';
 
-        // Safeguard: Ensure reCAPTCHA widget renders inside the modal
-        const recaptchaEl = modalOverlay.querySelector('.g-recaptcha');
-        if (recaptchaEl && recaptchaEl.children.length === 0 && window.grecaptcha && typeof grecaptcha.render === 'function') {
-          try {
-            grecaptcha.render(recaptchaEl, {
-              sitekey: recaptchaEl.getAttribute('data-sitekey')
-            });
-          } catch (err) {
-            // Handled or already bound by grecaptcha auto-scanner
-          }
+        // Render reCAPTCHA if already loaded
+        if (window.grecaptcha && typeof grecaptcha.render === 'function') {
+          window.onRecaptchaLoaded();
         }
       }
     });
@@ -715,5 +739,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initCookieConsent();
 
+  /* -------- Inizializzazione icone Lucide (se differite) -------- */
+  if (window.lucide && typeof lucide.createIcons === 'function') {
+    lucide.createIcons();
+  }
+
+});
+
+/* -------- Caricamento differito del video Hero dopo window.load (per non bloccare LCP e rete) -------- */
+window.addEventListener('load', () => {
+  const heroVideo = document.getElementById('heroVideo');
+  if (heroVideo) {
+    const source = heroVideo.querySelector('source[data-src]');
+    if (source) {
+      source.src = source.getAttribute('data-src');
+      heroVideo.load();
+      heroVideo.play().catch(() => {});
+    }
+  }
 });
 
