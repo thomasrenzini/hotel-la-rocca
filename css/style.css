@@ -2125,6 +2125,9 @@ h6 {
   padding: 2.2rem 1.8rem;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: left;
 }
 
 .dove-info-section .service-card h3,
@@ -2133,6 +2136,9 @@ h6 {
   font-family: var(--font-heading);
   font-size: 1.45rem;
   margin-bottom: 0.8rem;
+  min-height: 2.1rem;
+  display: flex;
+  align-items: center;
 }
 
 .dove-info-section .service-card p,
@@ -2142,20 +2148,19 @@ h6 {
   line-height: 1.68;
 }
 
-.dove-info-section .services-grid {
-  align-items: start;
-}
-
-.dove-info-section .service-card {
-  align-self: start;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
+.dove-info-section .services-grid,
+.dove-dintorni-section .services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  align-items: stretch;
 }
 
 .practical-info-body {
   width: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .practical-info-extra {
@@ -2192,7 +2197,8 @@ h6 {
   align-items: center;
   gap: 0.4rem;
   align-self: flex-start;
-  margin-top: 0.75rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
   transition: color var(--transition-fast);
 }
 
@@ -3696,6 +3702,12 @@ h6 {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-xl);
+  }
+
+  .dove-info-section .services-grid,
+  .dove-dintorni-section .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
   }
 }
 
