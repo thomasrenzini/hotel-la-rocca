@@ -747,15 +747,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-/* -------- Caricamento differito del video Hero (per non bloccare LCP e rete) -------- */
+/* -------- Hero Video Autoplay Management -------- */
 function initHeroVideo() {
   const heroVideo = document.getElementById('heroVideo');
   if (heroVideo) {
-    const source = heroVideo.querySelector('source[data-src]');
-    if (source && !source.getAttribute('src')) {
-      source.src = source.getAttribute('data-src');
-      heroVideo.load();
-      heroVideo.play().catch(() => {});
+    // Forziamo le proprietà muted via JS (indispensabile per iOS Safari e Chrome Mobile)
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+
+    const tryPlay = () => {
+      const playPromise = heroVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Fallback di riserva se il dispositivo (es. Low Power Mode iOS) blocca l'autoplay iniziale
+          const unlock = () => {
+            heroVideo.play().catch(() => {});
+            ['touchstart', 'scroll', 'click'].forEach(evt => {
+              window.removeEventListener(evt, unlock);
+            });
+          };
+          ['touchstart', 'scroll', 'click'].forEach(evt => {
+            window.addEventListener(evt, unlock, { passive: true, once: true });
+          });
+        });
+      }
+    };
+
+    if (heroVideo.paused) {
+      tryPlay();
     }
   }
 }
@@ -764,6 +783,5 @@ if (document.readyState === 'complete' || document.readyState === 'interactive')
   initHeroVideo();
 } else {
   document.addEventListener('DOMContentLoaded', initHeroVideo);
-  window.addEventListener('load', initHeroVideo);
 }
 
