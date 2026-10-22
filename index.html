@@ -175,9 +175,33 @@
   <!-- ==================== HERO ==================== -->
   <section class="hero" id="hero">
     <div class="hero-video-wrapper">
-      <video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="content/foto/hero-poster.webp" id="heroVideo">
+      <video id="heroVideo" src="content/video/video_mod1.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="content/foto/hero-poster.webp">
         <source src="content/video/video_mod1.mp4" type="video/mp4">
       </video>
+      <script>
+        (function() {
+          var v = document.getElementById('heroVideo');
+          if (v) {
+            v.muted = true;
+            v.defaultMuted = true;
+            var p = v.play();
+            if (p !== undefined) {
+              p.catch(function() {
+                var unlock = function() {
+                  v.muted = true;
+                  v.play();
+                  ['touchstart', 'touchend', 'pointerdown', 'scroll'].forEach(function(e) {
+                    window.removeEventListener(e, unlock, true);
+                  });
+                };
+                ['touchstart', 'touchend', 'pointerdown', 'scroll'].forEach(function(e) {
+                  window.addEventListener(e, unlock, { capture: true, passive: true, once: true });
+                });
+              });
+            }
+          }
+        })();
+      </script>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
