@@ -246,10 +246,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* -------- Form Validation -------- */
+  /* -------- Form Validation & Submission Handler -------- */
   const form = document.getElementById('form-preventivo');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    // Se siamo su Vercel, imposta l'action su /api/invia-richiesta per evitare l'errore 405 dei file statici
+    if (window.location.hostname.includes('vercel.app')) {
+      form.action = '/api/invia-richiesta';
+    }
+
+    form.addEventListener('submit', async (e) => {
       const privacy = document.getElementById('privacy');
       if (privacy && !privacy.checked) {
         e.preventDefault();
@@ -257,10 +262,48 @@ document.addEventListener('DOMContentLoaded', () => {
         const msgs = {
           it: "Devi accettare l'Informativa sulla Privacy e i Termini e Condizioni per procedere.",
           en: "You must accept the Privacy Policy and Terms and Conditions to proceed.",
-          de: "Sie müssen die Datenschutzerklärung und die Allgemeinen Geschäftsbedingungen akzeptieren, um fortzufahren."
+          de: "Sie müssen die Datenschutzerklärung und die Allgemeinen Geschäftsbedingungen akzeptieren, um fortzufahren.",
+          fr: "Vous devez accepter la politique de confidentialité et les conditions générales pour continuer."
         };
         alert(msgs[curLang] || msgs.it);
         return false;
+      }
+
+      // Su Vercel gestiamo l'invio via fetch per una UX fluida senza ricaricamento
+      if (window.location.hostname.includes('vercel.app')) {
+        e.preventDefault();
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.dataset.originalText = submitBtn.innerHTML;
+          submitBtn.innerHTML = '<span>Invio in corso...</span>';
+        }
+
+        try {
+          const formData = new FormData(form);
+          const params = new URLSearchParams(formData);
+
+          await fetch('/api/invia-richiesta', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+              'X-Requested-With': 'fetch'
+            },
+            body: params.toString()
+          });
+
+          const lang = (form.querySelector('input[name="lang"]')?.value || 'it').toLowerCase();
+          const redirectMap = {
+            en: '/en/grazie',
+            de: '/de/grazie',
+            fr: '/fr/grazie',
+            it: '/grazie'
+          };
+          window.location.href = redirectMap[lang] || '/grazie';
+        } catch (err) {
+          console.error("Invio form Vercel:", err);
+          window.location.href = '/grazie';
+        }
       }
     });
   }
