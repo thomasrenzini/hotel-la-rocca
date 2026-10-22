@@ -1,3 +1,7 @@
 {
-    "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/invia-richiesta.php", "destination": "/api/invia-richiesta" },
+    { "source": "/:lang(en|de|fr)/invia-richiesta.php", "destination": "/api/invia-richiesta" }
+  ]
 }

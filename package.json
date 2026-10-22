@@ -1,0 +1,10 @@
+{
+  "name": "hotel-la-rocca",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Hotel La Rocca San Marino – Sito Web Ufficiale",
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  }
+}

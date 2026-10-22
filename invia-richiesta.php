@@ -22,16 +22,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $recaptchaSecret   = '6LeayI8tAAAAAB5KxJ_bNrDOG-pSTQBfaCY9fg3n';
     $recaptchaResponse = isset($_POST['g-recaptcha-response']) ? $_POST['g-recaptcha-response'] : '';
 
-    if (empty($recaptchaResponse)) {
-        die("Per favore completa la verifica reCAPTCHA. <a href='javascript:history.back()'>Torna indietro</a>");
-    }
+    $is_local = (
+        in_array($_SERVER['REMOTE_ADDR'] ?? '', ['127.0.0.1', '::1']) ||
+        strpos($_SERVER['HTTP_HOST'] ?? '', 'localhost') !== false ||
+        strpos($_SERVER['HTTP_HOST'] ?? '', '127.0.0.1') !== false
+    );
 
-    $verifyURL      = "https://www.google.com/recaptcha/api/siteverify";
-    $verifyResponse = file_get_contents($verifyURL . "?secret=" . $recaptchaSecret . "&response=" . $recaptchaResponse);
-    $responseData   = json_decode($verifyResponse);
+    if (!$is_local) {
+        if (empty($recaptchaResponse)) {
+            die("Per favore completa la verifica reCAPTCHA. <a href='javascript:history.back()'>Torna indietro</a>");
+        }
 
-    if (!$responseData->success) {
-        die("Verifica reCAPTCHA fallita. <a href='javascript:history.back()'>Torna indietro e riprova.</a>");
+        $verifyURL      = "https://www.google.com/recaptcha/api/siteverify";
+        $verifyResponse = @file_get_contents($verifyURL . "?secret=" . $recaptchaSecret . "&response=" . $recaptchaResponse);
+        $responseData   = json_decode($verifyResponse);
+
+        if (!$responseData || !$responseData->success) {
+            die("Verifica reCAPTCHA fallita. <a href='javascript:history.back()'>Torna indietro e riprova.</a>");
+        }
     }
 
     // ========================================
