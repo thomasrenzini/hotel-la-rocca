@@ -465,9 +465,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Rileva lingua corrente dal tag <html lang="...">
     const lang = (document.documentElement.lang || 'it').toLowerCase();
     const i18nLabels = {
-      it: { more: (n) => `+ ${n} altri`, less: 'Mostra meno' },
-      en: { more: (n) => `+ ${n} more`, less: 'Show less' },
-      de: { more: (n) => `+ ${n} weitere`, less: 'Weniger anzeigen' }
+      it: { more: (n) => `+${n}`, less: 'Mostra meno' },
+      en: { more: (n) => `+${n}`, less: 'Show less' },
+      de: { more: (n) => `+${n}`, less: 'Weniger anzeigen' },
+      fr: { more: (n) => `+${n}`, less: 'Voir moins' }
     };
     const t = i18nLabels[lang] || i18nLabels.it;
 
@@ -746,16 +747,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-/* -------- Caricamento differito del video Hero dopo window.load (per non bloccare LCP e rete) -------- */
-window.addEventListener('load', () => {
+/* -------- Caricamento differito del video Hero (per non bloccare LCP e rete) -------- */
+function initHeroVideo() {
   const heroVideo = document.getElementById('heroVideo');
   if (heroVideo) {
     const source = heroVideo.querySelector('source[data-src]');
-    if (source) {
+    if (source && !source.getAttribute('src')) {
       source.src = source.getAttribute('data-src');
       heroVideo.load();
       heroVideo.play().catch(() => {});
     }
   }
-});
+}
+
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  initHeroVideo();
+} else {
+  document.addEventListener('DOMContentLoaded', initHeroVideo);
+  window.addEventListener('load', initHeroVideo);
+}
 
